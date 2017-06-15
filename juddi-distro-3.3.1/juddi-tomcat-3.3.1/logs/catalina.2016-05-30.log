@@ -1,0 +1,10 @@
+mai 30, 2016 6:36:52 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 30, 2016 6:36:54 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 30, 2016 6:36:54 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 30, 2016 6:36:55 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 30, 2016 6:36:55 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl

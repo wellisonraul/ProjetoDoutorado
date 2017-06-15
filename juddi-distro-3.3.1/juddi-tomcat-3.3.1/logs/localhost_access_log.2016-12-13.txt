@@ -1,0 +1,7 @@
+0:0:0:0:0:0:0:1 - - [13/Dec/2016:23:49:04 -0300] "GET /juddi-gui/serviceBrowse.jsp HTTP/1.1" 200 21330
+0:0:0:0:0:0:0:1 - - [13/Dec/2016:23:49:04 -0300] "GET /juddi-gui/favicon.ico HTTP/1.1" 200 766
+0:0:0:0:0:0:0:1 - - [13/Dec/2016:23:49:04 -0300] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 1015
+0:0:0:0:0:0:0:1 - - [13/Dec/2016:23:49:04 -0300] "GET /apple-touch-icon.png HTTP/1.1" 404 991
+0:0:0:0:0:0:0:1 - - [13/Dec/2016:23:49:05 -0300] "GET /juddi-gui/serviceBrowse.jsp HTTP/1.1" 200 21330
+0:0:0:0:0:0:0:1 - - [13/Dec/2016:23:49:05 -0300] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 1015
+0:0:0:0:0:0:0:1 - - [13/Dec/2016:23:49:05 -0300] "GET /apple-touch-icon.png HTTP/1.1" 404 991

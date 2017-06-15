@@ -1,0 +1,110 @@
+dez 04, 2016 10:55:01 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+dez 04, 2016 10:55:01 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+dez 04, 2016 10:55:02 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+dez 04, 2016 10:55:02 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+dez 04, 2016 10:55:02 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+dez 04, 2016 10:57:56 AM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIPublicationService#{urn:uddi-org:v3_service}save_service has thrown exception, unwinding now: org.apache.juddi.v3.error.AuthTokenRequiredException: Authentication is required for this API call
+dez 04, 2016 10:58:11 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 10:58:53 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 10:59:40 AM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_tModelDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The technical model was not found for the given key:  uddi:patrol:keygenerator
+dez 04, 2016 10:59:43 AM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_tModelDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The technical model was not found for the given key:  uddi:patrol:keygenerator
+dez 04, 2016 10:59:43 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 10:59:43 AM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.org.mycompany
+dez 04, 2016 10:59:43 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:00:50 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:00:51 AM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.org.mycompany
+dez 04, 2016 11:00:51 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:00:53 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:00:53 AM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.org.mycompany
+dez 04, 2016 11:00:53 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:00:56 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:00:56 AM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.org.mycompany
+dez 04, 2016 11:00:56 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:00:56 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:00:57 AM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.org.mycompany
+dez 04, 2016 11:00:57 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:00:57 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:00:57 AM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.org.mycompany
+dez 04, 2016 11:00:57 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:00:58 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:00:58 AM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.org.mycompany
+dez 04, 2016 11:00:58 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:00:58 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:00:58 AM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.org.mycompany
+dez 04, 2016 11:00:58 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:01:25 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:01:25 AM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.org.mycompany
+dez 04, 2016 11:01:25 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:01:26 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:01:26 AM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.org.mycompany
+dez 04, 2016 11:01:26 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:01:29 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:01:29 AM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.org.mycompany
+dez 04, 2016 11:01:30 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:01:30 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:01:30 AM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.org.mycompany
+dez 04, 2016 11:01:30 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:01:30 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:01:30 AM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.org.mycompany
+dez 04, 2016 11:01:30 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:01:30 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:01:30 AM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.org.mycompany
+dez 04, 2016 11:01:31 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:01:31 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+dez 04, 2016 11:01:31 AM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.org.mycompany
+dez 04, 2016 11:01:31 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl

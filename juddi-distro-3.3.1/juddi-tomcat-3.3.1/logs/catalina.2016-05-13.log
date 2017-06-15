@@ -1,0 +1,638 @@
+mai 13, 2016 4:03:59 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server version:        Apache Tomcat/7.0.64
+mai 13, 2016 4:03:59 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server built:          Aug 19 2015 17:18:06 UTC
+mai 13, 2016 4:03:59 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server number:         7.0.64.0
+mai 13, 2016 4:03:59 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: OS Name:               Mac OS X
+mai 13, 2016 4:03:59 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: OS Version:            10.11.4
+mai 13, 2016 4:03:59 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Architecture:          x86_64
+mai 13, 2016 4:03:59 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre
+mai 13, 2016 4:03:59 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: JVM Version:           1.8.0_65-b17
+mai 13, 2016 4:03:59 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: JVM Vendor:            Oracle Corporation
+mai 13, 2016 4:03:59 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: CATALINA_BASE:         /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1
+mai 13, 2016 4:03:59 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: CATALINA_HOME:         /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1
+mai 13, 2016 4:03:59 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.util.logging.config.file=/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/conf/logging.properties
+mai 13, 2016 4:03:59 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+mai 13, 2016 4:03:59 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Xms4096M
+mai 13, 2016 4:03:59 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Xmx4096M
+mai 13, 2016 4:03:59 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -XX:PermSize=512M
+mai 13, 2016 4:03:59 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -XX:MaxPermSize=512M
+mai 13, 2016 4:03:59 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.endorsed.dirs=/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/endorsed
+mai 13, 2016 4:03:59 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Dcatalina.base=/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1
+mai 13, 2016 4:03:59 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Dcatalina.home=/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1
+mai 13, 2016 4:03:59 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.io.tmpdir=/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/temp
+mai 13, 2016 4:03:59 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMAÇÕES: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/macbook/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+mai 13, 2016 4:03:59 PM org.apache.coyote.AbstractProtocol init
+INFORMAÇÕES: Initializing ProtocolHandler ["http-bio-8080"]
+mai 13, 2016 4:04:00 PM org.apache.coyote.AbstractProtocol init
+INFORMAÇÕES: Initializing ProtocolHandler ["ajp-bio-8009"]
+mai 13, 2016 4:04:00 PM org.apache.catalina.startup.Catalina load
+INFORMAÇÕES: Initialization processed in 665 ms
+mai 13, 2016 4:04:00 PM org.apache.catalina.core.StandardService startInternal
+INFORMAÇÕES: Starting service Catalina
+mai 13, 2016 4:04:00 PM org.apache.catalina.core.StandardEngine startInternal
+INFORMAÇÕES: Starting Servlet Engine: Apache Tomcat/7.0.64
+mai 13, 2016 4:04:00 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/docs
+mai 13, 2016 4:04:00 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+mai 13, 2016 4:04:00 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/docs has finished in 706 ms
+mai 13, 2016 4:04:00 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/examples
+mai 13, 2016 4:04:01 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+mai 13, 2016 4:04:01 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/examples has finished in 565 ms
+mai 13, 2016 4:04:01 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/host-manager
+mai 13, 2016 4:04:01 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+mai 13, 2016 4:04:01 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/host-manager has finished in 449 ms
+mai 13, 2016 4:04:01 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddi-gui
+mai 13, 2016 4:04:03 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+mai 13, 2016 4:04:03 PM org.apache.juddi.webconsole.StartupServlet contextInitialized
+INFORMAÇÕES: juddi-gui startup
+mai 13, 2016 4:04:03 PM org.apache.juddi.webconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Attempting to generate 256 bit AES key
+mai 13, 2016 4:04:03 PM org.apache.juddi.webconsole.StartupServlet contextInitialized
+ADVERTÊNCIA: 256 bit key validation failed. To use higher key sizes, try installing the Java Cryptographic Extensions (JCE) Unlimited Strength
+mai 13, 2016 4:04:03 PM org.apache.juddi.webconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Attempting to generate 128 bit AES key
+mai 13, 2016 4:04:03 PM org.apache.juddi.webconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Generation of 128 bit AES key successful
+mai 13, 2016 4:04:03 PM org.apache.juddi.webconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Storing key to /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddi-gui/META-INF/config.properties
+mai 13, 2016 4:04:03 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddi-gui has finished in 1,640 ms
+mai 13, 2016 4:04:03 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3
+mai 13, 2016 4:04:07 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+mai 13, 2016 4:04:12 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDIInquiryService from class org.uddi.v3_service.UDDIInquiryPortType
+mai 13, 2016 4:04:13 PM org.apache.cxf.bus.spring.OldSpringSupport logWarning
+ADVERTÊNCIA: Import of META-INF/cxf/cxf-extension-soap.xml has been deprecated and is unnecessary.
+mai 13, 2016 4:04:13 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /inquiry
+mai 13, 2016 4:04:13 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDIPublicationService from class org.uddi.v3_service.UDDIPublicationPortType
+mai 13, 2016 4:04:14 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /publish
+mai 13, 2016 4:04:14 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDISecurityService from class org.uddi.v3_service.UDDISecurityPortType
+mai 13, 2016 4:04:14 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /security
+mai 13, 2016 4:04:14 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDISubscriptionService from class org.uddi.v3_service.UDDISubscriptionPortType
+mai 13, 2016 4:04:14 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /subscription
+mai 13, 2016 4:04:14 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDISubscriptionListenerService from class org.uddi.v3_service.UDDISubscriptionListenerPortType
+mai 13, 2016 4:04:14 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /subscription-listener
+mai 13, 2016 4:04:14 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDICustodyTransferService from class org.uddi.v3_service.UDDICustodyTransferPortType
+mai 13, 2016 4:04:15 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /custody-transfer
+mai 13, 2016 4:04:15 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {http://impl.api.juddi.apache.org/}UDDIValueSetValidationImplService from class org.uddi.v3_service.UDDIValueSetValidationPortType
+mai 13, 2016 4:04:15 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /valueset-validation
+mai 13, 2016 4:04:15 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {http://impl.api.juddi.apache.org/}UDDIValueSetCachingImplService from class org.uddi.v3_service.UDDIValueSetCachingPortType
+mai 13, 2016 4:04:15 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /valueset-caching
+mai 13, 2016 4:04:15 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:inquiry_v2}Inquire from class org.uddi.v2_service.Inquire
+mai 13, 2016 4:04:16 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /inquiryv2
+mai 13, 2016 4:04:16 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:publication_v2}Publish from class org.uddi.v2_service.Publish
+mai 13, 2016 4:04:16 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /publishv2
+mai 13, 2016 4:04:16 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:juddi-apache-org:v3_service}JUDDIApiService from WSDL: classpath:/juddi_api_v1.wsdl
+mai 13, 2016 4:04:16 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /juddi-api
+mai 13, 2016 4:04:17 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /inquiryRest
+mai 13, 2016 4:04:17 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: juddi-admin gui startup
+mai 13, 2016 4:04:17 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Attempting to generate 256 bit AES key
+mai 13, 2016 4:04:17 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+ADVERTÊNCIA: 256 bit key validation failed. To use higher key sizes, try installing the Java Cryptographic Extensions (JCE) Unlimited Strength
+mai 13, 2016 4:04:17 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Attempting to generate 128 bit AES key
+mai 13, 2016 4:04:17 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Generation of 128 bit AES key successful
+mai 13, 2016 4:04:17 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Storing key to /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/config.properties
+mai 13, 2016 4:04:17 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3 has finished in 13,904 ms
+mai 13, 2016 4:04:17 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3replication
+mai 13, 2016 4:04:18 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+mai 13, 2016 4:04:21 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:repl_v3_portType}UDDI_Replication_PortType from class org.uddi.v3_service.UDDIReplicationPortType
+mai 13, 2016 4:04:24 PM org.apache.cxf.bus.spring.OldSpringSupport logWarning
+ADVERTÊNCIA: Import of META-INF/cxf/cxf-extension-soap.xml has been deprecated and is unnecessary.
+mai 13, 2016 4:04:25 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /replication
+mai 13, 2016 4:04:25 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: juddi-admin gui startup
+mai 13, 2016 4:04:25 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Attempting to generate 256 bit AES key
+mai 13, 2016 4:04:25 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+ADVERTÊNCIA: 256 bit key validation failed. To use higher key sizes, try installing the Java Cryptographic Extensions (JCE) Unlimited Strength
+mai 13, 2016 4:04:25 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Attempting to generate 128 bit AES key
+mai 13, 2016 4:04:25 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Generation of 128 bit AES key successful
+mai 13, 2016 4:04:25 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Storing key to /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3replication/WEB-INF/config.properties
+mai 13, 2016 4:04:25 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3replication has finished in 8,260 ms
+mai 13, 2016 4:04:25 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/manager
+mai 13, 2016 4:04:26 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+mai 13, 2016 4:04:26 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/manager has finished in 1,279 ms
+mai 13, 2016 4:04:26 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/ROOT
+mai 13, 2016 4:04:27 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+mai 13, 2016 4:04:27 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/ROOT has finished in 987 ms
+mai 13, 2016 4:04:27 PM org.apache.coyote.AbstractProtocol start
+INFORMAÇÕES: Starting ProtocolHandler ["http-bio-8080"]
+mai 13, 2016 4:04:28 PM org.apache.coyote.AbstractProtocol start
+INFORMAÇÕES: Starting ProtocolHandler ["ajp-bio-8009"]
+mai 13, 2016 4:04:28 PM org.apache.catalina.startup.Catalina start
+INFORMAÇÕES: Server startup in 27998 ms
+mai 13, 2016 4:04:32 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 13, 2016 4:04:33 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 13, 2016 4:04:33 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 13, 2016 4:04:33 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 13, 2016 4:04:34 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 13, 2016 4:05:39 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_tModelDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The technical model was not found for the given key:  uddi:uddi:keygenerator
+mai 13, 2016 4:05:43 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_tModelDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The technical model was not found for the given key:  uddi:uddi:keygenerator
+mai 13, 2016 4:05:43 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:05:44 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.org.mycompany
+mai 13, 2016 4:05:44 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:06:18 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:06:42 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:06:44 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:07:26 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:07:26 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.org.mycompany
+mai 13, 2016 4:07:26 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:09:40 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_tModelDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The technical model was not found for the given key:  uddi:localhost:keygenerator
+mai 13, 2016 4:09:54 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_tModelDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The technical model was not found for the given key:  uddi:localhost:keygenerator
+mai 13, 2016 4:09:54 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:09:54 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.mycompany.org
+mai 13, 2016 4:09:55 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:10:35 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:11:52 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:11:52 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.mycompany.org
+mai 13, 2016 4:11:52 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:23:46 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIPublicationService#{urn:uddi-org:v3_service}delete_service has thrown exception, unwinding now: org.apache.juddi.v3.error.AuthTokenExpiredException: The authentication token is expired
+mai 13, 2016 4:24:49 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:24:49 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.mycompany.org
+mai 13, 2016 4:24:49 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:25:10 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:27:17 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:27:42 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:27:42 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.mycompany.org
+mai 13, 2016 4:27:42 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:27:46 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:27:46 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.mycompany.org
+mai 13, 2016 4:27:46 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:27:48 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:27:48 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.mycompany.org
+mai 13, 2016 4:27:48 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:27:49 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:27:49 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.mycompany.org
+mai 13, 2016 4:27:49 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:31:17 PM org.apache.coyote.AbstractProtocol pause
+INFORMAÇÕES: Pausing ProtocolHandler ["http-bio-8080"]
+mai 13, 2016 4:31:20 PM org.apache.coyote.AbstractProtocol pause
+INFORMAÇÕES: Pausing ProtocolHandler ["ajp-bio-8009"]
+mai 13, 2016 4:31:20 PM org.apache.catalina.core.StandardService stopInternal
+INFORMAÇÕES: Stopping service Catalina
+mai 13, 2016 4:31:20 PM org.apache.juddi.webconsole.StartupServlet contextDestroyed
+INFORMAÇÕES: Cleaning up juddi-gui
+mai 13, 2016 4:31:20 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddi-gui] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@26260af]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.Description=java.lang.ref.WeakReference@25ce4039, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@493fe2ea, class java.util.ArrayList=java.lang.ref.WeakReference@1e38d017, class org.uddi.api_v3.ListDescription=java.lang.ref.WeakReference@f4ebc67, class org.uddi.api_v3.TModelInfo=java.lang.ref.WeakReference@58d6ea3f, class org.uddi.api_v3.TModelInfos=java.lang.ref.WeakReference@6e486b7d, class org.uddi.api_v3.TModelList=java.lang.ref.WeakReference@36a8b6cb, class org.uddi.api_v3.RelatedBusinessesList=java.lang.ref.WeakReference@4cff99fd}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+mai 13, 2016 4:31:20 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddi-gui] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@26260af]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.OperationalInfo=java.lang.ref.WeakReference@2317154f, class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@e2991d3, class org.uddi.api_v3.BusinessList=java.lang.ref.WeakReference@7d447033, class org.uddi.api_v3.OperationalInfos=java.lang.ref.WeakReference@4d442e17, class org.uddi.api_v3.OverviewURL=java.lang.ref.WeakReference@56e2e79d, class org.uddi.api_v3.TModelDetail=java.lang.ref.WeakReference@1487539b, class org.uddi.api_v3.Result=java.lang.ref.WeakReference@4a9c7cd0, class org.uddi.api_v3.TModelInfos=java.lang.ref.WeakReference@2644c702, class org.uddi.api_v3.BusinessServices=java.lang.ref.WeakReference@675b1258, class org.uddi.api_v3.BusinessEntity=java.lang.ref.WeakReference@496e9ea3, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@603d01a2, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@6041b670, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@5fb7b1f2, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@6291b721, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@6aa99ac0, class org.uddi.api_v3.DispositionReport=java.lang.ref.WeakReference@7b653d3, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@65ec5af6, class org.uddi.api_v3.BusinessDetail=java.lang.ref.WeakReference@a2bd1d5, class org.uddi.api_v3.ServiceInfo=java.lang.ref.WeakReference@2c7235ca, class org.uddi.api_v3.ServiceInfos=java.lang.ref.WeakReference@196fd35c, class org.uddi.api_v3.BusinessInfo=java.lang.ref.WeakReference@1ed3016d, class org.uddi.api_v3.ServiceDetail=java.lang.ref.WeakReference@4a22ce1b, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@77436ef0, class org.uddi.api_v3.TModel=java.lang.ref.WeakReference@10d1a677, class org.uddi.api_v3.ServiceList=java.lang.ref.WeakReference@160f1569, class java.util.ArrayList=java.lang.ref.WeakReference@4a8153a5, class org.uddi.api_v3.ListDescription=java.lang.ref.WeakReference@26d990eb, class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@3ba67859, class org.uddi.api_v3.TModelInfo=java.lang.ref.WeakReference@556c8619, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@15b0eb6a, class org.uddi.api_v3.TModelList=java.lang.ref.WeakReference@7f846fff, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@77e8a4e6, class org.uddi.api_v3.ErrInfo=java.lang.ref.WeakReference@4685a84c, class org.uddi.api_v3.OverviewDoc=java.lang.ref.WeakReference@547ce04d, class org.uddi.api_v3.BusinessInfos=java.lang.ref.WeakReference@85b96aa}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+mai 13, 2016 4:31:20 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddi-gui] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@26260af]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@3a26ccd3, class org.uddi.api_v3.OperationalInfo=java.lang.ref.WeakReference@510ad413, class org.uddi.api_v3.OperationalInfos=java.lang.ref.WeakReference@624728f7, class org.uddi.api_v3.BusinessServices=java.lang.ref.WeakReference@367d0cd3, class org.uddi.api_v3.TModelInfos=java.lang.ref.WeakReference@3ab10e9b, class org.uddi.api_v3.BusinessEntity=java.lang.ref.WeakReference@3d1cef92, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@66477856, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@3802fbd9, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@a75ef94, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@50cfe137, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@d17a6b0, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@22e448f8, class org.uddi.api_v3.BusinessDetail=java.lang.ref.WeakReference@7c80a7f, class org.uddi.api_v3.ServiceInfo=java.lang.ref.WeakReference@282195e8, class org.uddi.api_v3.ServiceInfos=java.lang.ref.WeakReference@18b3947a, class org.uddi.api_v3.ServiceDetail=java.lang.ref.WeakReference@1810ac1c, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@5fccd693, class org.uddi.api_v3.ServiceList=java.lang.ref.WeakReference@7b669657, class java.util.ArrayList=java.lang.ref.WeakReference@7f72dd05, class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@621ffebb, class org.uddi.api_v3.ListDescription=java.lang.ref.WeakReference@5bded425, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@14c52527, class org.uddi.api_v3.TModelInfo=java.lang.ref.WeakReference@7d36584f, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@60c18b74, class org.uddi.api_v3.TModelList=java.lang.ref.WeakReference@4d1314b5}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+mai 13, 2016 4:31:20 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddi-gui] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@26260af]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.OperationalInfo=java.lang.ref.WeakReference@7042ec2d, class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@3ff9264a, class org.uddi.api_v3.OperationalInfos=java.lang.ref.WeakReference@538f80ea, class org.uddi.api_v3.ServiceDetail=java.lang.ref.WeakReference@6ec8092, class org.uddi.api_v3.ServiceList=java.lang.ref.WeakReference@612837e6, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@179586ff, class java.util.ArrayList=java.lang.ref.WeakReference@3832dc37, class org.uddi.api_v3.ListDescription=java.lang.ref.WeakReference@5a3823b3, class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@7a8fa815, class org.uddi.api_v3.TModelInfo=java.lang.ref.WeakReference@41966bc5, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@6febd4a4, class org.uddi.api_v3.TModelInfos=java.lang.ref.WeakReference@74d55751, class org.uddi.api_v3.TModelList=java.lang.ref.WeakReference@739d86de, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@1a7032b, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@3058a94f, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@6e691fca, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@715dcfaf, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@485a34f4, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@3dbdfe61, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@1b0c3153, class org.uddi.api_v3.ServiceInfo=java.lang.ref.WeakReference@433b52a, class org.uddi.api_v3.ServiceInfos=java.lang.ref.WeakReference@1d57cccc}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+mai 13, 2016 4:31:20 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddi-gui] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@26260af]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@4f4b77f1, class org.uddi.api_v3.BusinessList=java.lang.ref.WeakReference@353751e2, class org.uddi.api_v3.OverviewURL=java.lang.ref.WeakReference@2cb4388b, class org.uddi.api_v3.TModelDetail=java.lang.ref.WeakReference@f26b07d, class org.uddi.api_v3.Result=java.lang.ref.WeakReference@1bc6ba97, class org.uddi.api_v3.BusinessServices=java.lang.ref.WeakReference@1471404c, class org.uddi.api_v3.BusinessEntity=java.lang.ref.WeakReference@190c5229, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@2393ac2d, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@dafb8ca, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@1342ea13, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@68a47f48, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@56e854b5, class org.uddi.api_v3.DispositionReport=java.lang.ref.WeakReference@26f1df4a, class org.uddi.api_v3.BusinessDetail=java.lang.ref.WeakReference@2267bbf5, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@69f2cece, class org.uddi.api_v3.ServiceInfos=java.lang.ref.WeakReference@7dab72b9, class org.uddi.api_v3.ServiceInfo=java.lang.ref.WeakReference@5508f9c9, class org.uddi.api_v3.BusinessInfo=java.lang.ref.WeakReference@4a2f488e, class org.uddi.api_v3.ServiceDetail=java.lang.ref.WeakReference@35547bbb, class org.uddi.api_v3.ServiceList=java.lang.ref.WeakReference@134ce912, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@1188c03, class org.uddi.api_v3.TModel=java.lang.ref.WeakReference@3143df96, class java.util.ArrayList=java.lang.ref.WeakReference@27dcf3a6, class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@532c8a36, class org.uddi.api_v3.ListDescription=java.lang.ref.WeakReference@16917cc4, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@3901aeef, class org.uddi.api_v3.ErrInfo=java.lang.ref.WeakReference@79802baa, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@4e4a7396, class org.uddi.api_v3.OverviewDoc=java.lang.ref.WeakReference@53a051c7, class org.uddi.api_v3.BusinessInfos=java.lang.ref.WeakReference@67e2eb8a}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+mai 13, 2016 4:31:20 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddi-gui] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@26260af]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@1fc751a7, class org.uddi.api_v3.OperationalInfo=java.lang.ref.WeakReference@20c470a, class org.uddi.api_v3.OperationalInfos=java.lang.ref.WeakReference@53f300e5, class org.uddi.api_v3.AuthToken=java.lang.ref.WeakReference@23bd1faa, class org.uddi.api_v3.Result=java.lang.ref.WeakReference@6d23813, class org.uddi.api_v3.TModelInfos=java.lang.ref.WeakReference@66861bd4, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@2d39cbc9, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@66b2c18b, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@71376fee, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@273982a7, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@44bd620a, class org.uddi.api_v3.DispositionReport=java.lang.ref.WeakReference@34735d8f, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@7ef11cf0, class org.uddi.api_v3.ServiceInfo=java.lang.ref.WeakReference@15368533, class org.uddi.api_v3.ServiceInfos=java.lang.ref.WeakReference@3ab408ad, class org.uddi.api_v3.ServiceDetail=java.lang.ref.WeakReference@1405a551, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@62e53dbd, class org.uddi.api_v3.ServiceList=java.lang.ref.WeakReference@43db33cf, class java.util.ArrayList=java.lang.ref.WeakReference@5930aa79, class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@60a6a323, class org.uddi.api_v3.ListDescription=java.lang.ref.WeakReference@2be5625f, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@313a79a7, class org.uddi.api_v3.TModelInfo=java.lang.ref.WeakReference@6d857e9b, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@38ef67b3, class org.uddi.api_v3.TModelList=java.lang.ref.WeakReference@38980d6b, class org.uddi.api_v3.ErrInfo=java.lang.ref.WeakReference@5a8dac9e}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+mai 13, 2016 4:31:20 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddi-gui] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@26260af]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@1c3a70f2, class org.uddi.api_v3.OperationalInfo=java.lang.ref.WeakReference@5fab4e39, class org.uddi.api_v3.OverviewURL=java.lang.ref.WeakReference@2720f3f2, class org.uddi.api_v3.OperationalInfos=java.lang.ref.WeakReference@10fe52d4, class org.uddi.api_v3.TModelDetail=java.lang.ref.WeakReference@5f0c1dd9, class org.uddi.api_v3.Result=java.lang.ref.WeakReference@5a535a87, class org.uddi.api_v3.BusinessServices=java.lang.ref.WeakReference@7a4c8d5c, class org.uddi.api_v3.BusinessEntity=java.lang.ref.WeakReference@18460833, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@271b2c37, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@675ccd31, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@79e49aeb, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@514b0274, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@2fcff6fe, class org.uddi.api_v3.DispositionReport=java.lang.ref.WeakReference@2efb8373, class org.uddi.api_v3.BusinessDetail=java.lang.ref.WeakReference@73957785, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@7a448321, class org.uddi.api_v3.ServiceInfo=java.lang.ref.WeakReference@2a6ce291, class org.uddi.api_v3.ServiceInfos=java.lang.ref.WeakReference@587e0cb4, class org.uddi.api_v3.ServiceDetail=java.lang.ref.WeakReference@8f7161, class org.uddi.api_v3.ServiceList=java.lang.ref.WeakReference@5e0cb7da, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@13b9aee0, class org.uddi.api_v3.TModel=java.lang.ref.WeakReference@3b0a0b8f, class java.util.ArrayList=java.lang.ref.WeakReference@40f571f6, class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@7b7cbc55, class org.uddi.api_v3.ListDescription=java.lang.ref.WeakReference@25ecc374, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@4ed1f235, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@25c050d8, class org.uddi.api_v3.ErrInfo=java.lang.ref.WeakReference@3b40ce21, class org.uddi.api_v3.OverviewDoc=java.lang.ref.WeakReference@78744d5e}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+mai 13, 2016 4:31:20 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddi-gui] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@26260af]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@3975583f, class org.uddi.api_v3.BusinessList=java.lang.ref.WeakReference@1e948959, class org.uddi.api_v3.ServiceDetail=java.lang.ref.WeakReference@23186d6c, class org.uddi.api_v3.ServiceList=java.lang.ref.WeakReference@79dccaec, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@6afbc148, class java.util.ArrayList=java.lang.ref.WeakReference@501f530f, class org.uddi.api_v3.ListDescription=java.lang.ref.WeakReference@308c276d, class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@2f18103a, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@1b5d7510, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@3170da5f, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@60163453, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@fe061ab, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@7fe560b2, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@4870ff33, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@1915fec2, class org.uddi.api_v3.BusinessInfos=java.lang.ref.WeakReference@15f42972, class javax.xml.bind.annotation.W3CDomHandler=java.lang.ref.WeakReference@41c03b8e, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@e06cde2, class org.uddi.api_v3.ServiceInfos=java.lang.ref.WeakReference@3853d10e, class org.uddi.api_v3.ServiceInfo=java.lang.ref.WeakReference@c58d0cf, class org.uddi.api_v3.BusinessInfo=java.lang.ref.WeakReference@4c849681}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+mai 13, 2016 4:31:20 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddi-gui] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@74552b2e]) and a value of type [org.apache.cxf.BusFactory.BusHolder] (value [org.apache.cxf.BusFactory$BusHolder@52284f0b]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+mai 13, 2016 4:31:20 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddi-gui] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@26260af]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.OperationalInfo=java.lang.ref.WeakReference@18bc3329, class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@70e49e21, class org.uddi.api_v3.OperationalInfos=java.lang.ref.WeakReference@2db5c748, class org.uddi.api_v3.ServiceDetail=java.lang.ref.WeakReference@3df585e2, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@4429dc0e, class org.uddi.api_v3.ServiceList=java.lang.ref.WeakReference@1068473c, class java.util.ArrayList=java.lang.ref.WeakReference@13645dfe, class org.uddi.api_v3.ListDescription=java.lang.ref.WeakReference@22f10e5, class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@86c6502, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@5aef9294, class org.uddi.api_v3.TModelInfo=java.lang.ref.WeakReference@6b55af9a, class org.uddi.api_v3.TModelInfos=java.lang.ref.WeakReference@1107222d, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@7a28117a, class org.uddi.api_v3.TModelList=java.lang.ref.WeakReference@5cf55799, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@1a9a1ae2, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@32a455d6, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@83d2139, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@7e02e638, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@3405be10, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@249f47a3, class org.uddi.api_v3.ServiceInfos=java.lang.ref.WeakReference@45ca9ee0, class org.uddi.api_v3.ServiceInfo=java.lang.ref.WeakReference@2c108347}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+mai 13, 2016 4:31:20 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddi-gui] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@26260af]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@357c5deb, class org.uddi.api_v3.OverviewURL=java.lang.ref.WeakReference@6b00a6b8, class org.uddi.api_v3.TModelDetail=java.lang.ref.WeakReference@7a2c18a6, class org.uddi.api_v3.AuthToken=java.lang.ref.WeakReference@520eb61f, class org.uddi.api_v3.Result=java.lang.ref.WeakReference@54a3ab0, class org.uddi.api_v3.BusinessServices=java.lang.ref.WeakReference@6b9169c7, class org.uddi.api_v3.BusinessEntity=java.lang.ref.WeakReference@71e2b53b, class org.uddi.api_v3.RelatedBusinessesList=java.lang.ref.WeakReference@56fb4b56, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@2307483, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@628fea53, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@6a0d054, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@a0d9a2d, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@b987383, class org.uddi.api_v3.DispositionReport=java.lang.ref.WeakReference@16d8cdd1, class org.uddi.api_v3.BusinessDetail=java.lang.ref.WeakReference@167a9d2e, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@7040a13e, class org.uddi.api_v3.ServiceInfo=java.lang.ref.WeakReference@380cc0de, class org.uddi.api_v3.ServiceInfos=java.lang.ref.WeakReference@686a344b, class org.uddi.api_v3.ServiceDetail=java.lang.ref.WeakReference@2abb5785, class org.uddi.api_v3.ServiceList=java.lang.ref.WeakReference@5f875abd, class org.uddi.api_v3.TModel=java.lang.ref.WeakReference@1d37ba3, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@38a2cfbe, class java.util.ArrayList=java.lang.ref.WeakReference@48d5b050, class org.uddi.api_v3.ListDescription=java.lang.ref.WeakReference@2d625945, class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@37762129, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@1987d746, class org.uddi.api_v3.ErrInfo=java.lang.ref.WeakReference@7c35a316, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@432275a4, class org.uddi.api_v3.OverviewDoc=java.lang.ref.WeakReference@455b7b80}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+mai 13, 2016 4:31:20 PM org.apache.juddi.adminconsole.StartupServlet contextDestroyed
+INFORMAÇÕES: Cleaning up juddi-admin
+mai 13, 2016 4:31:20 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+GRAVE: The web application [/juddiv3replication] appears to have started a thread named [Timer-3] but has failed to stop it. This is very likely to create a memory leak.
+mai 13, 2016 4:31:20 PM org.apache.juddi.adminconsole.StartupServlet contextDestroyed
+INFORMAÇÕES: Cleaning up juddi-admin
+mai 13, 2016 4:31:20 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddiv3] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@1a802296]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@3b5d711d, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@76845a28, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@4565e254, class org.uddi.api_v3.FindQualifiers=java.lang.ref.WeakReference@5eeaecfc, class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@e6faba5, class org.uddi.api_v3.BusinessServices=java.lang.ref.WeakReference@5aeee55a, class org.uddi.api_v3.FindService=java.lang.ref.WeakReference@30f3cb11, class org.uddi.api_v3.SaveTModel=java.lang.ref.WeakReference@39775cff, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@4a36faf7, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@675f12de, class org.uddi.api_v3.GetTModelDetail=java.lang.ref.WeakReference@49daf667, class org.uddi.api_v3.OverviewURL=java.lang.ref.WeakReference@4a49cb07, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@37d561fb, class org.uddi.api_v3.GetAuthToken=java.lang.ref.WeakReference@28834c3d, class org.uddi.api_v3.OverviewDoc=java.lang.ref.WeakReference@3674fe84, class java.util.ArrayList=java.lang.ref.WeakReference@32611abe, class org.uddi.api_v3.SaveBusiness=java.lang.ref.WeakReference@2e277fb0, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@1c772ced, class org.uddi.api_v3.GetBusinessDetail=java.lang.ref.WeakReference@d667139, class org.uddi.api_v3.BusinessEntity=java.lang.ref.WeakReference@37e83ec1, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@22a70d73, class org.uddi.api_v3.TModel=java.lang.ref.WeakReference@7125d8e, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@39431bec, class org.uddi.api_v3.FindBusiness=java.lang.ref.WeakReference@4fab3433, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@557d7420}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+mai 13, 2016 4:31:20 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddiv3] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@1a802296]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.GetServiceDetail=java.lang.ref.WeakReference@4096bd2c, class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@612b42a9, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@77b7f813, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@49555eb1, class java.util.ArrayList=java.lang.ref.WeakReference@3c5ff56a, class org.uddi.api_v3.FindQualifiers=java.lang.ref.WeakReference@7dac642, class org.uddi.api_v3.SaveBusiness=java.lang.ref.WeakReference@4f65c1ca, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@2c26be41, class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@6f11fa0a, class org.uddi.api_v3.BusinessServices=java.lang.ref.WeakReference@3ea8c97c, class org.uddi.api_v3.FindTModel=java.lang.ref.WeakReference@5fa234f2, class org.uddi.api_v3.FindService=java.lang.ref.WeakReference@46ef5df1, class org.uddi.api_v3.GetBusinessDetail=java.lang.ref.WeakReference@26ce2e8c, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@5e55e000, class org.uddi.api_v3.BusinessEntity=java.lang.ref.WeakReference@101e4a9c, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@2ca29dbb, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@7b4f7ced, class org.uddi.api_v3.GetOperationalInfo=java.lang.ref.WeakReference@aebd664, class org.uddi.api_v3.GetTModelDetail=java.lang.ref.WeakReference@6843370f, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@50b420f9, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@509c9616, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@4902297}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+mai 13, 2016 4:31:20 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddiv3] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@1a802296]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.FindRelatedBusinesses=java.lang.ref.WeakReference@759a8645, class org.uddi.api_v3.GetServiceDetail=java.lang.ref.WeakReference@4d8d3e7, class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@30c0c94c, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@3541c159, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@1448d11a, class org.uddi.api_v3.FindQualifiers=java.lang.ref.WeakReference@564d7f9f, class org.uddi.api_v3.SaveService=java.lang.ref.WeakReference@607156b3, class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@5b8108ed, class org.uddi.api_v3.BusinessServices=java.lang.ref.WeakReference@913c286, class org.uddi.api_v3.FindService=java.lang.ref.WeakReference@349ff5bc, class org.uddi.api_v3.SaveTModel=java.lang.ref.WeakReference@5e31f952, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@da45419, class org.uddi.api_v3.GetTModelDetail=java.lang.ref.WeakReference@1a34a0d9, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@51cd9436, class org.uddi.api_v3.OverviewURL=java.lang.ref.WeakReference@e70c34, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@2fcc84ad, class org.uddi.api_v3.OverviewDoc=java.lang.ref.WeakReference@10c1cbe5, class java.util.ArrayList=java.lang.ref.WeakReference@2d9091ef, class org.uddi.api_v3.SaveBusiness=java.lang.ref.WeakReference@15aeaec5, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@5e8ca931, class org.uddi.api_v3.GetBusinessDetail=java.lang.ref.WeakReference@408ccfe6, class org.uddi.api_v3.BusinessEntity=java.lang.ref.WeakReference@69ba31f1, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@9026285, class org.uddi.api_v3.TModel=java.lang.ref.WeakReference@327c87b5, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@14a99de3, class org.uddi.api_v3.FindBusiness=java.lang.ref.WeakReference@2c24033e, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@36285a75}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+mai 13, 2016 4:31:20 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddiv3] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@1a802296]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@603f322a, class org.uddi.api_v3.GetServiceDetail=java.lang.ref.WeakReference@38a1fd4b, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@34902492, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@401f3b87, class org.uddi.api_v3.FindQualifiers=java.lang.ref.WeakReference@5928efcc, class org.uddi.api_v3.SaveService=java.lang.ref.WeakReference@6ed40a07, class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@5b5517fb, class org.uddi.api_v3.BusinessServices=java.lang.ref.WeakReference@62afcc15, class org.uddi.api_v3.DeleteService=java.lang.ref.WeakReference@7ce70903, class org.uddi.api_v3.SaveTModel=java.lang.ref.WeakReference@322da0aa, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@41b493db, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@5de7209c, class org.uddi.api_v3.GetTModelDetail=java.lang.ref.WeakReference@198c9532, class org.uddi.api_v3.OverviewURL=java.lang.ref.WeakReference@467b5e59, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@23343706, class org.uddi.api_v3.GetAuthToken=java.lang.ref.WeakReference@47b3103c, class org.uddi.api_v3.OverviewDoc=java.lang.ref.WeakReference@3a6b38fd, class java.util.ArrayList=java.lang.ref.WeakReference@267e307f, class org.uddi.api_v3.SaveBusiness=java.lang.ref.WeakReference@2470bfb1, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@7b9d69f3, class org.uddi.api_v3.FindTModel=java.lang.ref.WeakReference@18d21aad, class org.uddi.api_v3.BusinessEntity=java.lang.ref.WeakReference@4ff83c00, class javax.xml.bind.annotation.W3CDomHandler=java.lang.ref.WeakReference@6e548f79, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@7e16a1b1, class org.uddi.api_v3.TModel=java.lang.ref.WeakReference@7619cbac, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@788ff153, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@326a967c}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+mai 13, 2016 4:31:20 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddiv3] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@1a802296]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@793ab2a9, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@41464289, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@4644369b, class java.util.ArrayList=java.lang.ref.WeakReference@207b8159, class org.uddi.api_v3.FindQualifiers=java.lang.ref.WeakReference@cf8d005, class org.uddi.api_v3.SaveBusiness=java.lang.ref.WeakReference@7f598919, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@184e8887, class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@64c3b39e, class org.uddi.api_v3.BusinessServices=java.lang.ref.WeakReference@2e712ffb, class org.uddi.api_v3.FindService=java.lang.ref.WeakReference@1d537a6d, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@7135c3f0, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@893d10b, class org.uddi.api_v3.BusinessEntity=java.lang.ref.WeakReference@2f3a3915, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@293cae8d, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@76c9d219, class org.uddi.api_v3.GetTModelDetail=java.lang.ref.WeakReference@60c44e42, class org.uddi.api_v3.FindBusiness=java.lang.ref.WeakReference@1ec821de, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@52ccbc4c, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@6aade516}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+mai 13, 2016 4:31:20 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddiv3] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@1a802296]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.GetServiceDetail=java.lang.ref.WeakReference@2859105f, class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@7740125b, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@40d9ee23, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@45d9267b, class java.util.ArrayList=java.lang.ref.WeakReference@25621d77, class org.uddi.api_v3.FindQualifiers=java.lang.ref.WeakReference@52c7014a, class org.uddi.api_v3.SaveService=java.lang.ref.WeakReference@5d6055c7, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@51064aee, class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@64ba7c1c, class org.uddi.api_v3.FindTModel=java.lang.ref.WeakReference@e1dfc90, class org.uddi.api_v3.FindService=java.lang.ref.WeakReference@518c4ef9, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@323e3f1c, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@553ffdb, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@64cb7a9d, class org.uddi.api_v3.GetOperationalInfo=java.lang.ref.WeakReference@57830b7b, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@14860848, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@eb18024, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@31911cfd}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+mai 13, 2016 4:31:20 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddiv3] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@1a802296]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.FindRelatedBusinesses=java.lang.ref.WeakReference@7e860167, class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@5a6682b7, class org.uddi.api_v3.OverviewDoc=java.lang.ref.WeakReference@58d4997f, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@619b106c, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@2f58a801, class java.util.ArrayList=java.lang.ref.WeakReference@4145e467, class org.uddi.api_v3.FindQualifiers=java.lang.ref.WeakReference@3da69251, class org.uddi.api_v3.SaveService=java.lang.ref.WeakReference@407edf9, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@6ef555d8, class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@fdf2bd, class org.uddi.api_v3.FindService=java.lang.ref.WeakReference@940cce9, class org.uddi.api_v3.SaveTModel=java.lang.ref.WeakReference@3213801d, class org.uddi.api_v3.GetBusinessDetail=java.lang.ref.WeakReference@760c4812, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@190b3474, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@16239438, class org.uddi.api_v3.TModel=java.lang.ref.WeakReference@389eed89, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@2cc66e50, class org.uddi.api_v3.GetTModelDetail=java.lang.ref.WeakReference@6c2e4728, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@66a68cc1, class org.uddi.api_v3.OverviewURL=java.lang.ref.WeakReference@291bc739, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@363088a4, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@28b99e4d}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+mai 13, 2016 4:31:20 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddiv3] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@1a802296]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.GetServiceDetail=java.lang.ref.WeakReference@7aabcf1f, class org.uddi.api_v3.OverviewDoc=java.lang.ref.WeakReference@dfeed7c, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@3f3931cf, class java.util.ArrayList=java.lang.ref.WeakReference@5b169b93, class org.uddi.api_v3.FindQualifiers=java.lang.ref.WeakReference@7fe164d9, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@58ee354, class org.uddi.api_v3.DeleteService=java.lang.ref.WeakReference@734f1d63, class org.uddi.api_v3.FindTModel=java.lang.ref.WeakReference@1ceada9a, class org.uddi.api_v3.FindService=java.lang.ref.WeakReference@68d9b272, class org.uddi.api_v3.SaveTModel=java.lang.ref.WeakReference@1a3f787e, class org.uddi.api_v3.GetBusinessDetail=java.lang.ref.WeakReference@1190ca5f, class org.uddi.api_v3.TModel=java.lang.ref.WeakReference@5be4ecfd, class org.uddi.api_v3.GetTModelDetail=java.lang.ref.WeakReference@7e8b9fd1, class org.uddi.api_v3.GetOperationalInfo=java.lang.ref.WeakReference@1f16f4f6, class org.uddi.api_v3.OverviewURL=java.lang.ref.WeakReference@8c31779, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@74bc8198}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+mai 13, 2016 4:31:20 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddiv3] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@1a802296]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@566bedc9, class org.uddi.api_v3.GetServiceDetail=java.lang.ref.WeakReference@7ef202b6, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@6e1abace, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@7e3a46d4, class org.uddi.api_v3.FindQualifiers=java.lang.ref.WeakReference@77b6f97f, class org.uddi.api_v3.SaveService=java.lang.ref.WeakReference@193fa28d, class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@2248a7ae, class org.uddi.api_v3.DeleteService=java.lang.ref.WeakReference@e6859d5, class org.uddi.api_v3.FindService=java.lang.ref.WeakReference@4ed53466, class org.uddi.api_v3.SaveTModel=java.lang.ref.WeakReference@2a1adcfb, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@4d886bc1, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@1e23554, class org.uddi.api_v3.GetOperationalInfo=java.lang.ref.WeakReference@6673570a, class org.uddi.api_v3.GetTModelDetail=java.lang.ref.WeakReference@1af2a23b, class org.uddi.api_v3.OverviewURL=java.lang.ref.WeakReference@142a14c7, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@4f2cb83, class org.uddi.api_v3.OverviewDoc=java.lang.ref.WeakReference@78c51710, class java.util.ArrayList=java.lang.ref.WeakReference@77a98149, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@33613f57, class org.uddi.api_v3.FindTModel=java.lang.ref.WeakReference@21dd546b, class org.uddi.api_v3.GetBusinessDetail=java.lang.ref.WeakReference@71f0aad7, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@4ae8de69, class org.uddi.api_v3.TModel=java.lang.ref.WeakReference@70c9cbe4, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@3bfca79a, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@4f2e0420}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+mai 13, 2016 4:31:20 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddiv3] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@1a802296]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@4339903a, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@7d11f552, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@238f4d1d, class java.util.ArrayList=java.lang.ref.WeakReference@1c3f4248, class org.uddi.api_v3.FindQualifiers=java.lang.ref.WeakReference@1388a9b5, class org.uddi.api_v3.SaveBusiness=java.lang.ref.WeakReference@61c165f3, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@387f2b73, class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@5e340336, class org.uddi.api_v3.BusinessServices=java.lang.ref.WeakReference@827cc44, class org.uddi.api_v3.FindService=java.lang.ref.WeakReference@62a3ce4e, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@234645da, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@5d95df37, class org.uddi.api_v3.BusinessEntity=java.lang.ref.WeakReference@6b666d2d, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@174b0fb1, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@632e017, class org.uddi.api_v3.FindBusiness=java.lang.ref.WeakReference@752dfb81, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@2d7aef0c, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@62834b95}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+mai 13, 2016 4:31:20 PM org.apache.coyote.AbstractProtocol stop
+INFORMAÇÕES: Stopping ProtocolHandler ["http-bio-8080"]
+mai 13, 2016 4:31:20 PM org.apache.coyote.AbstractProtocol stop
+INFORMAÇÕES: Stopping ProtocolHandler ["ajp-bio-8009"]
+mai 13, 2016 4:31:21 PM org.apache.coyote.AbstractProtocol destroy
+INFORMAÇÕES: Destroying ProtocolHandler ["http-bio-8080"]
+mai 13, 2016 4:31:21 PM org.apache.coyote.AbstractProtocol destroy
+INFORMAÇÕES: Destroying ProtocolHandler ["ajp-bio-8009"]
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server version:        Apache Tomcat/7.0.64
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server built:          Aug 19 2015 17:18:06 UTC
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server number:         7.0.64.0
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: OS Name:               Mac OS X
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: OS Version:            10.11.4
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Architecture:          x86_64
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: JVM Version:           1.8.0_65-b17
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: JVM Vendor:            Oracle Corporation
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: CATALINA_BASE:         /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: CATALINA_HOME:         /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.util.logging.config.file=/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/conf/logging.properties
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Xms4096M
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Xmx4096M
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -XX:PermSize=512M
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -XX:MaxPermSize=512M
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.endorsed.dirs=/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/endorsed
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Dcatalina.base=/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Dcatalina.home=/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.io.tmpdir=/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/temp
+mai 13, 2016 4:37:47 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMAÇÕES: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/macbook/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+mai 13, 2016 4:37:47 PM org.apache.coyote.AbstractProtocol init
+INFORMAÇÕES: Initializing ProtocolHandler ["http-bio-8080"]
+mai 13, 2016 4:37:47 PM org.apache.coyote.AbstractProtocol init
+INFORMAÇÕES: Initializing ProtocolHandler ["ajp-bio-8009"]
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.Catalina load
+INFORMAÇÕES: Initialization processed in 1117 ms
+mai 13, 2016 4:37:47 PM org.apache.catalina.core.StandardService startInternal
+INFORMAÇÕES: Starting service Catalina
+mai 13, 2016 4:37:47 PM org.apache.catalina.core.StandardEngine startInternal
+INFORMAÇÕES: Starting Servlet Engine: Apache Tomcat/7.0.64
+mai 13, 2016 4:37:47 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/docs
+mai 13, 2016 4:37:48 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+mai 13, 2016 4:37:48 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/docs has finished in 1,006 ms
+mai 13, 2016 4:37:48 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/examples
+mai 13, 2016 4:37:49 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+mai 13, 2016 4:37:49 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/examples has finished in 797 ms
+mai 13, 2016 4:37:49 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/host-manager
+mai 13, 2016 4:37:50 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+mai 13, 2016 4:37:50 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/host-manager has finished in 456 ms
+mai 13, 2016 4:37:50 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddi-gui
+mai 13, 2016 4:37:51 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+mai 13, 2016 4:37:51 PM org.apache.juddi.webconsole.StartupServlet contextInitialized
+INFORMAÇÕES: juddi-gui startup
+mai 13, 2016 4:37:51 PM org.apache.juddi.webconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Attempting to generate 256 bit AES key
+mai 13, 2016 4:37:52 PM org.apache.juddi.webconsole.StartupServlet contextInitialized
+ADVERTÊNCIA: 256 bit key validation failed. To use higher key sizes, try installing the Java Cryptographic Extensions (JCE) Unlimited Strength
+mai 13, 2016 4:37:52 PM org.apache.juddi.webconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Attempting to generate 128 bit AES key
+mai 13, 2016 4:37:52 PM org.apache.juddi.webconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Generation of 128 bit AES key successful
+mai 13, 2016 4:37:52 PM org.apache.juddi.webconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Storing key to /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddi-gui/META-INF/config.properties
+mai 13, 2016 4:37:52 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddi-gui has finished in 2,318 ms
+mai 13, 2016 4:37:52 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3
+mai 13, 2016 4:37:55 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+mai 13, 2016 4:38:03 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDIInquiryService from class org.uddi.v3_service.UDDIInquiryPortType
+mai 13, 2016 4:38:07 PM org.apache.cxf.bus.spring.OldSpringSupport logWarning
+ADVERTÊNCIA: Import of META-INF/cxf/cxf-extension-soap.xml has been deprecated and is unnecessary.
+mai 13, 2016 4:38:07 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /inquiry
+mai 13, 2016 4:38:07 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDIPublicationService from class org.uddi.v3_service.UDDIPublicationPortType
+mai 13, 2016 4:38:08 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /publish
+mai 13, 2016 4:38:08 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDISecurityService from class org.uddi.v3_service.UDDISecurityPortType
+mai 13, 2016 4:38:09 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /security
+mai 13, 2016 4:38:09 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDISubscriptionService from class org.uddi.v3_service.UDDISubscriptionPortType
+mai 13, 2016 4:38:09 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /subscription
+mai 13, 2016 4:38:09 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDISubscriptionListenerService from class org.uddi.v3_service.UDDISubscriptionListenerPortType
+mai 13, 2016 4:38:10 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /subscription-listener
+mai 13, 2016 4:38:10 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDICustodyTransferService from class org.uddi.v3_service.UDDICustodyTransferPortType
+mai 13, 2016 4:38:10 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /custody-transfer
+mai 13, 2016 4:38:10 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {http://impl.api.juddi.apache.org/}UDDIValueSetValidationImplService from class org.uddi.v3_service.UDDIValueSetValidationPortType
+mai 13, 2016 4:38:11 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /valueset-validation
+mai 13, 2016 4:38:11 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {http://impl.api.juddi.apache.org/}UDDIValueSetCachingImplService from class org.uddi.v3_service.UDDIValueSetCachingPortType
+mai 13, 2016 4:38:11 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /valueset-caching
+mai 13, 2016 4:38:11 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:inquiry_v2}Inquire from class org.uddi.v2_service.Inquire
+mai 13, 2016 4:38:12 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /inquiryv2
+mai 13, 2016 4:38:12 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:publication_v2}Publish from class org.uddi.v2_service.Publish
+mai 13, 2016 4:38:12 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /publishv2
+mai 13, 2016 4:38:13 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:juddi-apache-org:v3_service}JUDDIApiService from WSDL: classpath:/juddi_api_v1.wsdl
+mai 13, 2016 4:38:13 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /juddi-api
+mai 13, 2016 4:38:14 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /inquiryRest
+mai 13, 2016 4:38:14 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: juddi-admin gui startup
+mai 13, 2016 4:38:14 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Attempting to generate 256 bit AES key
+mai 13, 2016 4:38:14 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+ADVERTÊNCIA: 256 bit key validation failed. To use higher key sizes, try installing the Java Cryptographic Extensions (JCE) Unlimited Strength
+mai 13, 2016 4:38:14 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Attempting to generate 128 bit AES key
+mai 13, 2016 4:38:14 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Generation of 128 bit AES key successful
+mai 13, 2016 4:38:14 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Storing key to /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/config.properties
+mai 13, 2016 4:38:14 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3 has finished in 22,371 ms
+mai 13, 2016 4:38:14 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3replication
+mai 13, 2016 4:38:19 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+mai 13, 2016 4:38:26 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:repl_v3_portType}UDDI_Replication_PortType from class org.uddi.v3_service.UDDIReplicationPortType
+mai 13, 2016 4:38:27 PM org.apache.cxf.bus.spring.OldSpringSupport logWarning
+ADVERTÊNCIA: Import of META-INF/cxf/cxf-extension-soap.xml has been deprecated and is unnecessary.
+mai 13, 2016 4:38:28 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /replication
+mai 13, 2016 4:38:28 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: juddi-admin gui startup
+mai 13, 2016 4:38:28 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Attempting to generate 256 bit AES key
+mai 13, 2016 4:38:28 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+ADVERTÊNCIA: 256 bit key validation failed. To use higher key sizes, try installing the Java Cryptographic Extensions (JCE) Unlimited Strength
+mai 13, 2016 4:38:28 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Attempting to generate 128 bit AES key
+mai 13, 2016 4:38:28 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Generation of 128 bit AES key successful
+mai 13, 2016 4:38:28 PM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Storing key to /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3replication/WEB-INF/config.properties
+mai 13, 2016 4:38:28 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3replication has finished in 13,582 ms
+mai 13, 2016 4:38:28 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/manager
+mai 13, 2016 4:38:28 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+mai 13, 2016 4:38:28 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/manager has finished in 293 ms
+mai 13, 2016 4:38:28 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/ROOT
+mai 13, 2016 4:38:29 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+mai 13, 2016 4:38:29 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/ROOT has finished in 470 ms
+mai 13, 2016 4:38:29 PM org.apache.coyote.AbstractProtocol start
+INFORMAÇÕES: Starting ProtocolHandler ["http-bio-8080"]
+mai 13, 2016 4:38:29 PM org.apache.coyote.AbstractProtocol start
+INFORMAÇÕES: Starting ProtocolHandler ["ajp-bio-8009"]
+mai 13, 2016 4:38:29 PM org.apache.catalina.startup.Catalina start
+INFORMAÇÕES: Server startup in 41385 ms
+mai 13, 2016 4:40:26 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 13, 2016 4:40:28 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 13, 2016 4:40:28 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 13, 2016 4:40:28 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 13, 2016 4:40:28 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 13, 2016 4:40:56 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIPublicationService#{urn:uddi-org:v3_service}save_tModel has thrown exception, unwinding now: org.apache.juddi.v3.error.AuthTokenRequiredException: Authentication is required for this API call
+mai 13, 2016 4:40:56 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIPublicationService#{urn:uddi-org:v3_service}save_tModel has thrown exception, unwinding now: org.apache.juddi.v3.error.AuthTokenRequiredException: Authentication is required for this API call
+mai 13, 2016 4:40:56 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.mycompany.org
+mai 13, 2016 4:40:57 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIPublicationService#{urn:uddi-org:v3_service}save_business has thrown exception, unwinding now: org.apache.juddi.v3.error.AuthTokenRequiredException: Authentication is required for this API call
+mai 13, 2016 4:41:22 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIPublicationService#{urn:uddi-org:v3_service}save_service has thrown exception, unwinding now: org.apache.juddi.v3.error.AuthTokenRequiredException: Authentication is required for this API call
+mai 13, 2016 4:41:36 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIPublicationService#{urn:uddi-org:v3_service}save_service has thrown exception, unwinding now: org.apache.juddi.v3.error.AuthTokenRequiredException: Authentication is required for this API call
+mai 13, 2016 4:44:17 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIPublicationService#{urn:uddi-org:v3_service}save_service has thrown exception, unwinding now: org.apache.juddi.v3.error.AuthTokenRequiredException: Authentication is required for this API call
+mai 13, 2016 4:44:56 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:44:56 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.mycompany.org
+mai 13, 2016 4:44:56 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:44:58 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:44:59 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.mycompany.org
+mai 13, 2016 4:44:59 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:45:00 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:45:00 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.mycompany.org
+mai 13, 2016 4:45:00 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:45:00 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:45:00 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.mycompany.org
+mai 13, 2016 4:45:00 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:45:21 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:45:49 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:46:14 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:46:14 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  uddi.mycompany.org
+mai 13, 2016 4:46:14 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:47:04 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 13, 2016 4:47:04 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 13, 2016 4:47:04 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 13, 2016 4:47:04 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 13, 2016 4:47:04 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 13, 2016 4:49:10 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:49:10 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  mycompany
+mai 13, 2016 4:49:10 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:49:29 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:50:50 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:50:51 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+INFORMAÇÕES: Application {urn:uddi-org:v3_service}UDDIInquiryService#{urn:uddi-org:v3_service}get_businessDetail has thrown exception, unwinding now: org.apache.juddi.v3.error.InvalidKeyPassedException: The business entity was not found for the given key:  mycompany
+mai 13, 2016 4:50:51 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+mai 13, 2016 4:52:07 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 13, 2016 4:52:07 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 13, 2016 4:52:07 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 13, 2016 4:52:07 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+mai 13, 2016 4:52:07 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/Applications/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl

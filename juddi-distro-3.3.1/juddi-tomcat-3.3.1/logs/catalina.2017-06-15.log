@@ -1,0 +1,280 @@
+jun 15, 2017 11:05:47 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server version:        Apache Tomcat/7.0.64
+jun 15, 2017 11:05:47 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server built:          Aug 19 2015 17:18:06 UTC
+jun 15, 2017 11:05:47 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server number:         7.0.64.0
+jun 15, 2017 11:05:47 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: OS Name:               Linux
+jun 15, 2017 11:05:47 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: OS Version:            4.8.0-54-generic
+jun 15, 2017 11:05:47 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Architecture:          amd64
+jun 15, 2017 11:05:47 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Java Home:             /usr/lib/jvm/java-8-oracle/jre
+jun 15, 2017 11:05:47 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: JVM Version:           1.8.0_131-b11
+jun 15, 2017 11:05:47 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: JVM Vendor:            Oracle Corporation
+jun 15, 2017 11:05:47 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: CATALINA_BASE:         /home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1
+jun 15, 2017 11:05:47 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: CATALINA_HOME:         /home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1
+jun 15, 2017 11:05:47 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.util.logging.config.file=/home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/conf/logging.properties
+jun 15, 2017 11:05:47 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+jun 15, 2017 11:05:47 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Xms4096M
+jun 15, 2017 11:05:47 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Xmx4096M
+jun 15, 2017 11:05:47 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -XX:PermSize=512M
+jun 15, 2017 11:05:47 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -XX:MaxPermSize=512M
+jun 15, 2017 11:05:47 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.endorsed.dirs=/home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/endorsed
+jun 15, 2017 11:05:47 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Dcatalina.base=/home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1
+jun 15, 2017 11:05:47 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Dcatalina.home=/home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1
+jun 15, 2017 11:05:47 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.io.tmpdir=/home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/temp
+jun 15, 2017 11:05:47 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMAÇÕES: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+jun 15, 2017 11:05:48 AM org.apache.coyote.AbstractProtocol init
+INFORMAÇÕES: Initializing ProtocolHandler ["http-bio-8080"]
+jun 15, 2017 11:05:48 AM org.apache.coyote.AbstractProtocol init
+INFORMAÇÕES: Initializing ProtocolHandler ["ajp-bio-8009"]
+jun 15, 2017 11:05:48 AM org.apache.catalina.startup.Catalina load
+INFORMAÇÕES: Initialization processed in 1043 ms
+jun 15, 2017 11:05:48 AM org.apache.catalina.core.StandardService startInternal
+INFORMAÇÕES: Starting service Catalina
+jun 15, 2017 11:05:48 AM org.apache.catalina.core.StandardEngine startInternal
+INFORMAÇÕES: Starting Servlet Engine: Apache Tomcat/7.0.64
+jun 15, 2017 11:05:48 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddi-gui
+jun 15, 2017 11:05:51 AM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+jun 15, 2017 11:05:51 AM org.apache.juddi.webconsole.StartupServlet contextInitialized
+INFORMAÇÕES: juddi-gui startup
+jun 15, 2017 11:05:51 AM org.apache.juddi.webconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Attempting to generate 256 bit AES key
+jun 15, 2017 11:05:51 AM org.apache.juddi.webconsole.StartupServlet contextInitialized
+ADVERTÊNCIA: 256 bit key validation failed. To use higher key sizes, try installing the Java Cryptographic Extensions (JCE) Unlimited Strength
+jun 15, 2017 11:05:51 AM org.apache.juddi.webconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Attempting to generate 128 bit AES key
+jun 15, 2017 11:05:51 AM org.apache.juddi.webconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Generation of 128 bit AES key successful
+jun 15, 2017 11:05:51 AM org.apache.juddi.webconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Storing key to /home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddi-gui/META-INF/config.properties
+jun 15, 2017 11:05:51 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddi-gui has finished in 3,406 ms
+jun 15, 2017 11:05:51 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/manager
+jun 15, 2017 11:05:52 AM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+jun 15, 2017 11:05:52 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/manager has finished in 327 ms
+jun 15, 2017 11:05:52 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3replication
+jun 15, 2017 11:05:56 AM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+jun 15, 2017 11:06:03 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:repl_v3_portType}UDDI_Replication_PortType from class org.uddi.v3_service.UDDIReplicationPortType
+jun 15, 2017 11:06:04 AM org.apache.cxf.bus.spring.OldSpringSupport logWarning
+ADVERTÊNCIA: Import of META-INF/cxf/cxf-extension-soap.xml has been deprecated and is unnecessary.
+jun 15, 2017 11:06:05 AM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /replication
+jun 15, 2017 11:06:05 AM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: juddi-admin gui startup
+jun 15, 2017 11:06:05 AM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Attempting to generate 256 bit AES key
+jun 15, 2017 11:06:05 AM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+ADVERTÊNCIA: 256 bit key validation failed. To use higher key sizes, try installing the Java Cryptographic Extensions (JCE) Unlimited Strength
+jun 15, 2017 11:06:05 AM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Attempting to generate 128 bit AES key
+jun 15, 2017 11:06:05 AM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Generation of 128 bit AES key successful
+jun 15, 2017 11:06:05 AM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Storing key to /home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3replication/WEB-INF/config.properties
+jun 15, 2017 11:06:05 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3replication has finished in 13,508 ms
+jun 15, 2017 11:06:05 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/ROOT
+jun 15, 2017 11:06:06 AM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+jun 15, 2017 11:06:06 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/ROOT has finished in 539 ms
+jun 15, 2017 11:06:06 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/docs
+jun 15, 2017 11:06:06 AM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+jun 15, 2017 11:06:06 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/docs has finished in 387 ms
+jun 15, 2017 11:06:06 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/host-manager
+jun 15, 2017 11:06:07 AM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+jun 15, 2017 11:06:07 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/host-manager has finished in 655 ms
+jun 15, 2017 11:06:07 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3
+jun 15, 2017 11:06:22 AM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+jun 15, 2017 11:06:25 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDIInquiryService from class org.uddi.v3_service.UDDIInquiryPortType
+jun 15, 2017 11:06:27 AM org.apache.cxf.bus.spring.OldSpringSupport logWarning
+ADVERTÊNCIA: Import of META-INF/cxf/cxf-extension-soap.xml has been deprecated and is unnecessary.
+jun 15, 2017 11:06:27 AM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /inquiry
+jun 15, 2017 11:06:27 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDIPublicationService from class org.uddi.v3_service.UDDIPublicationPortType
+jun 15, 2017 11:06:27 AM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /publish
+jun 15, 2017 11:06:27 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDISecurityService from class org.uddi.v3_service.UDDISecurityPortType
+jun 15, 2017 11:06:27 AM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /security
+jun 15, 2017 11:06:27 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDISubscriptionService from class org.uddi.v3_service.UDDISubscriptionPortType
+jun 15, 2017 11:06:28 AM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /subscription
+jun 15, 2017 11:06:28 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDISubscriptionListenerService from class org.uddi.v3_service.UDDISubscriptionListenerPortType
+jun 15, 2017 11:06:28 AM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /subscription-listener
+jun 15, 2017 11:06:28 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDICustodyTransferService from class org.uddi.v3_service.UDDICustodyTransferPortType
+jun 15, 2017 11:06:28 AM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /custody-transfer
+jun 15, 2017 11:06:28 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {http://impl.api.juddi.apache.org/}UDDIValueSetValidationImplService from class org.uddi.v3_service.UDDIValueSetValidationPortType
+jun 15, 2017 11:06:28 AM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /valueset-validation
+jun 15, 2017 11:06:28 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {http://impl.api.juddi.apache.org/}UDDIValueSetCachingImplService from class org.uddi.v3_service.UDDIValueSetCachingPortType
+jun 15, 2017 11:06:29 AM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /valueset-caching
+jun 15, 2017 11:06:29 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:inquiry_v2}Inquire from class org.uddi.v2_service.Inquire
+jun 15, 2017 11:06:29 AM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /inquiryv2
+jun 15, 2017 11:06:29 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFORMAÇÕES: Creating Service {urn:uddi-org:publication_v2}Publish from class org.uddi.v2_service.Publish
+jun 15, 2017 11:06:29 AM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /publishv2
+jun 15, 2017 11:06:29 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:juddi-apache-org:v3_service}JUDDIApiService from WSDL: classpath:/juddi_api_v1.wsdl
+jun 15, 2017 11:06:30 AM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /juddi-api
+jun 15, 2017 11:06:30 AM org.apache.cxf.endpoint.ServerImpl initDestination
+INFORMAÇÕES: Setting the server's publish address to be /inquiryRest
+jun 15, 2017 11:06:30 AM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: juddi-admin gui startup
+jun 15, 2017 11:06:30 AM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Attempting to generate 256 bit AES key
+jun 15, 2017 11:06:30 AM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+ADVERTÊNCIA: 256 bit key validation failed. To use higher key sizes, try installing the Java Cryptographic Extensions (JCE) Unlimited Strength
+jun 15, 2017 11:06:30 AM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Attempting to generate 128 bit AES key
+jun 15, 2017 11:06:30 AM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Generation of 128 bit AES key successful
+jun 15, 2017 11:06:30 AM org.apache.juddi.adminconsole.StartupServlet contextInitialized
+INFORMAÇÕES: Storing key to /home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/config.properties
+jun 15, 2017 11:06:30 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3 has finished in 23,515 ms
+jun 15, 2017 11:06:30 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory /home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/examples
+jun 15, 2017 11:06:31 AM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+jun 15, 2017 11:06:31 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory /home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/examples has finished in 1,204 ms
+jun 15, 2017 11:06:31 AM org.apache.coyote.AbstractProtocol start
+INFORMAÇÕES: Starting ProtocolHandler ["http-bio-8080"]
+jun 15, 2017 11:06:31 AM org.apache.coyote.AbstractProtocol start
+INFORMAÇÕES: Starting ProtocolHandler ["ajp-bio-8009"]
+jun 15, 2017 11:06:31 AM org.apache.catalina.startup.Catalina start
+INFORMAÇÕES: Server startup in 43733 ms
+jun 15, 2017 11:09:18 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+jun 15, 2017 11:09:19 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+jun 15, 2017 11:09:19 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+jun 15, 2017 11:09:19 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+jun 15, 2017 11:09:20 AM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+jun 15, 2017 4:20:57 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+jun 15, 2017 4:20:57 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+jun 15, 2017 4:20:57 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+jun 15, 2017 4:20:57 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+jun 15, 2017 4:20:57 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: file:/home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/work/Catalina/localhost/juddi-gui/loader/uddi_v3_service.wsdl
+jun 15, 2017 4:21:33 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+jun 15, 2017 4:21:44 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+jun 15, 2017 4:22:12 PM org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFORMAÇÕES: Creating Service {urn:uddi-org:v3_service}UDDI_Service from WSDL: jar:file:/home/wellisonraul/Activiti/juddi-distro-3.3.1/juddi-distro-3.3.1/juddi-tomcat-3.3.1/webapps/juddiv3/WEB-INF/lib/uddi-ws-3.3.1.jar!/uddi_v3_service.wsdl
+jun 15, 2017 5:22:16 PM org.apache.catalina.core.StandardServer await
+INFORMAÇÕES: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+jun 15, 2017 5:22:16 PM org.apache.coyote.AbstractProtocol pause
+INFORMAÇÕES: Pausing ProtocolHandler ["http-bio-8080"]
+jun 15, 2017 5:22:16 PM org.apache.coyote.AbstractProtocol pause
+INFORMAÇÕES: Pausing ProtocolHandler ["ajp-bio-8009"]
+jun 15, 2017 5:22:16 PM org.apache.catalina.core.StandardService stopInternal
+INFORMAÇÕES: Stopping service Catalina
+jun 15, 2017 5:22:17 PM org.apache.juddi.webconsole.StartupServlet contextDestroyed
+INFORMAÇÕES: Cleaning up juddi-gui
+jun 15, 2017 5:22:19 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddi-gui] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@f84e6d]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@93c01fb, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@40a951b3, class java.util.ArrayList=java.lang.ref.WeakReference@936c2bd, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@4b7f7ed0, class javax.xml.bind.annotation.W3CDomHandler=java.lang.ref.WeakReference@22a59d9d, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@280b64b3, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@17176825, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@272e1de9, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@29e935e4, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@5ab4e296, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@764effa5, class org.uddi.api_v3.ServiceDetail=java.lang.ref.WeakReference@215875d0, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@417e220a, class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@3c23d8e1}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+jun 15, 2017 5:22:19 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddi-gui] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@3d11ab17]) and a value of type [org.apache.cxf.BusFactory.BusHolder] (value [org.apache.cxf.BusFactory$BusHolder@5f05af90]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+jun 15, 2017 5:22:19 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddi-gui] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@f84e6d]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@6fdba808, class org.uddi.api_v3.ServiceInfos=java.lang.ref.WeakReference@4d9d91c2, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@7d64d275, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@fef8b66, class java.util.ArrayList=java.lang.ref.WeakReference@3dc6e97b, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@1cf47c80, class org.uddi.api_v3.ServiceList=java.lang.ref.WeakReference@4758f211, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@341ff527, class org.uddi.api_v3.TModelInfo=java.lang.ref.WeakReference@3e985fee, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@13724c1, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@17f968c, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@4a82fd49, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@3699acd8, class org.uddi.api_v3.TModelList=java.lang.ref.WeakReference@e3087e6, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@7386bb5a, class org.uddi.api_v3.ServiceDetail=java.lang.ref.WeakReference@2e3368d6, class org.uddi.api_v3.TModelInfos=java.lang.ref.WeakReference@55b7eea4, class org.uddi.api_v3.ServiceInfo=java.lang.ref.WeakReference@5f324c43, class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@19287094, class org.uddi.api_v3.ListDescription=java.lang.ref.WeakReference@2c68debf}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+jun 15, 2017 5:22:19 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddi-gui] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@f84e6d]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@46c0d758, class org.uddi.api_v3.OperationalInfos=java.lang.ref.WeakReference@b5ddb97, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@51abb6b8, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@3b5c1714, class java.util.ArrayList=java.lang.ref.WeakReference@7b666d30, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@1e8290a8, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@1210ebb6, class org.uddi.api_v3.TModelInfo=java.lang.ref.WeakReference@49afba57, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@16851bf, class org.uddi.api_v3.OperationalInfo=java.lang.ref.WeakReference@be596ea, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@1e3d817b, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@2a74ede9, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@6952b4b1, class org.uddi.api_v3.TModelList=java.lang.ref.WeakReference@4e272db7, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@3c634b51, class org.uddi.api_v3.ServiceDetail=java.lang.ref.WeakReference@3175f291, class org.uddi.api_v3.TModelInfos=java.lang.ref.WeakReference@4d7e3f32, class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@3a43f9bf, class org.uddi.api_v3.ListDescription=java.lang.ref.WeakReference@1c5c1465}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+jun 15, 2017 5:22:19 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddi-gui] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@f84e6d]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.AuthToken=java.lang.ref.WeakReference@2239c05, class org.uddi.api_v3.ServiceInfos=java.lang.ref.WeakReference@3e98b4dc, class java.util.ArrayList=java.lang.ref.WeakReference@1bb33cb1, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@6730ec9e, class org.uddi.api_v3.ServiceInfo=java.lang.ref.WeakReference@79ed87c9, class org.uddi.api_v3.ListDescription=java.lang.ref.WeakReference@228f27c, class org.uddi.api_v3.ServiceList=java.lang.ref.WeakReference@7c103c}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+jun 15, 2017 5:22:19 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddi-gui] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@f84e6d]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.OperationalInfos=java.lang.ref.WeakReference@604858b1, class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@750e48be, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@30f0ff71, class org.uddi.api_v3.ServiceInfos=java.lang.ref.WeakReference@50ede4a3, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@7242b3df, class java.util.ArrayList=java.lang.ref.WeakReference@758e4e91, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@42b22c26, class org.uddi.api_v3.ServiceList=java.lang.ref.WeakReference@7d45002f, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@1afe8813, class org.uddi.api_v3.TModelInfo=java.lang.ref.WeakReference@1d83a71b, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@4e036b91, class org.uddi.api_v3.OperationalInfo=java.lang.ref.WeakReference@1b925e06, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@7542e377, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@75f939bb, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@20f39b76, class org.uddi.api_v3.TModelList=java.lang.ref.WeakReference@29988300, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@4b23941f, class org.uddi.api_v3.ServiceDetail=java.lang.ref.WeakReference@772b4821, class org.uddi.api_v3.TModelInfos=java.lang.ref.WeakReference@4b3f4599, class org.uddi.api_v3.ServiceInfo=java.lang.ref.WeakReference@26d24f7d, class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@7106a4d4, class org.uddi.api_v3.ListDescription=java.lang.ref.WeakReference@5c418095}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+jun 15, 2017 5:22:20 PM org.apache.juddi.adminconsole.StartupServlet contextDestroyed
+INFORMAÇÕES: Cleaning up juddi-admin
+jun 15, 2017 5:22:23 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+GRAVE: The web application [/juddiv3replication] appears to have started a thread named [Timer-1] but has failed to stop it. This is very likely to create a memory leak.
+jun 15, 2017 5:22:23 PM org.apache.juddi.adminconsole.StartupServlet contextDestroyed
+INFORMAÇÕES: Cleaning up juddi-admin
+jun 15, 2017 5:22:25 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddiv3] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@572037b0]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.FindTModel=java.lang.ref.WeakReference@1f903804, class org.uddi.api_v3.GetAuthToken=java.lang.ref.WeakReference@581041c, class java.util.ArrayList=java.lang.ref.WeakReference@9433e9f, class org.uddi.api_v3.GetServiceDetail=java.lang.ref.WeakReference@5f0805b0, class org.uddi.api_v3.FindService=java.lang.ref.WeakReference@41c6464d, class org.uddi.api_v3.FindQualifiers=java.lang.ref.WeakReference@4c6a1b8d, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@5c4d7359}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+jun 15, 2017 5:22:25 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddiv3] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@572037b0]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.FindTModel=java.lang.ref.WeakReference@4377d8e5, class java.util.ArrayList=java.lang.ref.WeakReference@30700ae8, class org.uddi.api_v3.GetServiceDetail=java.lang.ref.WeakReference@2c5ad918, class org.uddi.api_v3.FindService=java.lang.ref.WeakReference@1bbab071, class org.uddi.api_v3.FindQualifiers=java.lang.ref.WeakReference@66f7f313, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@56e0826f}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+jun 15, 2017 5:22:25 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddiv3] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@572037b0]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.SaveService=java.lang.ref.WeakReference@2c8813b2, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@627f176a, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@3b490f5d, class java.util.ArrayList=java.lang.ref.WeakReference@696811a1, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@5118abd, class org.uddi.api_v3.FindService=java.lang.ref.WeakReference@1fcf0932, class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@6c0fde71, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@45c33f48, class org.uddi.api_v3.FindQualifiers=java.lang.ref.WeakReference@4c0e012f, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@2bef1705, class org.uddi.api_v3.FindTModel=java.lang.ref.WeakReference@3981b85f, class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@6564e958, class org.uddi.api_v3.GetServiceDetail=java.lang.ref.WeakReference@595f9ba2, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@a5bf8b3, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@3eacfae7, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@7cc0ea43, class org.uddi.api_v3.GetOperationalInfo=java.lang.ref.WeakReference@59e7fcf2, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@cac091d}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+jun 15, 2017 5:22:25 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddiv3] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@572037b0]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.GetServiceDetail=java.lang.ref.WeakReference@550ea1ad, class java.util.ArrayList=java.lang.ref.WeakReference@2e67cbbd, class org.uddi.api_v3.FindService=java.lang.ref.WeakReference@4801b2ef, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@2409ae13}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+jun 15, 2017 5:22:25 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddiv3] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@572037b0]) and a value of type [java.util.WeakHashMap] (value [{class java.util.ArrayList=java.lang.ref.WeakReference@42a60f6, class org.uddi.api_v3.GetServiceDetail=java.lang.ref.WeakReference@148079ed, class org.uddi.api_v3.FindService=java.lang.ref.WeakReference@51d33758, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@38c37247}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+jun 15, 2017 5:22:25 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddiv3] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@572037b0]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.GetServiceDetail=java.lang.ref.WeakReference@6fb98879, class java.util.ArrayList=java.lang.ref.WeakReference@7861db72, class org.uddi.api_v3.FindService=java.lang.ref.WeakReference@30c05ad1, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@13b247c4}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+jun 15, 2017 5:22:25 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddiv3] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@572037b0]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.FindTModel=java.lang.ref.WeakReference@30ebff8b, class org.uddi.api_v3.GetServiceDetail=java.lang.ref.WeakReference@46a718af, class java.util.ArrayList=java.lang.ref.WeakReference@7483d478, class org.uddi.api_v3.FindService=java.lang.ref.WeakReference@758e314b, class org.uddi.api_v3.FindQualifiers=java.lang.ref.WeakReference@1a769fd6, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@646a9e57}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+jun 15, 2017 5:22:25 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddiv3] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@572037b0]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.FindTModel=java.lang.ref.WeakReference@e20a6b6, class org.uddi.api_v3.GetServiceDetail=java.lang.ref.WeakReference@aa0ca50, class java.util.ArrayList=java.lang.ref.WeakReference@24867cfd, class org.uddi.api_v3.FindService=java.lang.ref.WeakReference@142ec61c, class org.uddi.api_v3.FindQualifiers=java.lang.ref.WeakReference@1f30c739, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@134e7cc5}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+jun 15, 2017 5:22:26 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddiv3] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@572037b0]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.SaveService=java.lang.ref.WeakReference@4389bc5, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@6644b378, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@7fd4a986, class java.util.ArrayList=java.lang.ref.WeakReference@1f9c5aed, class javax.xml.bind.annotation.W3CDomHandler=java.lang.ref.WeakReference@5f3a1c68, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@1c26ab84, class org.uddi.api_v3.FindService=java.lang.ref.WeakReference@4664a91f, class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@3b52c80c, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@34845a52, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@1dd7bdcd, class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@7e18d339, class org.uddi.api_v3.GetServiceDetail=java.lang.ref.WeakReference@5327665e, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@45e7f0a2, class org.uddi.api_v3.GetOperationalInfo=java.lang.ref.WeakReference@65fe0406, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@5dc7829b, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@35ba0aeb, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@4f228e1e}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+jun 15, 2017 5:22:26 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddiv3] created a ThreadLocal with key of type [com.sun.xml.bind.v2.ClassFactory$1] (value [com.sun.xml.bind.v2.ClassFactory$1@572037b0]) and a value of type [java.util.WeakHashMap] (value [{class org.uddi.api_v3.SaveService=java.lang.ref.WeakReference@5ae97dc8, class org.uddi.api_v3.BindingTemplate=java.lang.ref.WeakReference@3b5bef54, class org.uddi.api_v3.Description=java.lang.ref.WeakReference@5e534786, class java.util.ArrayList=java.lang.ref.WeakReference@5da602c, class org.uddi.api_v3.BindingTemplates=java.lang.ref.WeakReference@144c4a62, class org.uddi.api_v3.FindService=java.lang.ref.WeakReference@700926f0, class org.uddi.api_v3.BusinessService=java.lang.ref.WeakReference@34a23000, class org.uddi.api_v3.KeyedReference=java.lang.ref.WeakReference@622ffdb8, class org.uddi.api_v3.TModelInstanceInfo=java.lang.ref.WeakReference@1446a4c5, class org.uddi.api_v3.InstanceDetails=java.lang.ref.WeakReference@2d412e1b, class org.uddi.api_v3.GetServiceDetail=java.lang.ref.WeakReference@8c62983, class org.uddi.api_v3.AccessPoint=java.lang.ref.WeakReference@1599d71e, class org.uddi.api_v3.CategoryBag=java.lang.ref.WeakReference@345829e4, class org.uddi.api_v3.TModelInstanceDetails=java.lang.ref.WeakReference@10cde882, class org.uddi.api_v3.Name=java.lang.ref.WeakReference@297e4129}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+jun 15, 2017 5:22:26 PM org.apache.coyote.AbstractProtocol stop
+INFORMAÇÕES: Stopping ProtocolHandler ["http-bio-8080"]
+jun 15, 2017 5:22:26 PM org.apache.coyote.AbstractProtocol stop
+INFORMAÇÕES: Stopping ProtocolHandler ["ajp-bio-8009"]
+jun 15, 2017 5:22:26 PM org.apache.coyote.AbstractProtocol destroy
+INFORMAÇÕES: Destroying ProtocolHandler ["http-bio-8080"]
+jun 15, 2017 5:22:26 PM org.apache.coyote.AbstractProtocol destroy
+INFORMAÇÕES: Destroying ProtocolHandler ["ajp-bio-8009"]
