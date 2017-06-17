@@ -22,8 +22,6 @@ public class Tarefa {
 		this.nome = nome;
 	}
 
-	
-
 	public CopyOnWriteArrayList<Servico> getListaServicos() {
 		return listaServicos;
 	}

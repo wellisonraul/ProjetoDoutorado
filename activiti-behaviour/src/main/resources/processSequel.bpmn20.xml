@@ -14,11 +14,8 @@
       <activiti:field name="eventname">
           <activiti:expression>ValorAliquota</activiti:expression>
         </activiti:field>
-        <activiti:field name="wsdl">
-          <activiti:expression>AliquotRate</activiti:expression>
-        </activiti:field>
-        <activiti:field name="operation">
-          <activiti:expression>toSayAliquot</activiti:expression>
+        <activiti:field name="wsdloperation">
+          <activiti:expression>AliquotRate:toSayAliquot;AliquotRateSecond:toSayAliquotSecond</activiti:expression>
         </activiti:field>
         <activiti:field name="parameters">
           <activiti:expression>${nameuf}</activiti:expression>
@@ -36,13 +33,9 @@
        <activiti:field name="eventname">
           <activiti:expression>TaxaImportacao</activiti:expression>
         </activiti:field>
-     
-      <activiti:field name="wsdl">
-          <activiti:expression>ImportationRate</activiti:expression>
-        </activiti:field>
-        <activiti:field name="operation">
-          <activiti:expression>toSayImportationTax</activiti:expression>
-        </activiti:field>  
+      <activiti:field name="wsdloperation">
+          <activiti:expression>ImportationRate:toSayImportationTax</activiti:expression>
+        </activiti:field> 
         <activiti:field name="parameters">
           <activiti:expression>${good};${shipping}</activiti:expression>
         </activiti:field>
@@ -58,11 +51,8 @@
           <activiti:expression>ValorICMS</activiti:expression>
         </activiti:field>
      
-        <activiti:field name="wsdl">
-          <activiti:expression>ICMSRate</activiti:expression>
-        </activiti:field>
-        <activiti:field name="operation">
-          <activiti:expression>toSayFinalCost</activiti:expression>
+        <activiti:field name="wsdloperation">
+          <activiti:expression>ICMSRate:toSayFinalCost</activiti:expression>
         </activiti:field>
         <activiti:field name="parameters">
           <activiti:expression>${good};${shipping};${aliquot};${importation}</activiti:expression>

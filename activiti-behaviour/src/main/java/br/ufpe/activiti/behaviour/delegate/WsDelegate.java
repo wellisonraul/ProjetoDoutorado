@@ -77,32 +77,24 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 	private ArrayList<Tarefa> tarefas;
 	private ArrayList<Tarefa> auxiliarTarefas;
 	private ProcessoNegocio processoNegocio;
-	private Expression wsdl;
-	private Expression operation;
+	private Expression wsdloperation;
 	private Expression parameters;
 	private Expression returnValue;
 	private Expression eventname;
 	
 	
 	// MÉTODOS GET E SET
-	public Expression getWsdl() {
-		return wsdl;
-		}
-
-		public void setWsdl(Expression wsdl) {
-			this.wsdl = wsdl;
-		}
-
-		public Expression getOperation() {
-			return operation;
-		}
-
-		public void setOperation(Expression operation) {
-			this.operation = operation;
-		}
-
+	
 		public Expression getParameters() {
 			return parameters;
+		}
+
+		public Expression getWsdloperation() {
+			return wsdloperation;
+		}
+
+		public void setWsdloperation(Expression wsdloperation) {
+			this.wsdloperation = wsdloperation;
 		}
 
 		public void setParameters(Expression parameters) {
@@ -120,87 +112,76 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 		
 
 	public Expression getEventname() {
-			return eventname;
-		}
+		return eventname;
+	}
 
-		public void setEventname(Expression eventname) {
-			this.eventname = eventname;
-		}
+	public void setEventname(Expression eventname) {
+		this.eventname = eventname;
+	}
 
 	private void criaListaServicos(DelegateExecution execution){
 		// CLASSE PARA UTILIZAR O JUDDI
 		BuscaJuddi buscaJuddi = new BuscaJuddi();
 		
-		// CRIANDO UM SERVIÇO
-		Servico servico = new Servico ();
-		servico.setId(Integer.parseInt(execution.getId()));
-		servico.setNome((String) wsdl.getValue(execution));
-		servico.setOperacao((String)operation.getValue(execution));
-		servico.setListaParametros(execution.getVariables());
-		servico.setFator(0);
-		servico.setTarefa((String)eventname.getValue(execution));
-		
-		// UTILIZANDO O JUDDI
-		buscaJuddi.setServiceWSDLKey(servico, servico.getNome());
-		
-		
-		
-		
 		// CLASSES RESPONSÁVEIS POR TRATAR A ADIÇÃO DAS PROPRIEDADES (SERVICOS E TAREFAS)
 		selecionaServicos = new SelecionaServicos();
 		selecionaTarefas = new SelecionaTarefa();
 		
-		
-		
-		selecionaServicos.addService(servico);
-		selecionaServicos.addService(servico);
-		
-		// CRIANDO UMA TAREFA
+		// CRIANDO UMA TAREFA INICIAL
 		Tarefa t = new Tarefa();
 		t.setId(execution.getCurrentActivityId());
 		t.setNome((String)eventname.getValue(execution));
-		t.setListaServicos(selecionaServicos.getServicos());
 		
-		selecionaTarefas.addTarefa(t);
+		// RECEBE OS VALORES VINDOS DA STRING WSDL, ELA CONTÉM QUANTOS SERVIÇOS ESSA TAREFA TEM.
+		String wsdlServicos = (String) wsdloperation.getValue(execution);
+			
+		// CASO SEJA MAIS DE UM SERVIÇO PARA ESTA TAREFA
+		if(wsdlServicos.contains(";")){
+			// DIVIDE OS SERVIÇOS
+			String servicoOperacao[] = wsdlServicos.split(";");
+			// RODA QUANTOS SERVIÇOS TEM
+			for(int i=0; i<servicoOperacao.length;i++){
+				// DIVIDE WSDL DA OPERAÇÃO
+				String divisaoServicoOperacao[] = servicoOperacao[i].split(":");
+				// CRIA O SERVIÇO
+				Servico servico = new Servico ();
 				
-		//System.out.println("Lista:"+this.selecionaServicos.getServices());
-		
-		
-		/* MUDANDO DE LÓGICA 
-		// CRIA UM SERVIÇO
-		s = new Servico();
-		s.setId(Integer.parseInt(execution.getId()));
-		s.setNome((String) wsdl.getValue(execution));
-		s.setOperacao((String)operation.getValue(execution));
-		s.setListaParametros(execution.getVariables());
-		s.setFator(0);
-		s.setTarefa((String)eventname.getValue(execution));
-		
-		// CONSULTA O JUDDI
-		BuscaJuddi buscaJuddi = new BuscaJuddi();
-		buscaJuddi.setServiceWSDLKey(s, s.getNome());
-		servicos.add(s);
-		
-		// CRIA UMA TAREFA E INSERI OS SERVIÇOS
-		t = new Tarefa();
-		t.setId(execution.getCurrentActivityId());
-		t.setNome((String) eventname.getValue(execution));
-		t.setListaServicos(servicos);
-		tarefas = new ArrayList<Tarefa>();
-		tarefas.add(t);
-		
-		
-		if(contAux==0){
-			processoNegocio = new ProcessoNegocio();
-			processoNegocio.setId(1);
-			processoNegocio.setNome("ICMSRateTest");
-			auxiliarTarefas.add(contAux++, t);
-			processoNegocio.setListaTarefas(auxiliarTarefas);
+				servico.setNome(divisaoServicoOperacao[0]);
+				servico.setOperacao(divisaoServicoOperacao[1]);
+				servico.setListaParametros(execution.getVariables());
+				servico.setFator(0);
+				servico.setTarefa((String)eventname.getValue(execution));
+				
+				// UTILIZANDO O JUDDI PARA RECEBER O WSDL E A DISPONIBILIDADE
+				buscaJuddi.setServiceWSDLKey(servico, servico.getNome());
+				
+				selecionaServicos.addService(servico);
+			}
+			
+		// CASO SEJA APENAS UM SERVIÇO PARA ESTA TAREFA
 		}else{
-			auxiliarTarefas.add(contAux++, t);
-			System.out.println("Neste instante:"+auxiliarTarefas.size());
-			processoNegocio.setListaTarefas(tarefas);
-		}*/
+			String divisaoServicoOperacao[] = wsdlServicos.split(":");
+			
+			// CRIA O SERVIÇO
+			Servico servico = new Servico ();
+			
+			servico.setNome(divisaoServicoOperacao[0]);
+			servico.setOperacao(divisaoServicoOperacao[1]);
+			servico.setListaParametros(execution.getVariables());
+			servico.setFator(0);
+			servico.setTarefa((String)eventname.getValue(execution));
+			
+			// UTILIZANDO O JUDDI PARA RECEBER O WSDL E A DISPONIBILIDADE
+			buscaJuddi.setServiceWSDLKey(servico, servico.getNome());
+			
+			selecionaServicos.addService(servico);
+		}
+		
+		// ADICIONO A LISTA DE SERVIÇOS DESSA TAREFA		
+		t.setListaServicos(selecionaServicos.getServicos());
+		selecionaTarefas.addTarefa(t);
+		
+		selecionaServicos.ordenarServicos();
 	}	
 	
 	public void execute(DelegateExecution execution) {		
@@ -209,40 +190,29 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 			criaListaServicos(execution);
 		}else{
 			
-			// DEMONSTRA O QUE SE ENCONTRA NA LISTA DE SERVIÇOS
-			for (Tarefa tarefa : selecionaTarefas.getTarefas()) {
-				System.out.println("Tarefa id: "+tarefa.getId());
-				System.out.println("Tarefa nome: "+tarefa.getNome());
-					for (Servico servico : tarefa.getListaServicos()) {
-						System.out.println("Nome serviço:"+servico.getWsdl());
-						System.out.println("Nome da operação:"+servico.getOperacao());
-					}
-			}
-			
-			
+			CallService(selecionaServicos.retorneMelhorServico(), execution);
 		}
 		
 	}
 	
 	
-	public void CallService(DelegateExecution execution){
-
-		String wsdlString = (String) wsdl.getValue(execution);
-		
-		
+	public void CallService(Servico servico, DelegateExecution execution){
+		String wsdlString = servico.getWsdl(); //.getValue(execution);
 		
 		// CRIA UMA NOVA INSTÂNCIA
 		JaxWsDynamicClientFactory dcf = JaxWsDynamicClientFactory.newInstance();
 		// DEFINE UM NOVO CLIENTE PASSANDO O WSDL
+		
+		// WSDL ERRO AQUI !
 		Client client = dcf.createClient(wsdlString);
 		Endpoint endpoint = client.getEndpoint();
 
-		ServiceInfo serviceInfo = endpoint.getService().getServiceInfos()
-				.get(0);
-
+		ServiceInfo serviceInfo = endpoint.getService().getServiceInfos().get(0);
+		
 		BindingInfo binding = (BindingInfo) serviceInfo.getBindings().toArray()[0];
-		QName opName = new QName(serviceInfo.getTargetNamespace(),
-				operation.getExpressionText());
+		
+		// ERRO DE OPERAÇÃO.
+		QName opName = new QName(serviceInfo.getTargetNamespace(), servico.getOperacao());
 		BindingOperationInfo boi = binding.getOperation(opName);
 		BindingMessageInfo inputMessageInfo = boi.getInput();
 		List<MessagePartInfo> parts = null;
@@ -252,13 +222,15 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 		Field[] fieldsService = null;
 		Object inputPartObject = null;
 		ArrayList params = new ArrayList();
-
+		
+		System.out.println("Existem paramêtros de entrada?");
 		try {
 			parameters.getExpressionText();
 		} catch (Exception e) {
 			parameters = null;
 		}
-
+		
+		// VAMOS TRATAR ESSES PARAMETROS.
 		if (parameters != null && parameters.getExpressionText() != null) {
 			parts = inputMessageInfo.getMessageParts();
 
@@ -267,8 +239,7 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 			if (partClass == null) {
 				partClass = String.class;
 			}
-			System.out.println("Aqui 1:"+ partClass.getCanonicalName());
-
+			
 			try {
 				inputObject = partClass.newInstance();
 			} catch (InstantiationException e1) {
@@ -307,7 +278,6 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 
 				Class<?> partPropType = partPropertyDescriptor
 						.getPropertyType();
-				System.out.println("Aqui 2: "+ partPropType.getCanonicalName());
 				
 				if (partPropType.getCanonicalName().equals("byte[]")) {
 					inputPartObject = token.getBytes(Charset.forName("UTF-8"));
@@ -339,6 +309,7 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
+					
 					try {
 						partPropertyDescriptor.getWriteMethod().invoke(inputObject,
 								inputPartObject);
@@ -352,6 +323,7 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
+					
 					JSONObject jsonObject = new JSONObject(token);
 					Iterator<?> keys = jsonObject.keys();
 
@@ -365,6 +337,7 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
+						
 						try {
 							numberPropertyDescriptor.getWriteMethod().invoke(
 									inputPartObject, jsonObject.get(key));
@@ -491,30 +464,5 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 
 		System.out.println("Aqui 3 - Retorno: " + result[0]);
 
-		/*
-		 * Class<?> resultClass = result[0].getClass();
-		 * System.out.println(resultClass.getCanonicalName());
-		 * PropertyDescriptor resultDescriptor = new
-		 * PropertyDescriptor("agentWSResponse", resultClass); Object wsResponse
-		 * = resultDescriptor.getReadMethod().invoke(result[0]); Class<?>
-		 * wsResponseClass = wsResponse.getClass();
-		 * System.out.println(wsResponseClass.getCanonicalName());
-		 * PropertyDescriptor agentNameDescriptor = new
-		 * PropertyDescriptor("agentName", wsResponseClass); String agentName =
-		 * (String)agentNameDescriptor.getReadMethod().invoke(wsResponse);
-		 * System.out.println("Agent name: " + agentName);
-		 */
-
-		/*
-		 * ArrayList paramStrings = new ArrayList(); if (parameters!=null) {
-		 * StringTokenizer st = new StringTokenizer(
-		 * (String)parameters.getValue(execution), ","); while
-		 * (st.hasMoreTokens()) { paramStrings.add(st.nextToken().trim()); } }
-		 * Object response =
-		 * client.invoke((String)operation.getValue(execution),
-		 * paramStrings.toArray(new Object[0])); if (returnValue!=null) { String
-		 * returnVariableName = (String) returnValue.getValue(execution);
-		 * execution.setVariable(returnVariableName, response); }
-		 */
 	}
 }

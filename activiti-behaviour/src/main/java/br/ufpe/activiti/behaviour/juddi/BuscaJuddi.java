@@ -87,8 +87,9 @@ public class BuscaJuddi {
 					Name name = new Name();
 					name.setValue(value);
 					fs.getName().add(name);
+					ServiceList sl = null;
+					sl = inquiry.findService(fs);
 					
-					ServiceList sl = inquiry.findService(fs);
 					GetServiceDetail getSD = new GetServiceDetail();
 					
 					List<org.uddi.api_v3.ServiceInfo> serviceInfos = sl.getServiceInfos().getServiceInfo();

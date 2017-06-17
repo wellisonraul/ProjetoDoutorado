@@ -1,12 +1,9 @@
 package br.ufpe.activiti.behaviour.model;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Servico {
-	private int id;
 	private String nome;
 	private String wsdl;
 	private String operacao;
@@ -14,22 +11,23 @@ public class Servico {
 	private String tarefa;
 	private double disponibilidade;
 	private double fator;
+	private QualidadeDoServico qualidadeDoServico;
 	
 	
 	// MÉTODOS GET E SET
 	
 	
-	public int getId() {
-		return id;
+	public QualidadeDoServico getQualidadeDoServico() {
+		return qualidadeDoServico;
+	}
+	public void setQualidadeDoServico(QualidadeDoServico qualidadeDoServico) {
+		this.qualidadeDoServico = qualidadeDoServico;
 	}
 	public String getWsdl() {
 		return wsdl;
 	}
 	public void setWsdl(String wsdl) {
 		this.wsdl = wsdl;
-	}
-	public void setId(int id) {
-		this.id = id;
 	}
 	public String getNome() {
 		return nome;
