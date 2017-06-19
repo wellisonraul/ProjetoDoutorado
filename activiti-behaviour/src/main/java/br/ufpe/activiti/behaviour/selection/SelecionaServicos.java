@@ -32,6 +32,7 @@ public class SelecionaServicos{
 	public void ordenacaoServicos(){
 		
 	}
+	
 	public Servico retorneMelhorServico() {
 		return this.servicos.get(0);
 	}
@@ -54,5 +55,9 @@ public class SelecionaServicos{
 				}
 			}	
 		}
+	}
+	
+	public Servico proximoServico(int posicao){
+		return this.servicos.get(posicao);
 	}
 }
