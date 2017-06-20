@@ -12,10 +12,11 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.Scanner;
 import java.util.StringTokenizer;
-import java.util.concurrent.CopyOnWriteArrayList;
 import javax.xml.namespace.QName;
-// NÃO ENCONTRA ESSA CLASSE!
+
+// N��O ENCONTRA ESSA CLASSE!
 //import org.activiti.bpmn.model.ServiceRequirement;
 import org.activiti.engine.delegate.DelegateExecution;
 import org.activiti.engine.delegate.Expression;
@@ -36,6 +37,8 @@ import br.ufpe.activiti.behaviour.juddi.BuscaJuddi;
 import br.ufpe.activiti.behaviour.model.ProcessoNegocio;
 import br.ufpe.activiti.behaviour.model.Servico;
 import br.ufpe.activiti.behaviour.model.Tarefa;
+import br.ufpe.activiti.behaviour.random.ThreadGeradorErros;
+import br.ufpe.activiti.behaviour.random.ThreadTemporizador;
 import br.ufpe.activiti.behaviour.random.GeradorRandomico;
 import br.ufpe.activiti.behaviour.selection.SelecionaServicos;
 import br.ufpe.activiti.behaviour.selection.SelecionaTarefa;
@@ -84,6 +87,7 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 	private Expression parameters;
 	private Expression returnValue;
 	private Expression eventname;
+	private Invocar invocar;
 	
 	
 	// MÉTODOS GET E SET
@@ -209,25 +213,72 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 	
 	// INICIALIZA, TESTANDO SE UM SERVIÇO IRÁ FUNCIONAR!
 	public void inicializaServico(DelegateExecution execution,Servico servico){
+		int tentativaDois = 0;
 		int posicao = 0;
 		boolean erro = false;
 		Servico servicoAuxiliar = null;
+		Object [] resultado = null;
+		ThreadTemporizador t = null;
 		
+		// TRATAMENTO DO ERRO DA THREAD!
+		StringTokenizer stringTokenizer = null;
+    	try{
+    		stringTokenizer = new StringTokenizer( (String)parameters.getValue(execution), "::");
+    	}catch(ClassCastException e){
+    		stringTokenizer = new StringTokenizer(parameters.getValue(execution).toString());
+    	}
+    	
+    	
 		for(int i=0; i<3; i++){
-			// GERADOR DE ERROS
+			/*// GERADOR DE ERROS
 			if(!erro){
 				servicoAuxiliar = geradorRandomico.retornaValorAleartorio(servico, servico.getNome());
 			}else{
 				servicoAuxiliar = geradorRandomico.retornaValorAleartorio(servicoAuxiliar, servicoAuxiliar.getNome());
+			}*/
+			
+			if(!erro){
+				servicoAuxiliar = servico;
 			}
 			
 			// TENTA INVOCAR O SERVIÇO
 			try{
-				System.out.println("Invocando servico "+servicoAuxiliar.getNome()+" tentativa: "+(i+1));
-				invocarServico(execution, servicoAuxiliar);
-				i=3;
+				// THREAD QUE INVOQUE O SERVIÇO ? 
+				// COM UMA THREAD QUE INVOQUE O SERVIÇO EU SOU CAPAZ DE DECIDIR QUANDO ENCERA-LA E SOU CAPAZ TAMBÉM DE REALIZAR UM 
+				/* PROCESSAMENTO PARALELO COM UM CONTATOR *
+				 * QUANDO INVOCO ESSA THREAD EU ACHO UM OBJETO E PASSO OS PARAMêTROS NECESSÁRIOS PARA INVOCAR
+				 * SERVICO, EXECUTION, PARAMETROS, RETURN 
+				 * QUANDO ESSE SERVIÇO CHEGA LÁ, ELE NÃO CONSEGUE TRATAR ESSAS DUAS VÁRIAVEIS QUE SÃO 
+				 * PARAMETROS E RETORNO, PORQUE ? 
+				 * NO CONSTRUTOR ELE É CAPAZ DE IDETIFICADOR O OBJETO, PORÉM NO CÓDIGO, RUN (), ELE NÃO CONSEGUE
+				 * ISSO TA BÉM CONFIGURADO NO CONSTRUTOR, EU FAÇO O PROJETO RECEBER, PORÉM ELE NÃO IDENTIFICA;
+				 * */
+				System.out.println("Invocando o serviço "+servicoAuxiliar.getNome()+" tentativa: "+(i+1));
+				System.out.println("Retornos:\nExecution: "+execution+"\nParametros: "+parameters+
+						"\nRetorno Valor: "+returnValue+"\nServicoAuxliar: "+servicoAuxiliar+"\nString Tokenizer: "+stringTokenizer);
+				
+				t = new ThreadTemporizador(execution, parameters, returnValue, servicoAuxiliar, stringTokenizer);
+				Thread t1 = new Thread(t);
+				t1.start();
+				t1.join(10000);
+				resultado = t.getRetorno();
+				t1.interrupt();
+				//invocarServico(execution, servicoAuxiliar);
+				//i=3;
 			}catch(Exception e){
-				System.out.println(e);
+				
+			}
+			
+			if(resultado==null){
+				System.out.println("Serviço "+servicoAuxiliar.getNome()+" demorou muito para ser executado!");
+			}else{
+				try{
+					t.setRetornaResult(execution, servicoAuxiliar, t.getRetorno());
+					i=3;
+				}catch(Exception e){
+					System.out.println(e);
+				}
+				
 			}
 			
 			
@@ -241,157 +292,174 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 					erro = true;
 				// NÃO HÁ MAIS SERVIÇOS DISPONÍVEIS
 				}else{
-					try{
-						invocarServico(execution, selecionaServicos.retorneMelhorServico());
-					}catch(Exception e){
+					if(tentativaDois==2){
 						System.out.println("Nenhum servico do tipo "+servicoAuxiliar.getNome()+" está funcionando!");
-
-					}
-					i = 3;
+						int recebeScannerContinua = 0;
+						Scanner leitorInt = new Scanner(System.in);
+						System.out.println("Informe o valor 1 para tentar invocar novamente os serviços ou 0 para parar");
+						recebeScannerContinua = leitorInt.nextInt();
+						
+						
+						if(recebeScannerContinua==0){
+							i = 3;
+							break;
+						}else{
+							System.out.println("Aqui?");
+							i = -1;
+							posicao = 0;
+							servicoAuxiliar = servico;
+							erro = false;
+						}
+					}else{
+						i = -1;
+						posicao = 0;
+						tentativaDois++;
+						servicoAuxiliar = selecionaServicos.proximoServico(posicao);
+						erro = false;
+					}	
 				}
 			}
 		}	
 	}
 	
-	
 	// INVOCA O SERVIÇO E RECEBE A REPOSTA
-	public void invocarServico( DelegateExecution execution, Servico servico) throws Exception{
-		
-		String wsdlString = servico.getWsdl(); //.getValue(execution);
-		
-	    JaxWsDynamicClientFactory dcf = JaxWsDynamicClientFactory.newInstance();
-	    Client client = dcf.createClient(wsdlString);
-	    Endpoint endpoint = client.getEndpoint();
-	    
-	    ServiceInfo serviceInfo = endpoint.getService().getServiceInfos().get(0);
-	    
-	    BindingInfo binding = (BindingInfo) serviceInfo.getBindings().toArray()[0];
-	    QName opName = new QName(serviceInfo.getTargetNamespace(), servico.getOperacao());
-	    BindingOperationInfo boi = binding.getOperation(opName);
-	    BindingMessageInfo inputMessageInfo = boi.getInput();
-	    List<MessagePartInfo> parts = null;
-	    MessagePartInfo partInfo = null;
-	    Class<?> partClass = null;
-	    Object inputObject = null;
-	    Field[] fieldsService = null;
-	    Object inputPartObject = null;
-	    ArrayList params = new ArrayList();
-	    
-	    try {
-	    	 parameters.getExpressionText();
-		} catch (Exception e) {
-			parameters = null;
-		}
-	   
-	    
-	    if (parameters!=null && parameters.getExpressionText() != null) {
-	    	parts = inputMessageInfo.getMessageParts();
-		    
-		    partInfo = parts.get(0);
-		    partClass = partInfo.getTypeClass();
-		    if(partClass == null){
-		    	partClass = String.class;
-		    }
-		    System.out.println(partClass.getCanonicalName());
-		    
-		    inputObject = partClass.newInstance();
-		    
-		    fieldsService = partClass.getDeclaredFields();
-		    
-		   
-		    
-	    	StringTokenizer st = null;
-	    	try{
-	    		st = new StringTokenizer( (String)parameters.getValue(execution), ";");
-	    	}catch(ClassCastException e){
-	    		st = new StringTokenizer(parameters.getValue(execution).toString());
-	    	}
-	      int i = -1;
-	      while (st.hasMoreTokens()) {
-	    	i++;
-	        String token = st.nextToken().trim();
-	        
-	        Field field = fieldsService[i];
-	        
-		    PropertyDescriptor partPropertyDescriptor = new PropertyDescriptor(field.getName(), partClass);
+		public void invocarServico( DelegateExecution execution, Servico servico) throws Exception{
+				
+				// TEMPORIZADOR 2 (0 a 50)
+				// THREAD.SLEEP(40)
+				String wsdlString = servico.getWsdl(); //.getValue(execution);
+				JaxWsDynamicClientFactory dcf = JaxWsDynamicClientFactory.newInstance();
+			    Client client = dcf.createClient(wsdlString);
+			    Endpoint endpoint = client.getEndpoint();
 			    
-			Class<?> partPropType = partPropertyDescriptor.getPropertyType();
-			System.out.println(partPropType.getCanonicalName());
-			if(partPropType.getCanonicalName().equals("byte[]")){
-				 inputPartObject = token.getBytes(Charset.forName("UTF-8"));
-			}else if(partPropType.getCanonicalName().equals("java.lang.String")){
-				 inputPartObject = token;
-			 }else if(partPropType.getCanonicalName().equals("short")){
-				 inputPartObject = new Short(token);
-			 }else if(partPropType.getCanonicalName().equals("int")){
-				 inputPartObject = new Integer(token);
-			 }else if(partPropType.getCanonicalName().equals("long")){
-				 inputPartObject = new Long(token);
-			 }else if(partPropType.getCanonicalName().equals("float")){
-				 inputPartObject = new Float(token);
-			 }else if(partPropType.getCanonicalName().equals("double")){
-				 inputPartObject = new Double(token);
-			 }else if(partPropType.getCanonicalName().equals("char")){
-				 inputPartObject = new Character(token.charAt(0));
-			 }else if(partPropType.getCanonicalName().equals("boolean") || partPropType.equals(Boolean.class)){
-				 inputPartObject = new Boolean(token);
-			 }else {
-				inputPartObject = partPropType.newInstance(); 
-			    partPropertyDescriptor.getWriteMethod().invoke(inputObject, inputPartObject);
-			    JSONObject jsonObject = new JSONObject(token);
-				Iterator<?> keys = jsonObject.keys();
-				    
-				while(keys.hasNext()){
-				    String key =  (String) keys.next();
-				    PropertyDescriptor numberPropertyDescriptor = new PropertyDescriptor(key, partPropType);
-					numberPropertyDescriptor.getWriteMethod().invoke(inputPartObject, jsonObject.get(key));
-					    
+			    ServiceInfo serviceInfo = endpoint.getService().getServiceInfos().get(0);
+			    
+			    BindingInfo binding = (BindingInfo) serviceInfo.getBindings().toArray()[0];
+			    QName opName = new QName(serviceInfo.getTargetNamespace(), servico.getOperacao());
+			    BindingOperationInfo boi = binding.getOperation(opName);
+			    BindingMessageInfo inputMessageInfo = boi.getInput();
+			    List<MessagePartInfo> parts = null;
+			    MessagePartInfo partInfo = null;
+			    Class<?> partClass = null;
+			    Object inputObject = null;
+			    Field[] fieldsService = null;
+			    Object inputPartObject = null;
+			    ArrayList params = new ArrayList();
+			    
+			    try {
+			    	 parameters.getExpressionText();
+				} catch (Exception e) {
+					parameters = null;
 				}
-			 }
-			params.add(inputPartObject);
-	      
-	    } 
-	   
-		    
-		    
-		}
-
-	    //Object[] result = client.invoke(opName, inputObject);
-	    Object[] result = null;
-	    if(params.size() == 0){
-	    	result = client.invoke(opName);
-	    }else if(params.size() == 1){
-	    	 result = client.invoke(opName, params.get(0));
-	    }else if(params.size() == 2){
-	    	result = client.invoke(opName, params.get(0), params.get(1));
-	    }else if(params.size() == 3){
-	    	result = client.invoke(opName, params.get(0), params.get(1), params.get(2));
-	    }else if(params.size() == 4){
-	    	result = client.invoke(opName, params.get(0), params.get(1), params.get(2), params.get(3));
-	    }else if(params.size() == 5){
-	    	result = client.invoke(opName, params.get(0), params.get(1), params.get(2), params.get(3), params.get(4));
-	    }
-	   
-	    
-	    Class<?> resultClass = result[0].getClass();
-	    
-	    if (returnValue!=null) {
-		      String returnVariableName = (String) returnValue.getValue(execution);
-		     		      
-		      if(!(resultClass.equals(String.class) || resultClass.equals(Integer.class) || resultClass.equals(Byte.class) || resultClass.equals(Short.class) || resultClass.equals(Byte.class) || resultClass.equals(Long.class)|| resultClass.equals(Float.class) || resultClass.equals(Double.class) || resultClass.equals(Character.class) || resultClass.equals(Boolean.class) ) ){
-			      Field[] fields = resultClass.getDeclaredFields();
+			   
+			    
+			    if (parameters!=null && parameters.getExpressionText() != null) {
+			    	parts = inputMessageInfo.getMessageParts();
 				    
-				  for (Field field : fields) {
-					  PropertyDescriptor resultDescriptor = new PropertyDescriptor(field.getName(), resultClass);
-					  Object wsResponse = resultDescriptor.getReadMethod().invoke(result[0]);
-					  execution.setVariable(returnVariableName+"."+field.getName(), wsResponse);
-				  }
-		      } else {
-		    	  execution.setVariable(returnVariableName, result[0]);
-		      }
-		 }
-	    
-	    System.out.println("Retorno: "+ result[0]);
-		
-	}
+				    partInfo = parts.get(0);
+				    partClass = partInfo.getTypeClass();
+				    if(partClass == null){
+				    	partClass = String.class;
+				    }
+				    System.out.println(partClass.getCanonicalName());
+				    
+				    inputObject = partClass.newInstance();
+				    
+				    fieldsService = partClass.getDeclaredFields();
+				    
+				    
+			    	StringTokenizer st = null;
+			    	try{
+			    		st = new StringTokenizer( (String)parameters.getValue(execution), "::");
+			    	}catch(ClassCastException e){
+			    		st = new StringTokenizer(parameters.getValue(execution).toString());
+			    	}
+			      int i = -1;
+			      while (st.hasMoreTokens()) {
+			    	i++;
+			        String token = st.nextToken().trim();
+			        
+			        Field field = fieldsService[i];
+			        
+				    PropertyDescriptor partPropertyDescriptor = new PropertyDescriptor(field.getName(), partClass);
+					    
+					Class<?> partPropType = partPropertyDescriptor.getPropertyType();
+					System.out.println(partPropType.getCanonicalName());
+					if(partPropType.getCanonicalName().equals("byte[]")){
+						 inputPartObject = token.getBytes(Charset.forName("UTF-8"));
+					}else if(partPropType.getCanonicalName().equals("java.lang.String")){
+						 inputPartObject = token;
+					 }else if(partPropType.getCanonicalName().equals("short")){
+						 inputPartObject = new Short(token);
+					 }else if(partPropType.getCanonicalName().equals("int")){
+						 inputPartObject = new Integer(token);
+					 }else if(partPropType.getCanonicalName().equals("long")){
+						 inputPartObject = new Long(token);
+					 }else if(partPropType.getCanonicalName().equals("float")){
+						 inputPartObject = new Float(token);
+					 }else if(partPropType.getCanonicalName().equals("double")){
+						 inputPartObject = new Double(token);
+					 }else if(partPropType.getCanonicalName().equals("char")){
+						 inputPartObject = new Character(token.charAt(0));
+					 }else if(partPropType.getCanonicalName().equals("boolean") || partPropType.equals(Boolean.class)){
+						 inputPartObject = new Boolean(token);
+					 }else {
+						inputPartObject = partPropType.newInstance(); 
+					    partPropertyDescriptor.getWriteMethod().invoke(inputObject, inputPartObject);
+					    JSONObject jsonObject = new JSONObject(token);
+						Iterator<?> keys = jsonObject.keys();
+						    
+						while(keys.hasNext()){
+						    String key =  (String) keys.next();
+						    PropertyDescriptor numberPropertyDescriptor = new PropertyDescriptor(key, partPropType);
+							numberPropertyDescriptor.getWriteMethod().invoke(inputPartObject, jsonObject.get(key));
+							    
+						}
+					 }
+					params.add(inputPartObject);
+			      
+			    }     
+			}
+
+			    //Object[] result = client.invoke(opName, inputObject);
+			    Object[] result = null;
+			    if(params.size() == 0){
+			    	result = client.invoke(opName);
+			    }else if(params.size() == 1){
+			    	 result = client.invoke(opName, params.get(0));
+			    }else if(params.size() == 2){
+			    	result = client.invoke(opName, params.get(0), params.get(1));
+			    }else if(params.size() == 3){
+			    	result = client.invoke(opName, params.get(0), params.get(1), params.get(2));
+			    }else if(params.size() == 4){
+			    	result = client.invoke(opName, params.get(0), params.get(1), params.get(2), params.get(3));
+			    }else if(params.size() == 5){
+			    	result = client.invoke(opName, params.get(0), params.get(1), params.get(2), params.get(3), params.get(4));
+			    }
+			   
+			    
+			    Class<?> resultClass = result[0].getClass();
+			    
+			    if (returnValue!=null) {
+				      String returnVariableName = (String) returnValue.getValue(execution);
+				     		      
+				      if(!(resultClass.equals(String.class) || resultClass.equals(Integer.class) || resultClass.equals(Byte.class) || resultClass.equals(Short.class) || resultClass.equals(Byte.class) || resultClass.equals(Long.class)|| resultClass.equals(Float.class) || resultClass.equals(Double.class) || resultClass.equals(Character.class) || resultClass.equals(Boolean.class) ) ){
+					      Field[] fields = resultClass.getDeclaredFields();
+						    
+						  for (Field field : fields) {
+							  PropertyDescriptor resultDescriptor = new PropertyDescriptor(field.getName(), resultClass);
+							  Object wsResponse = resultDescriptor.getReadMethod().invoke(result[0]);
+							  execution.setVariable(returnVariableName+"."+field.getName(), wsResponse);
+						  }
+				      } else {
+				    	  execution.setVariable(returnVariableName, result[0]);
+				      }
+				 }
+			    
+			    //setRetorno(result);
+			    System.out.println("Retorno: "+ result[0]);
+			}
+	
+	
+	
 }

@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 import org.activiti.engine.ProcessEngine;
 import org.activiti.engine.ProcessEngines;
@@ -11,10 +12,14 @@ import org.activiti.engine.RepositoryService;
 import org.activiti.engine.RuntimeService;
 import org.activiti.engine.repository.DeploymentBuilder;
 
+import br.ufpe.activiti.behaviour.random.ThreadGeradorErros;
+
 
 
 public class Engine {
 	public static void main(String[] args) {
+		
+		
 		ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
 
 		
@@ -30,7 +35,12 @@ public class Engine {
 		RuntimeService runtimeService = processEngine.getRuntimeService();
 	
 
-		int numDays =2;
+		// GERADOR DE ERROS
+		/*ThreadGeradorErros geradorErros = new ThreadGeradorErros();
+		Thread threadGeradorErros = new Thread(geradorErros);
+		threadGeradorErros.start();*/
+		
+		int numDays =10;
 		for (int i = 0; i < numDays; i++) {
 
 			for (int j = 0; j <3; j++) {

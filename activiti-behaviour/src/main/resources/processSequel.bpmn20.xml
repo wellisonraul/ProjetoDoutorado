@@ -37,7 +37,7 @@
           <activiti:expression>ImportationRate:toSayImportationTax</activiti:expression>
         </activiti:field> 
         <activiti:field name="parameters">
-          <activiti:expression>${good};${shipping}</activiti:expression>
+          <activiti:expression>${good}::${shipping}</activiti:expression>
         </activiti:field>
         <activiti:field name="returnValue">
           <activiti:expression>importation</activiti:expression>
@@ -55,7 +55,7 @@
           <activiti:expression>ICMSRate:toSayFinalCost</activiti:expression>
         </activiti:field>
         <activiti:field name="parameters">
-          <activiti:expression>${good};${shipping};${aliquot};${importation}</activiti:expression>
+          <activiti:expression>${good}::${shipping}::${aliquot}::${importation}</activiti:expression>
         </activiti:field>
         <activiti:field name="returnValue">
           <activiti:expression>icms</activiti:expression>
