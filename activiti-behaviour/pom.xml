@@ -118,6 +118,13 @@
 			<artifactId>commons-io</artifactId>
 			<version>1.3.2</version>
 		</dependency>
-  
+		
+		<!-- Adcionado por Wellison para tratar o Monitor -->
+		<dependency>
+		    <groupId>org.pojava</groupId>
+		    <artifactId>datetime</artifactId>
+		    <version>3.0.2</version>
+		</dependency>
+		
   	</dependencies>
 </project>

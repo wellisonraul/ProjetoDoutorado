@@ -1,4 +1,5 @@
 package br.ufpe.activiti.behaviour.delegate;
+
 import java.beans.IntrospectionException;
 import java.beans.PropertyDescriptor;
 import java.io.BufferedWriter;
@@ -16,7 +17,7 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 import javax.xml.namespace.QName;
 
-// N��O ENCONTRA ESSA CLASSE!
+//  ENCONTRA ESSA CLASSE!
 //import org.activiti.bpmn.model.ServiceRequirement;
 import org.activiti.engine.delegate.DelegateExecution;
 import org.activiti.engine.delegate.Expression;
@@ -33,22 +34,22 @@ import org.apache.cxf.service.model.ServiceInfo;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import br.ufpe.activiti.bahaviour.util.Util;
+import br.ufpe.activiti.behaviour.dao.DefineProcessLog;
 import br.ufpe.activiti.behaviour.juddi.BuscaJuddi;
+import br.ufpe.activiti.behaviour.model.Atributo;
 import br.ufpe.activiti.behaviour.model.ProcessoNegocio;
 import br.ufpe.activiti.behaviour.model.Servico;
 import br.ufpe.activiti.behaviour.model.Tarefa;
 import br.ufpe.activiti.behaviour.random.ThreadGeradorErros;
 import br.ufpe.activiti.behaviour.random.ThreadTemporizador;
 import br.ufpe.activiti.behaviour.random.GeradorRandomico;
+import br.ufpe.activiti.behaviour.selection.Ordenacao;
 import br.ufpe.activiti.behaviour.selection.SelecionaServicos;
 import br.ufpe.activiti.behaviour.selection.SelecionaTarefa;
-
 import org.activiti.engine.delegate.JavaDelegate;
-
-
 import org.activiti.engine.delegate.DelegateExecution;
 import org.activiti.engine.delegate.JavaDelegate;
-
 import java.beans.PropertyDescriptor;
 import java.lang.reflect.Field;
 import java.nio.charset.Charset;
@@ -56,9 +57,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.StringTokenizer;
-
 import javax.xml.namespace.QName;
-
 import org.activiti.engine.delegate.DelegateExecution;
 import org.activiti.engine.delegate.Expression;
 import org.activiti.engine.delegate.JavaDelegate;
@@ -74,8 +73,6 @@ import org.json.JSONObject;
 
 public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 
-
-
 	private ArrayList<Servico> servicos;
 	private GeradorRandomico geradorRandomico = new GeradorRandomico();
 	private SelecionaServicos selecionaServicos;
@@ -88,56 +85,49 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 	private Expression returnValue;
 	private Expression eventname;
 	private Invocar invocar;
+	public static int processIDInicializacao;
 	
-	
-	// MÉTODOS GET E SET
-	
-		public Expression getParameters() {
-			return parameters;
-		}
-
-		public Expression getWsdloperation() {
-			return wsdloperation;
-		}
-
-		public void setWsdloperation(Expression wsdloperation) {
-			this.wsdloperation = wsdloperation;
-		}
-
-		public void setParameters(Expression parameters) {
-			this.parameters = parameters;
-		}
-
-		public Expression getReturnValue() {
-			return returnValue;
-		}
-
-		public void setReturnValue(Expression returnValue) {
-			this.returnValue = returnValue;
-		}
-		
-		
-
+	public Expression getParameters() {
+		return parameters;
+	}
+	public static int getProcessIDInicializacao() {
+		return processIDInicializacao;
+	}
+	public static void setProcessIDInicializacao(int processIDInicializacao) {
+		WsDelegate.processIDInicializacao = processIDInicializacao;
+	}
+	public Expression getWsdloperation() {
+		return wsdloperation;
+	}
+	public void setWsdloperation(Expression wsdloperation) {
+		this.wsdloperation = wsdloperation;
+	}
+	public void setParameters(Expression parameters) {
+		this.parameters = parameters;
+	}
+	public Expression getReturnValue() {
+		return returnValue;
+	}
+	public void setReturnValue(Expression returnValue) {
+		this.returnValue = returnValue;
+	}	
 	public Expression getEventname() {
 		return eventname;
 	}
-
 	public void setEventname(Expression eventname) {
 		this.eventname = eventname;
 	}
 
 	private void criaListaServicos(DelegateExecution execution){
-		// CLASSE PARA UTILIZAR O JUDDI
-		BuscaJuddi buscaJuddi = new BuscaJuddi();
+		BuscaJuddi buscaJuddi = new BuscaJuddi(); // Objeto para criar uma instância para consultar o repositório Juddi
 		
-		// CLASSES RESPONSÁVEIS POR TRATAR A ADIÇÃO DAS PROPRIEDADES (SERVICOS E TAREFAS)
-		selecionaServicos = new SelecionaServicos();
+		selecionaServicos = new SelecionaServicos(); // CLASSES RESPONSÁVEIS POR TRATAR A ADIÇÃO DAS PROPRIEDADES (SERVICOS E TAREFAS)
 		selecionaTarefas = new SelecionaTarefa();
 		
-		// CRIANDO UMA TAREFA INICIAL
+		// Criar um objeto tarefa.
 		Tarefa t = new Tarefa();
-		t.setId(execution.getCurrentActivityId());
-		t.setNome((String)eventname.getValue(execution));
+		t.setId(execution.getCurrentActivityId()); // Cria id da tarefa com base no BPMN!
+		t.setNome((String)eventname.getValue(execution)); // Recebe o nome da tarefa com base no BPMN
 		
 		// RECEBE OS VALORES VINDOS DA STRING WSDL, ELA CONTÉM QUANTOS SERVIÇOS ESSA TAREFA TEM.
 		String wsdlServicos = (String) wsdloperation.getValue(execution);
@@ -180,7 +170,6 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 			
 			// UTILIZANDO O JUDDI PARA RECEBER O WSDL E A DISPONIBILIDADE
 			buscaJuddi.setServiceWSDLKey(servico, servico.getNome());
-			
 			selecionaServicos.addService(servico);
 		}
 		
@@ -188,7 +177,24 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 		t.setListaServicos(selecionaServicos.getServicos());
 		selecionaTarefas.addTarefa(t);
 		
-		selecionaServicos.ordenarServicos();
+		for(Servico servicos: selecionaServicos.getServicos()) {
+			System.out.println(servicos.getNome());
+			for(Atributo atributo: servicos.getAtributos()) {
+				System.out.println(atributo.getNome()+": "+atributo.getValor());
+			}
+		}
+		
+		Ordenacao ordenacao = new Ordenacao();
+		if(Util.METODODEAGREGACAO==1) ordenacao.ordenarAdicaoPeso(selecionaServicos);
+		else if(Util.METODODEAGREGACAO==2) ordenacao.ordenarDistanciaEuclidiana(selecionaServicos);
+		
+		for(Servico servicos: selecionaServicos.getServicos()) {
+			System.out.println(servicos.getNome());
+			for(Atributo atributo: servicos.getAtributos()) {
+				System.out.println(atributo.getNome()+": "+atributo.getValor());
+			}
+			System.out.println("Fator: "+servicos.getFator());
+		}
 	}	
 	
 	// MÉTODO PRINCIPAL QUE CHAMA OS RECURSOS
@@ -199,267 +205,155 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 	 * RECEBE RESPOSTA
 	 * */
 	
-	public void execute(DelegateExecution execution) {		
-		// LISTA DE SERVIÇOS NÃO EXISTE, DESSA FORMA CRIE!
-		if(selecionaServicos==null){
-			criaListaServicos(execution);
-		}else{
-			inicializaServico(execution,selecionaServicos.retorneMelhorServico());
+	public void execute(DelegateExecution execution) {	
+		// A LISTA DE SERVIÇOS EXISTE?
+		if(selecionaServicos==null){ // Não, então chame o método de criação!
+			criaListaServicos(execution); // Método para cria lista de serviços
+			setProcessIDInicializacao(Integer.parseInt(execution.getProcessInstanceId())); // Recebe o processo que está sendo iniciado
+		} 
+		
+		DefineProcessLog dao = new DefineProcessLog(); // Inserção de traces
+		try {
+			dao.inserirLog(execution,selecionaServicos.retorneMelhorServico(),null); // Insira o trace de inicialização
+			invocarServico(execution, selecionaServicos.retorneMelhorServico()); // Invoca o serviço da lista de serviços
+		}catch (Exception e) {
+			System.out.println("O serviço "+selecionaServicos.retorneMelhorServico().getNome()+" falhou!");
+		}finally {
+			// Inseri traces de execução, caso seja concluído, inseri complete!
+			if(execution.getVariable((String)returnValue.getValue(execution))!=null) 
+				dao.inserirLog(execution,selecionaServicos.retorneMelhorServico(),execution.getVariable((String)returnValue.getValue(execution)));
 		}
 	}
 	
-	
-	
-	
-	// INICIALIZA, TESTANDO SE UM SERVIÇO IRÁ FUNCIONAR!
-	public void inicializaServico(DelegateExecution execution,Servico servico){
-		int tentativaDois = 0;
-		int posicao = 0;
-		boolean erro = false;
-		Servico servicoAuxiliar = null;
-		Object [] resultado = null;
-		ThreadTemporizador t = null;
-		
-		// TRATAMENTO DO ERRO DA THREAD!
-		StringTokenizer stringTokenizer = null;
-    	try{
-    		stringTokenizer = new StringTokenizer( (String)parameters.getValue(execution), "::");
-    	}catch(ClassCastException e){
-    		stringTokenizer = new StringTokenizer(parameters.getValue(execution).toString());
-    	}
-    	
-    	
-		for(int i=0; i<3; i++){
-			/*// GERADOR DE ERROS
-			if(!erro){
-				servicoAuxiliar = geradorRandomico.retornaValorAleartorio(servico, servico.getNome());
-			}else{
-				servicoAuxiliar = geradorRandomico.retornaValorAleartorio(servicoAuxiliar, servicoAuxiliar.getNome());
-			}*/
-			
-			if(!erro){
-				servicoAuxiliar = servico;
-			}
-			
-			// TENTA INVOCAR O SERVIÇO
-			try{
-				// THREAD QUE INVOQUE O SERVIÇO ? 
-				// COM UMA THREAD QUE INVOQUE O SERVIÇO EU SOU CAPAZ DE DECIDIR QUANDO ENCERA-LA E SOU CAPAZ TAMBÉM DE REALIZAR UM 
-				/* PROCESSAMENTO PARALELO COM UM CONTATOR *
-				 * QUANDO INVOCO ESSA THREAD EU ACHO UM OBJETO E PASSO OS PARAMêTROS NECESSÁRIOS PARA INVOCAR
-				 * SERVICO, EXECUTION, PARAMETROS, RETURN 
-				 * QUANDO ESSE SERVIÇO CHEGA LÁ, ELE NÃO CONSEGUE TRATAR ESSAS DUAS VÁRIAVEIS QUE SÃO 
-				 * PARAMETROS E RETORNO, PORQUE ? 
-				 * NO CONSTRUTOR ELE É CAPAZ DE IDETIFICADOR O OBJETO, PORÉM NO CÓDIGO, RUN (), ELE NÃO CONSEGUE
-				 * ISSO TA BÉM CONFIGURADO NO CONSTRUTOR, EU FAÇO O PROJETO RECEBER, PORÉM ELE NÃO IDENTIFICA;
-				 * */
-				System.out.println("Invocando o serviço "+servicoAuxiliar.getNome()+" tentativa: "+(i+1));
-				System.out.println("Retornos:\nExecution: "+execution+"\nParametros: "+parameters+
-						"\nRetorno Valor: "+returnValue+"\nServicoAuxliar: "+servicoAuxiliar+"\nString Tokenizer: "+stringTokenizer);
-				
-				t = new ThreadTemporizador(execution, parameters, returnValue, servicoAuxiliar, stringTokenizer);
-				Thread t1 = new Thread(t);
-				t1.start();
-				t1.join(10000);
-				resultado = t.getRetorno();
-				t1.interrupt();
-				//invocarServico(execution, servicoAuxiliar);
-				//i=3;
-			}catch(Exception e){
-				
-			}
-			
-			if(resultado==null){
-				System.out.println("Serviço "+servicoAuxiliar.getNome()+" demorou muito para ser executado!");
-			}else{
-				try{
-					t.setRetornaResult(execution, servicoAuxiliar, t.getRetorno());
-					i=3;
-				}catch(Exception e){
-					System.out.println(e);
-				}
-				
-			}
-			
-			
-			// TESTA SE EXISTE UM PRÓXIMO SERVIÇO OU NÃO NA LISTA!
-			if(i==2){
-				posicao++;
-				// PRÓXIMO SERVIÇO DA LISTA
-				if((selecionaServicos.retorneTamanhoServicos()) >= (posicao+1)){
-					servicoAuxiliar = selecionaServicos.proximoServico(posicao);
-					i = -1;
-					erro = true;
-				// NÃO HÁ MAIS SERVIÇOS DISPONÍVEIS
-				}else{
-					if(tentativaDois==2){
-						System.out.println("Nenhum servico do tipo "+servicoAuxiliar.getNome()+" está funcionando!");
-						int recebeScannerContinua = 0;
-						Scanner leitorInt = new Scanner(System.in);
-						System.out.println("Informe o valor 1 para tentar invocar novamente os serviços ou 0 para parar");
-						recebeScannerContinua = leitorInt.nextInt();
-						
-						
-						if(recebeScannerContinua==0){
-							i = 3;
-							break;
-						}else{
-							System.out.println("Aqui?");
-							i = -1;
-							posicao = 0;
-							servicoAuxiliar = servico;
-							erro = false;
-						}
-					}else{
-						i = -1;
-						posicao = 0;
-						tentativaDois++;
-						servicoAuxiliar = selecionaServicos.proximoServico(posicao);
-						erro = false;
-					}	
-				}
-			}
-		}	
-	}
-	
 	// INVOCA O SERVIÇO E RECEBE A REPOSTA
-		public void invocarServico( DelegateExecution execution, Servico servico) throws Exception{
-				
-				// TEMPORIZADOR 2 (0 a 50)
-				// THREAD.SLEEP(40)
-				String wsdlString = servico.getWsdl(); //.getValue(execution);
-				JaxWsDynamicClientFactory dcf = JaxWsDynamicClientFactory.newInstance();
-			    Client client = dcf.createClient(wsdlString);
-			    Endpoint endpoint = client.getEndpoint();
+	public void invocarServico( DelegateExecution execution, Servico servico) throws Exception{
+		
+		String wsdlString = servico.getWsdl(); //.getValue(execution);
+		JaxWsDynamicClientFactory dcf = JaxWsDynamicClientFactory.newInstance();
+		Client client = dcf.createClient(wsdlString);
+		Endpoint endpoint = client.getEndpoint();
+				    
+		ServiceInfo serviceInfo = endpoint.getService().getServiceInfos().get(0);
+				    
+		BindingInfo binding = (BindingInfo) serviceInfo.getBindings().toArray()[0];
+		QName opName = new QName(serviceInfo.getTargetNamespace(), servico.getOperacao());
+		BindingOperationInfo boi = binding.getOperation(opName);
+		BindingMessageInfo inputMessageInfo = boi.getInput();
+		List<MessagePartInfo> parts = null;
+		MessagePartInfo partInfo = null;
+		Class<?> partClass = null;
+		Object inputObject = null;
+		Field[] fieldsService = null;
+		Object inputPartObject = null;
+		ArrayList params = new ArrayList();
 			    
-			    ServiceInfo serviceInfo = endpoint.getService().getServiceInfos().get(0);
-			    
-			    BindingInfo binding = (BindingInfo) serviceInfo.getBindings().toArray()[0];
-			    QName opName = new QName(serviceInfo.getTargetNamespace(), servico.getOperacao());
-			    BindingOperationInfo boi = binding.getOperation(opName);
-			    BindingMessageInfo inputMessageInfo = boi.getInput();
-			    List<MessagePartInfo> parts = null;
-			    MessagePartInfo partInfo = null;
-			    Class<?> partClass = null;
-			    Object inputObject = null;
-			    Field[] fieldsService = null;
-			    Object inputPartObject = null;
-			    ArrayList params = new ArrayList();
-			    
-			    try {
-			    	 parameters.getExpressionText();
-				} catch (Exception e) {
-					parameters = null;
-				}
+		try {
+			parameters.getExpressionText();
+		} catch (Exception e) {
+			parameters = null;
+		}
 			   
 			    
-			    if (parameters!=null && parameters.getExpressionText() != null) {
-			    	parts = inputMessageInfo.getMessageParts();
+		if (parameters!=null && parameters.getExpressionText() != null) {
+			parts = inputMessageInfo.getMessageParts();
 				    
-				    partInfo = parts.get(0);
-				    partClass = partInfo.getTypeClass();
-				    if(partClass == null){
-				    	partClass = String.class;
-				    }
-				    System.out.println(partClass.getCanonicalName());
+			partInfo = parts.get(0);
+			partClass = partInfo.getTypeClass();
+			if(partClass == null){
+				partClass = String.class;
+			}
 				    
-				    inputObject = partClass.newInstance();
+			inputObject = partClass.newInstance();
+			fieldsService = partClass.getDeclaredFields();
 				    
-				    fieldsService = partClass.getDeclaredFields();
-				    
-				    
-			    	StringTokenizer st = null;
-			    	try{
-			    		st = new StringTokenizer( (String)parameters.getValue(execution), "::");
-			    	}catch(ClassCastException e){
-			    		st = new StringTokenizer(parameters.getValue(execution).toString());
-			    	}
-			      int i = -1;
-			      while (st.hasMoreTokens()) {
-			    	i++;
-			        String token = st.nextToken().trim();
-			        
-			        Field field = fieldsService[i];
-			        
-				    PropertyDescriptor partPropertyDescriptor = new PropertyDescriptor(field.getName(), partClass);
+			StringTokenizer st = null;
+			try{
+				st = new StringTokenizer( (String)parameters.getValue(execution), "::");
+			}catch(ClassCastException e){
+				st = new StringTokenizer(parameters.getValue(execution).toString());
+			}
+			
+			int i = -1;
+			while (st.hasMoreTokens()) {
+				i++;
+			    String token = st.nextToken().trim();  
+			    Field field = fieldsService[i];
+			    PropertyDescriptor partPropertyDescriptor = new PropertyDescriptor(field.getName(), partClass);
 					    
-					Class<?> partPropType = partPropertyDescriptor.getPropertyType();
-					System.out.println(partPropType.getCanonicalName());
-					if(partPropType.getCanonicalName().equals("byte[]")){
-						 inputPartObject = token.getBytes(Charset.forName("UTF-8"));
-					}else if(partPropType.getCanonicalName().equals("java.lang.String")){
-						 inputPartObject = token;
-					 }else if(partPropType.getCanonicalName().equals("short")){
-						 inputPartObject = new Short(token);
-					 }else if(partPropType.getCanonicalName().equals("int")){
-						 inputPartObject = new Integer(token);
-					 }else if(partPropType.getCanonicalName().equals("long")){
-						 inputPartObject = new Long(token);
-					 }else if(partPropType.getCanonicalName().equals("float")){
-						 inputPartObject = new Float(token);
-					 }else if(partPropType.getCanonicalName().equals("double")){
-						 inputPartObject = new Double(token);
-					 }else if(partPropType.getCanonicalName().equals("char")){
-						 inputPartObject = new Character(token.charAt(0));
-					 }else if(partPropType.getCanonicalName().equals("boolean") || partPropType.equals(Boolean.class)){
-						 inputPartObject = new Boolean(token);
-					 }else {
-						inputPartObject = partPropType.newInstance(); 
-					    partPropertyDescriptor.getWriteMethod().invoke(inputObject, inputPartObject);
-					    JSONObject jsonObject = new JSONObject(token);
-						Iterator<?> keys = jsonObject.keys();
+				Class<?> partPropType = partPropertyDescriptor.getPropertyType();
+				if(partPropType.getCanonicalName().equals("byte[]")){
+					inputPartObject = token.getBytes(Charset.forName("UTF-8"));
+				}else if(partPropType.getCanonicalName().equals("java.lang.String")){
+					inputPartObject = token;
+				}else if(partPropType.getCanonicalName().equals("short")){
+					inputPartObject = new Short(token);
+				}else if(partPropType.getCanonicalName().equals("int")){
+					inputPartObject = new Integer(token);
+				}else if(partPropType.getCanonicalName().equals("long")){
+					inputPartObject = new Long(token);
+				}else if(partPropType.getCanonicalName().equals("float")){
+					inputPartObject = new Float(token);
+				}else if(partPropType.getCanonicalName().equals("double")){
+					inputPartObject = new Double(token);
+				}else if(partPropType.getCanonicalName().equals("char")){
+					inputPartObject = new Character(token.charAt(0));
+				}else if(partPropType.getCanonicalName().equals("boolean") || partPropType.equals(Boolean.class)){
+					inputPartObject = new Boolean(token);
+				}else{
+					inputPartObject = partPropType.newInstance(); 
+					partPropertyDescriptor.getWriteMethod().invoke(inputObject, inputPartObject);
+					JSONObject jsonObject = new JSONObject(token);
+					Iterator<?> keys = jsonObject.keys();
 						    
-						while(keys.hasNext()){
-						    String key =  (String) keys.next();
-						    PropertyDescriptor numberPropertyDescriptor = new PropertyDescriptor(key, partPropType);
-							numberPropertyDescriptor.getWriteMethod().invoke(inputPartObject, jsonObject.get(key));
-							    
-						}
-					 }
-					params.add(inputPartObject);
-			      
-			    }     
-			}
+					while(keys.hasNext()){
+						String key =  (String) keys.next();
+						PropertyDescriptor numberPropertyDescriptor = new PropertyDescriptor(key, partPropType);
+						numberPropertyDescriptor.getWriteMethod().invoke(inputPartObject, jsonObject.get(key));    
+					}
+				}
+				
+				params.add(inputPartObject);
+			}     
+		}
 
-			    //Object[] result = client.invoke(opName, inputObject);
-			    Object[] result = null;
-			    if(params.size() == 0){
-			    	result = client.invoke(opName);
-			    }else if(params.size() == 1){
-			    	 result = client.invoke(opName, params.get(0));
-			    }else if(params.size() == 2){
-			    	result = client.invoke(opName, params.get(0), params.get(1));
-			    }else if(params.size() == 3){
-			    	result = client.invoke(opName, params.get(0), params.get(1), params.get(2));
-			    }else if(params.size() == 4){
-			    	result = client.invoke(opName, params.get(0), params.get(1), params.get(2), params.get(3));
-			    }else if(params.size() == 5){
-			    	result = client.invoke(opName, params.get(0), params.get(1), params.get(2), params.get(3), params.get(4));
-			    }
+		//Object[] result = client.invoke(opName, inputObject);
+		Object[] result = null;
+		if(params.size() == 0){
+			result = client.invoke(opName);
+		}else if(params.size() == 1){
+			result = client.invoke(opName, params.get(0));
+		}else if(params.size() == 2){
+			result = client.invoke(opName, params.get(0), params.get(1));
+		}else if(params.size() == 3){
+			result = client.invoke(opName, params.get(0), params.get(1), params.get(2));
+		}else if(params.size() == 4){
+			result = client.invoke(opName, params.get(0), params.get(1), params.get(2), params.get(3));
+		}else if(params.size() == 5){
+			result = client.invoke(opName, params.get(0), params.get(1), params.get(2), params.get(3), params.get(4));
+		}
 			   
 			    
-			    Class<?> resultClass = result[0].getClass();
+		Class<?> resultClass = result[0].getClass();
 			    
-			    if (returnValue!=null) {
-				      String returnVariableName = (String) returnValue.getValue(execution);
-				     		      
-				      if(!(resultClass.equals(String.class) || resultClass.equals(Integer.class) || resultClass.equals(Byte.class) || resultClass.equals(Short.class) || resultClass.equals(Byte.class) || resultClass.equals(Long.class)|| resultClass.equals(Float.class) || resultClass.equals(Double.class) || resultClass.equals(Character.class) || resultClass.equals(Boolean.class) ) ){
-					      Field[] fields = resultClass.getDeclaredFields();
+		if (returnValue!=null) {
+			String returnVariableName = (String) returnValue.getValue(execution);
+			   		      
+			if(!(resultClass.equals(String.class) || resultClass.equals(Integer.class) || resultClass.equals(Byte.class) || resultClass.equals(Short.class) || resultClass.equals(Byte.class) || resultClass.equals(Long.class)|| resultClass.equals(Float.class) || resultClass.equals(Double.class) || resultClass.equals(Character.class) || resultClass.equals(Boolean.class) ) ){
+				Field[] fields = resultClass.getDeclaredFields();
 						    
-						  for (Field field : fields) {
-							  PropertyDescriptor resultDescriptor = new PropertyDescriptor(field.getName(), resultClass);
-							  Object wsResponse = resultDescriptor.getReadMethod().invoke(result[0]);
-							  execution.setVariable(returnVariableName+"."+field.getName(), wsResponse);
-						  }
-				      } else {
-				    	  execution.setVariable(returnVariableName, result[0]);
-				      }
-				 }
-			    
-			    //setRetorno(result);
-			    System.out.println("Retorno: "+ result[0]);
+				for (Field field : fields) {
+					PropertyDescriptor resultDescriptor = new PropertyDescriptor(field.getName(), resultClass);
+					Object wsResponse = resultDescriptor.getReadMethod().invoke(result[0]);
+					execution.setVariable(returnVariableName+"."+field.getName(), wsResponse);
+				}
+			}else{
+				execution.setVariable(returnVariableName, result[0]);
 			}
-	
-	
-	
+		}else{
+			
+		}
+		
+		
+		System.out.println("Retorno: "+ result[0]);
+	}
 }

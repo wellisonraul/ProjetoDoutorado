@@ -1,8 +1,8 @@
 package br.ufpe.activiti.behaviour.juddi;
 
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 import java.util.List;
-
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.juddi.v3.client.UDDIConstants;
 import org.apache.juddi.v3.client.config.UDDIClient;
@@ -19,6 +19,7 @@ import org.uddi.api_v3.ServiceDetail;
 import org.uddi.api_v3.ServiceList;
 import org.uddi.v3_service.DispositionReportFaultMessage;
 import org.uddi.v3_service.UDDIInquiryPortType;
+import br.ufpe.activiti.behaviour.model.Atributo;
 import br.ufpe.activiti.behaviour.model.Servico;
 
 
@@ -80,10 +81,7 @@ public class BuscaJuddi {
 					
 				} else {
 					FindService fs = new FindService();
-					//Set id
 					service.setNome(value);
-					
-					//set wsdl
 					Name name = new Name();
 					name.setValue(value);
 					fs.getName().add(name);
@@ -100,17 +98,42 @@ public class BuscaJuddi {
 					BusinessService bs = serviceDetails.getBusinessService().get(0);
 					CategoryBag cb = bs.getCategoryBag();
 					List<KeyedReference> keyedReferences = cb.getKeyedReference();
+					
 					for (KeyedReference keyedReference : keyedReferences) {
+						
+						ArrayList<Atributo> listaAtributo = new ArrayList<Atributo>();
+						
 						if(keyedReference.getTModelKey().equals("uddi:uddi.org:wsdl:address")){
 							service.setWsdl(keyedReference.getKeyValue());
-							//break;
 						}
+						
 						if(keyedReference.getTModelKey().equals("urn:wsdm.org:qos:reliability")){
 							Double reliability = Double.parseDouble(keyedReference.getKeyValue());
-							service.setDisponibilidade(reliability);
-							//break;
-							//service.setOperation(keyedReference.getKeyValue());
+							
+							Atributo atributo = new Atributo();
+							
+							atributo.setNome("Disponibilidade");
+							atributo.setEMelhorOValorMaior(true);
+							atributo.setValor(reliability);
+							
+							listaAtributo.add(atributo);
+							service.setAtributos(listaAtributo);
 						}
+						
+						if(keyedReference.getTModelKey().equals("urn:wsdm.org:qos:responsetime_average")){
+							Double tempoRespostaMedio = Double.parseDouble(keyedReference.getKeyValue());
+							
+							Atributo atributo = new Atributo();
+							
+							atributo.setNome("TempoDeResposta");
+							atributo.setEMelhorOValorMaior(false);
+							atributo.setValor(tempoRespostaMedio);	
+							
+							listaAtributo.addAll(service.getAtributos());
+							listaAtributo.add(atributo);
+							service.setAtributos(listaAtributo);
+						}
+						
 					}
 				}
 				

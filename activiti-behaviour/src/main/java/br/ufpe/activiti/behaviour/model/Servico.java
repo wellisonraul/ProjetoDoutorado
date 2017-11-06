@@ -1,5 +1,6 @@
 package br.ufpe.activiti.behaviour.model;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,11 +13,15 @@ public class Servico {
 	private double disponibilidade;
 	private double fator;
 	private QualidadeDoServico qualidadeDoServico;
+	private ArrayList<Atributo> atributos;
 	
 	
-	// MÉTODOS GET E SET
-	
-	
+	public ArrayList<Atributo> getAtributos() {
+		return atributos;
+	}
+	public void setAtributos(ArrayList<Atributo> atributos) {
+		this.atributos = atributos;
+	}
 	public QualidadeDoServico getQualidadeDoServico() {
 		return qualidadeDoServico;
 	}

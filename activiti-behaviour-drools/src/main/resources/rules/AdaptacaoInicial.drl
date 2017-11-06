@@ -1,0 +1,18 @@
+package br.ufpe.behaviour.drools
+
+import br.ufpe.behaviour.drools.Codigo;
+
+dialect "java"
+rule "Regra para adaptar"
+    when
+        c : Codigo( codigoParaAnalise <= Codigo.LIMITE)
+    then
+    	System.out.println("O código precisa adaptar!");
+end
+
+rule "Regra para não adaptar"
+    when
+        c : Codigo( codigoParaAnalise > Codigo.LIMITE)
+    then
+    	System.out.println("O código não precisa adaptar!");
+end

@@ -78,7 +78,6 @@ public class ThreadTemporizador extends Thread {
 		setReturnValue(returnValue);
 		setServico(servico);
 		setStringTokenizer(stringTokenizer);
-		
 	}
 	
 	public void run(){	
@@ -97,7 +96,7 @@ public class ThreadTemporizador extends Thread {
 	
 	public Object[] invoca(DelegateExecution execution, Expression parameters, Expression returnValue, Servico servico, StringTokenizer stringTokenizer) throws Exception{
 		// TEMPORIZADOR 2 (0 a 50)
-					// THREAD.SLEEP(40)
+		// THREAD.SLEEP(40)
 					String wsdlString = servico.getWsdl(); //.getValue(execution);
 					System.out.println(wsdlString);
 				    

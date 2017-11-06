@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Activity"> 
+	 
+	 <resultMap id="resultActivityLog" type="br.ufpe.activiti.behaviour.model.ProcessoLog">
+		 <id property="id" column="idActivityLog" />
+		 <result property="processId" column="processId" />
+		 <result property="processInstanceId" column="processInstanceId" />
+		 <result property="activityId" column="activityId" />
+		 <result property="activityName" column="activityName" />
+		 <result property="timestamp" column="timestamp" />
+		 <result property="eventType" column="eventType" />
+		 <result property="resource" column="resource" />	
+	 </resultMap>
+	 
+	 <!-- ACTIVITY LOG -->
+	 
+		<select id="countActivityLog" parameterType="map" resultType="long">
+	 		SELECT
+	 			count(*)
+	 		FROM PROCESS_LOG AL
+	 		WHERE AL.process_id = #{processId} AND AL.resource = #{resource} AND AL.start BETWEEN #{start} AND #{end}
+	 	
+	 	</select>
+	 	 
+	 	<select id="sumActivityLogDataLength" parameterType="map" resultType="long">
+	 	SELECT
+	 		sum(DATA_LENGTH)
+	 	FROM PROCESS_LOG AL
+	 	WHERE AL.process_id = #{processId} AND AL.resource = #{resource} AND AL.start BETWEEN #{start} AND #{end}
+	 	
+	 </select>
+	 
+	 <select id="sumActivityLogMessageLength" parameterType="map" resultType="long">
+	 	SELECT
+	 		sum(MESSAGE_LENGTH)
+	 	FROM PROCESS_LOG AL
+	 	WHERE AL.process_id = #{processId} AND AL.resource = #{resource} AND AL.start BETWEEN #{start} AND #{end}
+	 	
+	 </select>
+
+	 <select id="getActivityLog" parameterType="map" resultMap="resultActivityLog">
+	 	SELECT
+	 		AL.id as idActivityLog, AL.process_id as processId, AL.process_instance_id as processInstanceId, AL.activity_id as activityId, AL.activity_name as activityName, AL.start as start, AL.end as end, AL.resource as resource
+	 	FROM PROCESS_LOG AL
+	 	WHERE AL.process_id = #{processId} AND AL.resource = #{resource} AND AL.start BETWEEN #{start} AND #{end}
+	 	
+	 </select> 
+	 
+	 <insert id="setActivityLog" parameterType="br.ufpe.activiti.behaviour.model.ProcessoLog">
+	 	INSERT 
+	 		INTO PROCESS_LOG (PROCESS_ID, PROCESS_INSTANCE_ID, ACTIVITY_ID, ACTIVITY_NAME, TIMESTAMP, RESOURCE, EVENT_TYPE)
+	 		VALUES( #{processId}, #{processInstanceId}, #{activityId}, #{activityName}, #{timestamp}, #{resource}, #{eventType})
+	 		<selectKey resultType="int" keyProperty="id" order="AFTER">
+	 			SELECT LAST_INSERT_ID() as id
+	 		</selectKey>
+	 			
+	 </insert>
+	 
+	 <update id="updateActivityLog" parameterType="br.ufpe.activiti.behaviour.model.ProcessoLog">
+	 
+	 	UPDATE PROCESS_LOG 
+	 		SET end=#{end}, resource=#{resource} where id=#{id}	
+	 </update>
+</mapper>

@@ -2,36 +2,60 @@ package br.ufpe.activiti.behaviour.model;
 
 public class Atributo {
 
-	private String name;
-	private boolean isGreaterValuesBetter;
+	private String nome;
+	private double valor;
+	private boolean eMelhorOValorMaior;
+	private int peso;
 	
 	public Atributo() {
 		super();
 	}
 	
-	public Atributo(String name, boolean isGreaterValuesBetter) {
+	public Atributo(String nome, boolean eMelhorOValorMaior, double valor, int peso) {
 		super();
-		this.name = name;
-		this.isGreaterValuesBetter = isGreaterValuesBetter;
+		this.nome = nome;
+		this.eMelhorOValorMaior = eMelhorOValorMaior;
+		this.valor = valor;
+		this.peso = peso;
 	}
 	
-	public String getName() {
-		return name;
+	public int getPeso() {
+		return peso;
 	}
-	public void setName(String name) {
-		this.name = name;
+
+	public void setPeso(int peso) {
+		this.peso = peso;
 	}
-	public boolean isGreaterValuesBetter() {
-		return isGreaterValuesBetter;
+
+	public double getValor() {
+		return valor;
 	}
-	public void setGreaterValuesBetter(boolean isGreaterValuesBetter) {
-		this.isGreaterValuesBetter = isGreaterValuesBetter;
+
+	public void setValor(double valor) {
+		this.valor = valor;
 	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public boolean getEMelhorOValorMaior() {
+		return eMelhorOValorMaior;
+	}
+
+	public void setEMelhorOValorMaior(boolean eMelhorOValorMaior) {
+		this.eMelhorOValorMaior = eMelhorOValorMaior;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
 		return result;
 	}
 	@Override
@@ -43,10 +67,10 @@ public class Atributo {
 		if (!(obj instanceof Atributo))
 			return false;
 		Atributo other = (Atributo) obj;
-		if (name == null) {
-			if (other.name != null)
+		if (nome == null) {
+			if (other.nome != null)
 				return false;
-		} else if (!name.equals(other.name))
+		} else if (!nome.equals(other.nome))
 			return false;
 		return true;
 	}

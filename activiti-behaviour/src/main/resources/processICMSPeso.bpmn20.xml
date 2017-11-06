@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
+  <process id="processICMSPeso” isExecutable="true">
+    <startEvent id="sid-BBFF164B-1125-499F-8C83-BE36F1F1285B">
+      <extensionElements>
+        <activiti:formProperty id="nameuf" name="nameuf" type="string"/>
+        <activiti:formProperty id="good" name="good" type="long"/>
+        <activiti:formProperty id="shipping" name="shipping" type="long"/>
+      </extensionElements>
+    </startEvent>
+    <sequenceFlow id="sid-5C689DD3-8AB3-442E-A0EF-ECE0D363EADA" sourceRef="sid-BBFF164B-1125-499F-8C83-BE36F1F1285B" targetRef="sid-BBDCCE8C-1362-4FFF-AE5F-075C206FB1D8"/>
+    <serviceTask id="sid-BBDCCE8C-1362-4FFF-AE5F-075C206FB1D8" name="ValorAliquota" activiti:class="activiti.WsDelegate">
+      <extensionElements>
+        <activiti:field name="wsdlOperation">
+          <activiti:expression>AliquotRate::toSayAliquot;AliquotRateSecond::toSayAliquotSecond</activiti:expression>
+        </activiti:field>
+        <activiti:field name="parameters">
+          <activiti:expression>${nameuf};${nameuf}</activiti:expression>
+        </activiti:field>
+        <activiti:field name="returnValue">
+          <activiti:expression>aliquot</activiti:expression>
+        </activiti:field>
+      </extensionElements>
+      <serviceRequirements>
+        <activiti:requirement name="Behavior" value="0.94" weight="0.2"/>
+        <activiti:requirement name="Availability" value="0.95" weight="0.3"/>
+        <activiti:requirement name="Reliability" value="0.98" weight="0.4"/>
+        <activiti:requirement name="ResponseTime" value="0.4" weight="0.1"/>
+      </serviceRequirements>
+    </serviceTask>
+    <sequenceFlow id="sid-20E5AC4E-212E-48E7-9F1A-2BC6EACA0479" sourceRef="sid-BBDCCE8C-1362-4FFF-AE5F-075C206FB1D8" targetRef="sid-EB09C0BA-5465-434C-B3C9-8FEBA8CF0398"/>
+    <sequenceFlow id="sid-59641360-C9C7-4635-9AEC-C251EEF6E6DD" sourceRef="sid-EB09C0BA-5465-434C-B3C9-8FEBA8CF0398" targetRef="sid-8CDC9119-2EB9-4074-965B-E9A7817FC726"/>
+    <serviceTask id="sid-EB09C0BA-5465-434C-B3C9-8FEBA8CF0398" name="TaxaImportação" activiti:class="activiti.WsDelegate">
+      <extensionElements>
+        <activiti:field name="wsdlOperation">
+          <activiti:expression>ImportationRate::toSayImportationTax</activiti:expression>
+        </activiti:field>
+        <activiti:field name="parameters">
+          <activiti:expression>${good}::${shipping}</activiti:expression>
+        </activiti:field>
+        <activiti:field name="returnValue">
+          <activiti:expression>importation</activiti:expression>
+        </activiti:field>
+      </extensionElements>
+      <serviceRequirements>
+        <activiti:requirement name="Behavior" value="0.94" weight="0.2"/>
+        <activiti:requirement name="Availability" value="0.97" weight="0.3"/>
+        <activiti:requirement name="Reliability" value="0.95" weight="0.4"/>
+        <activiti:requirement name="ResponseTime" value="0.31" weight="0.1"/>
+      </serviceRequirements>
+    </serviceTask>
+    <serviceTask id="sid-8CDC9119-2EB9-4074-965B-E9A7817FC726" name="ValorICMS" activiti:class="activiti.WsDelegate">
+      <extensionElements>
+        <activiti:field name="wsdlOperation">
+          <activiti:expression>ICMSRate::toSayFinalCost</activiti:expression>
+        </activiti:field>
+        <activiti:field name="parameters">
+          <activiti:expression>${good}::${shipping}::${aliquot}::${importation}</activiti:expression>
+        </activiti:field>
+        <activiti:field name="returnValue">
+          <activiti:expression>icms</activiti:expression>
+        </activiti:field>
+      </extensionElements>
+      <serviceRequirements>
+        <activiti:requirement name="Behavior" value="0.95" weight="0.2"/>
+        <activiti:requirement name="Availability" value="0.94" weight="0.3"/>
+        <activiti:requirement name="Reliability" value="0.97" weight="0.4"/>
+        <activiti:requirement name="ResponseTime" value="0.32" weight="0.1"/>
+      </serviceRequirements>
+    </serviceTask>
+    <intermediateThrowEvent id="sid-8033AA68-D5F4-4251-A0F1-0A6B653AC1CF"/>
+    <sequenceFlow id="sid-7EF8DB4D-8B39-4F0A-AA7F-5EBB715C5906" sourceRef="sid-8CDC9119-2EB9-4074-965B-E9A7817FC726" targetRef="sid-8033AA68-D5F4-4251-A0F1-0A6B653AC1CF"/>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_processICMSPeso">
+    <bpmndi:BPMNPlane bpmnElement="processICMSPeso" id="BPMNPlane_processICMSPeso">
+      <bpmndi:BPMNShape bpmnElement="sid-BBFF164B-1125-499F-8C83-BE36F1F1285B" id="BPMNShape_sid-BBFF164B-1125-499F-8C83-BE36F1F1285B">
+        <omgdc:Bounds height="30.0" width="30.0" x="75.0" y="160.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-BBDCCE8C-1362-4FFF-AE5F-075C206FB1D8" id="BPMNShape_sid-BBDCCE8C-1362-4FFF-AE5F-075C206FB1D8">
+        <omgdc:Bounds height="80.0" width="100.0" x="165.0" y="135.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-EB09C0BA-5465-434C-B3C9-8FEBA8CF0398" id="BPMNShape_sid-EB09C0BA-5465-434C-B3C9-8FEBA8CF0398">
+        <omgdc:Bounds height="80.0" width="100.0" x="312.0" y="135.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-8CDC9119-2EB9-4074-965B-E9A7817FC726" id="BPMNShape_sid-8CDC9119-2EB9-4074-965B-E9A7817FC726">
+        <omgdc:Bounds height="80.0" width="100.0" x="457.0" y="135.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-8033AA68-D5F4-4251-A0F1-0A6B653AC1CF" id="BPMNShape_sid-8033AA68-D5F4-4251-A0F1-0A6B653AC1CF">
+        <omgdc:Bounds height="30.0" width="30.0" x="602.0" y="160.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sid-5C689DD3-8AB3-442E-A0EF-ECE0D363EADA" id="BPMNEdge_sid-5C689DD3-8AB3-442E-A0EF-ECE0D363EADA">
+        <omgdi:waypoint x="105.0" y="175.0"/>
+        <omgdi:waypoint x="165.0" y="175.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-20E5AC4E-212E-48E7-9F1A-2BC6EACA0479" id="BPMNEdge_sid-20E5AC4E-212E-48E7-9F1A-2BC6EACA0479">
+        <omgdi:waypoint x="265.0" y="175.0"/>
+        <omgdi:waypoint x="312.0" y="175.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-7EF8DB4D-8B39-4F0A-AA7F-5EBB715C5906" id="BPMNEdge_sid-7EF8DB4D-8B39-4F0A-AA7F-5EBB715C5906">
+        <omgdi:waypoint x="557.0" y="175.0"/>
+        <omgdi:waypoint x="602.0" y="175.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-59641360-C9C7-4635-9AEC-C251EEF6E6DD" id="BPMNEdge_sid-59641360-C9C7-4635-9AEC-C251EEF6E6DD">
+        <omgdi:waypoint x="412.0" y="175.0"/>
+        <omgdi:waypoint x="457.0" y="175.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

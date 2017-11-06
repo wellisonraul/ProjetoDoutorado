@@ -1,20 +1,46 @@
 package br.ufpe.activiti.behaviour.selection;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
-
-
 import br.ufpe.activiti.behaviour.model.Servico;
 
 public class SelecionaServicos{
-	CopyOnWriteArrayList<Servico> servicos = new CopyOnWriteArrayList<Servico>(); 
+	CopyOnWriteArrayList<Servico> servicos = new CopyOnWriteArrayList<Servico>();
+	private Map<String, Double> valores;
+	private Map<String, Double> pesos;
 	
+	public SelecionaServicos() {
+		valores = new HashMap<String,Double>();
+		valores.put("Disponibilidade", 0.93);
+		valores.put("TempoDeResposta", 10.0);
+		
+		pesos = new HashMap<String,Double>();
+		pesos.put("Disponibilidade", 2.0);
+		pesos.put("TempoDeResposta", 1.5);	
+	}
+	
+	public Map<String, Double> getValores() {
+		return valores;
+	}
+	
+	public void setValores(Map<String, Double> valores) {
+		this.valores = valores;
+	}
+
+	public Map<String, Double> getPesos() {
+		return pesos;
+	}
+	
+	public void setPesos(Map<String, Double> pesos) {
+		this.pesos = pesos;
+	}
+
 	public void addService(String wsdl, String operation) {
 		Servico service = new Servico();
 		service.setOperacao(operation);
 		service.setWsdl(wsdl);
-		
 		this.addService(service);
-
 	}
 
 	public void addService(Servico service) {
@@ -28,11 +54,7 @@ public class SelecionaServicos{
 	public void setServicos(CopyOnWriteArrayList<Servico> servicos) {
 		this.servicos = servicos;
 	}
-	
-	public void ordenacaoServicos(){
-		
-	}
-	
+
 	public Servico retorneMelhorServico() {
 		return this.servicos.get(0);
 	}
@@ -41,23 +63,8 @@ public class SelecionaServicos{
 		return this.servicos.size();
 	}
 	
-	public void ordenarServicos() {
-		// Lista de serviços maior que 1? 
-		if(servicos.size()>1){
-			// BUBBLE SORT
-			for(int i = 0; i<servicos.size(); i++){
-				for(int j = 0; j<servicos.size()-1; j++){
-					if(servicos.get(j).getDisponibilidade() < servicos.get(j + 1).getDisponibilidade()){
-						Servico aux = servicos.get(j);
-						servicos.set(j, servicos.get(j+1));
-						servicos.set(j+1, aux);
-					}
-				}
-			}	
-		}
-	}
-	
 	public Servico proximoServico(int posicao){
 		return this.servicos.get(posicao);
 	}
+	
 }
