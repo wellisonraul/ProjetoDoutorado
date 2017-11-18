@@ -66,5 +66,4 @@ public class SelecionaServicos{
 	public Servico proximoServico(int posicao){
 		return this.servicos.get(posicao);
 	}
-	
 }

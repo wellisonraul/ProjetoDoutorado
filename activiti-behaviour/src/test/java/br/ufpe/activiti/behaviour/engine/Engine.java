@@ -10,6 +10,7 @@ import org.activiti.engine.RepositoryService;
 import org.activiti.engine.RuntimeService;
 import org.activiti.engine.repository.DeploymentBuilder;
 import br.ufpe.activiti.behaviour.ciclo.mapek.MAPEK;
+import br.ufpe.activiti.behaviour.monitor.MonitorDisponibilidade;
 
 public class Engine {
 	public static void main(String[] args) {
@@ -35,10 +36,10 @@ public class Engine {
 		threadGeradorErros.start();*/
 		
 		
-		MAPEK mapek = new MAPEK();
-		mapek.start();
+		/*MAPEK mapek = new MAPEK();
+		mapek.start();*/
 		
-		/*int numDays =10;
+		int numDays =10;
 		for (int i = 0; i < numDays; i++) {
 
 			for (int j = 0; j <3; j++) {
@@ -58,7 +59,7 @@ public class Engine {
 				}
 			}
 
-		}*/
+		}
 
 	}
 

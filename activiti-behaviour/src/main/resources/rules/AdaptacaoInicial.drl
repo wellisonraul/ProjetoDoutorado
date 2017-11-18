@@ -1,6 +1,7 @@
-package br.ufpe.behaviour.drools
+package br.ufpe.activiti.behaviour.drools
 
-import br.ufpe.behaviour.drools.Codigo;
+import br.ufpe.activiti.behaviour.drools.Codigo;
+import function br.ufpe.activiti.behaviour.ciclo.mapek.Executor.executarDrools;
 
 dialect "java"
 rule "Regra para adaptar"
@@ -8,6 +9,7 @@ rule "Regra para adaptar"
         c : Codigo( codigoParaAnalise <= Codigo.LIMITE)
     then
     	System.out.println("O código precisa adaptar!");
+    	executarDrools(0);
 end
 
 rule "Regra para não adaptar"
@@ -15,4 +17,5 @@ rule "Regra para não adaptar"
         c : Codigo( codigoParaAnalise > Codigo.LIMITE)
     then
     	System.out.println("O código não precisa adaptar!");
+    	executarDrools(1);
 end

@@ -14,7 +14,7 @@ public class Planejador {
 		for (Iterator<Entry<String, Double>> iterator = mapaDeAnalise.entrySet().iterator(); iterator.hasNext();) {
 			Entry<String, Double> entry = iterator.next();
 			double x = (double) entry.getValue();
-			if(x>=0.1 && x<=0.9) {
+			if(x>=0 && x<=0.9) {
 				System.out.println("É necessário realizar adaptação no serviço");
 				System.out.println(entry.getKey() + ", " + entry.getValue());
 				mapa.put((String) entry.getKey(), 1);

@@ -6,6 +6,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import br.ufpe.activiti.behaviour.drools.AdaptarRequisicoes;
 
 public class PlanejadorDrools {
 	public Map<String, Integer> Planejar(Map<String, Double> mapaDeAnalise) {
@@ -19,10 +20,9 @@ public class PlanejadorDrools {
 			analises.add(x);
 		}
 		
-		//Planejamento planejar = new Planejamento();
-		//planejar.RequisitarDrools(analises);
+		AdaptarRequisicoes drools = new AdaptarRequisicoes();
+		drools.requisitarDrools(analises);
 		
-		System.out.println("Planejamento concluído!");
 		return mapa;
 	}
 }

@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 public class Executor {
-	public static void Executar(Map<String, Integer> mapaDeAnalisePlanejador) {
+	public void Executar(Map<String, Integer> mapaDeAnalisePlanejador) {
 		for (Iterator<Entry<String, Integer>> iterator = mapaDeAnalisePlanejador.entrySet().iterator(); iterator.hasNext();) {
 			Entry<String, Integer> entry = iterator.next();
 			int cod = (int) entry.getValue();
@@ -17,5 +17,13 @@ public class Executor {
 		}
 		
 		System.out.println("Executor finalizou!");
+	}
+	
+	public static void executarDrools(int cod) {
+		if(cod==1) {
+			System.out.println("Executor está trabalhando");
+		}else{
+			System.out.println("Executor não está trabalhando");
+		}
 	}
 }

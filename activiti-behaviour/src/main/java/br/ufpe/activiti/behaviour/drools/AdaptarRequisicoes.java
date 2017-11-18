@@ -1,4 +1,4 @@
-package br.ufpe.behaviour.drools;
+package br.ufpe.activiti.behaviour.drools;
 
 import java.util.ArrayList;
 import org.kie.api.KieServices;

@@ -34,19 +34,22 @@ import org.apache.cxf.service.model.ServiceInfo;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import br.ufpe.activiti.bahaviour.util.Util;
+import br.ufpe.activiti.behaviour.ciclo.mapek.Monitor;
 import br.ufpe.activiti.behaviour.dao.DefineProcessLog;
 import br.ufpe.activiti.behaviour.juddi.BuscaJuddi;
 import br.ufpe.activiti.behaviour.model.Atributo;
 import br.ufpe.activiti.behaviour.model.ProcessoNegocio;
 import br.ufpe.activiti.behaviour.model.Servico;
 import br.ufpe.activiti.behaviour.model.Tarefa;
+import br.ufpe.activiti.behaviour.monitor.MonitorDisponibilidade;
 import br.ufpe.activiti.behaviour.random.ThreadGeradorErros;
 import br.ufpe.activiti.behaviour.random.ThreadTemporizador;
 import br.ufpe.activiti.behaviour.random.GeradorRandomico;
 import br.ufpe.activiti.behaviour.selection.Ordenacao;
 import br.ufpe.activiti.behaviour.selection.SelecionaServicos;
 import br.ufpe.activiti.behaviour.selection.SelecionaTarefa;
+import br.ufpe.activiti.behaviour.util.Util;
+
 import org.activiti.engine.delegate.JavaDelegate;
 import org.activiti.engine.delegate.DelegateExecution;
 import org.activiti.engine.delegate.JavaDelegate;
@@ -210,19 +213,23 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 		if(selecionaServicos==null){ // Não, então chame o método de criação!
 			criaListaServicos(execution); // Método para cria lista de serviços
 			setProcessIDInicializacao(Integer.parseInt(execution.getProcessInstanceId())); // Recebe o processo que está sendo iniciado
-		} 
-		
-		DefineProcessLog dao = new DefineProcessLog(); // Inserção de traces
-		try {
-			dao.inserirLog(execution,selecionaServicos.retorneMelhorServico(),null); // Insira o trace de inicialização
-			invocarServico(execution, selecionaServicos.retorneMelhorServico()); // Invoca o serviço da lista de serviços
-		}catch (Exception e) {
-			System.out.println("O serviço "+selecionaServicos.retorneMelhorServico().getNome()+" falhou!");
-		}finally {
-			// Inseri traces de execução, caso seja concluído, inseri complete!
-			if(execution.getVariable((String)returnValue.getValue(execution))!=null) 
-				dao.inserirLog(execution,selecionaServicos.retorneMelhorServico(),execution.getVariable((String)returnValue.getValue(execution)));
+			MonitorDisponibilidade monitor = new MonitorDisponibilidade(selecionaServicos);
+			monitor.start();
+		}else {
+			DefineProcessLog dao = new DefineProcessLog(); // Inserção de traces
+			try {
+				dao.inserirLog(execution,selecionaServicos.retorneMelhorServico(),null); // Insira o trace de inicialização
+				invocarServico(execution, selecionaServicos.retorneMelhorServico()); // Invoca o serviço da lista de serviços
+			}catch (Exception e) {
+				System.out.println("O serviço "+selecionaServicos.retorneMelhorServico().getNome()+" falhou!");
+			}finally {
+				// Inseri traces de execução, caso seja concluído, inseri complete!
+				if(execution.getVariable((String)returnValue.getValue(execution))!=null) 
+					dao.inserirLog(execution,selecionaServicos.retorneMelhorServico(),execution.getVariable((String)returnValue.getValue(execution)));
+			}
 		}
+		
+		
 	}
 	
 	// INVOCA O SERVIÇO E RECEBE A REPOSTA

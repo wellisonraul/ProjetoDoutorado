@@ -15,7 +15,7 @@ import org.processmining.mapper.mapping.Mapping;
 import org.processmining.mapper.mapping.Properties;
 import org.processmining.mapper.mapping.Trace;
 
-import br.ufpe.activiti.bahaviour.util.Util;
+import br.ufpe.activiti.behaviour.util.Util;
 
 public class Monitor{
 	

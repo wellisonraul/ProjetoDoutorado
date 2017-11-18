@@ -143,59 +143,5 @@ public class Ordenacao {
 			}	
 		}
 	}
-
-	
-	
-public void ordenarModificado(SelecionaServicos servicos) {
-		
-		
-		for(int j=0;j<servicos.getServicos().get(0).getAtributos().size();j++) {
-			Double valorMaximo = 0.0;
-			Double valorMinimo = 0.0;
-			
-			boolean primeiraInteracao = true;
-			double valores = 0.0;
-			
-			for(int k=0;k<servicos.getServicos().size();k++) {
-				
-				Double valor = servicos.getServicos().get(k).getAtributos().get(j).getValor();
-				if (primeiraInteracao) {
-					for (Entry<String, Double> pair : servicos.getValores().entrySet()) {
-					    if(pair.getKey().equals(servicos.getServicos().get(k).getAtributos().get(j).getNome())) {
-					    	valorMaximo = pair.getValue();
-							valorMinimo = pair.getValue();
-							valores = pair.getValue();
-							primeiraInteracao = false;
-					    }
-					}
-				} 
-				
-					
-				if (valor < valorMinimo) {
-					valorMinimo = valor;
-				} else if (valor > valorMaximo) {
-					valorMaximo = valor;	
-				}
-			}
-			
-			for (Servico servico : servicos.getServicos()) {
-				this.normalizacao.normalizarListaDeAtributos(servico,valorMaximo,valorMinimo,j);
-			}
-			
-			valores = this.normalizacao.normalizarAtributoParaDistanciaEuclidiana(valorMaximo, valorMinimo, servicos.
-						getServicos().get(0).getAtributos().get(j).getEMelhorOValorMaior(), valores);
-			
-			Map<String,Double> temporario = servicos.getValores();
-			temporario.put(servicos.getServicos().get(0).getAtributos().get(j).getNome(), valores);
-			servicos.setValores(temporario);
-			
-		}
-		
-		this.agregacao.simplesAdicaoDePeso(servicos);
-		ordenarServicosDistanciaEuclidiana(servicos);
-		
-	}
-	
-	
 	
 }

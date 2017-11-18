@@ -1,4 +1,4 @@
-package br.ufpe.activiti.bahaviour.util;
+package br.ufpe.activiti.behaviour.util;
 
 public class Util {
 	public static String arquivoXES = "/home/wellisonraul/eclipse-workspace/Doutorado/activiti-behaviour/traceExecucao.xes";
