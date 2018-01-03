@@ -1,0 +1,167 @@
+#################################################
+# version	         : 0.3
+# date			 : 08122004
+# author		 : HT de Beer
+##
+
+## 
+# Start with defining the 'standard' attributes, as specified in the xml
+# specification of the workflow logs for the ProM framework.
+##
+
+set ate.EventType;
+set ate.Originator;
+date ate.Timestamp := "yyyy-MM-dd"; 
+# The format you should supply date literals to the attribute ate.Timestamp or
+# renamings of that attribute is a four digit year, a dash a two digit month,
+# again a dash and a two digit day. For example 2004-12-08, denoting December
+# the 8th of 2004.
+set ate.WorkflowModelElement;
+
+number pi.numSimilarInstances;
+
+##
+# Some 'standard' renamings. First some names of the attributes without the
+# ate. and without capitals. Then some renamings which can be used more
+# often. You can add easily your own renamings, as long you remember that
+# every name must be unique.
+##
+
+rename ate.EventType as eventtype;
+rename ate.EventType as event;
+rename ate.Originator as originator;
+rename ate.Originator as person;
+rename ate.Timestamp as timestamp;
+rename ate.Timestamp as time;
+rename ate.WorkflowModelElement as modelelement;
+rename ate.WorkflowModelElement as activity;
+rename ate.WorkflowModelElement as place;
+rename ate.WorkflowModelElement as element;
+rename pi.numSimilarInstances as freq;
+
+formula always_when_A_then_eventually_B( A: activity, B: activity ) :=
+{
+<h2>If activity A occurs, does activity B occur after activity A occured?</h2>
+<p> Compute if always when there is an activity with name A and then, eventually there
+is an activity with name B</p>
+<p> Arguments:<br>
+<ul>
+<li><b>A</b> of type set (<i>ate.WorkflowModelElement</i>)</li>
+<li><b>B</b> of type set (<i>ate.WorkflowModelElement</i>)</li>
+</ul>
+</p>
+}
+[]( (  activity == A  -> <>( activity == B ) ) );
+
+formula always_activity_A( A: activity ) :=
+{
+<h2>Does activity <b>A</b> occur?</h2>
+<p> Compute if there is an activity with name A </p>
+<p> Arguments:<br>
+<ul>
+<li><b>A</b> of type set (<i>ate.WorkflowModelElement</i>)</li>
+</ul>
+</p>
+}
+[]( activity == A );
+
+formula always_when_A_then_always_B( A: activity, B: activity ) :=
+{
+<h2>If activity A occurs, does activity B occur after activity A occured?</h2>
+<p> Compute if always when there is an activity with name A and then, eventually there
+is an activity with name B</p>
+<p> Arguments:<br>
+<ul>
+<li><b>A</b> of type set (<i>ate.WorkflowModelElement</i>)</li>
+<li><b>B</b> of type set (<i>ate.WorkflowModelElement</i>)</li>
+</ul>
+</p>
+}
+[]( (  activity == A  -> []( activity == B ) ) );
+
+formula always_activity_A_next_B( A: activity, B: activity ) :=
+{
+<h2>Does activity B occur after activity A occur?</h2>
+<p> Compute if there is an activity with name A and then, the next time there
+is an activity with name B</p>
+<p> Arguments:<br>
+<ul>
+<li><b>A</b> of type set (<i>ate.WorkflowModelElement</i>)</li>
+<li><b>B</b> of type set (<i>ate.WorkflowModelElement</i>)</li>
+</ul>
+</p>
+}
+[]( ( activity == A /\ _O( activity == B ) ) );
+
+formula always_activity_A_then_B( A: activity, B: activity ) :=
+{
+<h2>Does activity B occur after activity A occur?</h2>
+<p> Compute if there is an activity with name A and then, eventually there
+is an activity with name B</p>
+<p> Arguments:<br>
+<ul>
+<li><b>A</b> of type set (<i>ate.WorkflowModelElement</i>)</li>
+<li><b>B</b> of type set (<i>ate.WorkflowModelElement</i>)</li>
+</ul>
+</p>
+}
+[]( ( activity == A /\ <>( activity == B ) ) );
+
+formula always_activity_A_next_B_next_C( A: activity, B: activity, C: activity ) :=
+{
+<h2>Does activity C occur after activity B occur after activity A occur?</h2>
+<p> Compute if there is an activity with name A and then, the next time there
+is an activity with name B, followed by an activity with name C</p>
+<p> Arguments:<br>
+<ul>
+<li><b>A</b> of type set (<i>ate.WorkflowModelElement</i>)</li>
+<li><b>B</b> of type set (<i>ate.WorkflowModelElement</i>)</li>
+<li><b>C</b> of type set (<i>ate.WorkflowModelElement</i>)</li>
+</ul>
+</p>
+}
+<>( ( activity == A /\ _O( ( activity == B /\ _O( activity == C ) ) ) ) );
+
+formula always_activity_A_then_B_then_C( A: activity, B: activity, C: activity ) :=
+{
+<h2>Does activity C occur after activity B occur after activity A occur?</h2>
+<p> Compute if there is an activity with name A and then, eventually there
+is an activity with name B, followed by eventually an activity with name C</p>
+<p> Arguments:<br>
+<ul>
+<li><b>A</b> of type set (<i>ate.WorkflowModelElement</i>)</li>
+<li><b>B</b> of type set (<i>ate.WorkflowModelElement</i>)</li>
+<li><b>C</b> of type set (<i>ate.WorkflowModelElement</i>)</li>
+</ul>
+</p>
+}
+[]( ( activity == A /\ <>( ( activity == B /\ <>( activity == C ) ) ) ) );
+
+formula always_activity_A_or_always_B_or_always_C( A: activity, B: activity, C: activity ) :=
+{
+<h2>Does activity B occur or A or C?</h2>
+<p> Compute if there is an activity with name A or there
+is an activity with name B or there is an activity with name C</p>
+<p> Arguments:<br>
+<ul>
+<li><b>A</b> of type set (<i>ate.WorkflowModelElement</i>)</li>
+<li><b>B</b> of type set (<i>ate.WorkflowModelElement</i>)</li>
+</ul>
+</p>
+}
+[]( (activity==A \/ [] (( activity == B \/ [] (activity == C ) ) ) ) );
+
+formula always_activity_A_and_always_B_and_always_C( A: activity, B: activity, C: activity ) :=
+{
+<h2>Does activity B occur or A or C?</h2>
+<p> Compute if there is an activity with name A or there
+is an activity with name B or there is an activity with name C</p>
+<p> Arguments:<br>
+<ul>
+<li><b>A</b> of type set (<i>ate.WorkflowModelElement</i>)</li>
+<li><b>B</b> of type set (<i>ate.WorkflowModelElement</i>)</li>
+</ul>
+</p>
+}
+[]((activity==A /\ [] (( activity == B /\ [] (activity == C ) ) ) ) );
+
