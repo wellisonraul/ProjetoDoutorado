@@ -16,11 +16,11 @@ public class Planejador {
 			double x = (double) entry.getValue();
 			if(x>=0 && x<=0.9) {
 				System.out.println("É necessário realizar adaptação no serviço");
-				System.out.println(entry.getKey() + ", " + entry.getValue());
+				System.out.println(entry.getKey() + " -> " + entry.getValue());
 				mapa.put((String) entry.getKey(), 1);
 			}else {
 				System.out.println("Não é necessário realizar adaptação no serviço");
-				System.out.println(entry.getKey() + ", " + entry.getValue());
+				System.out.println(entry.getKey() + " -> " + entry.getValue());
 				mapa.put((String) entry.getKey(), 0);
 			}
 		}

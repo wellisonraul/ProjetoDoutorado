@@ -3,15 +3,15 @@ package br.ufpe.activiti.behaviour.model;
 import java.util.List;
 
 public class ProcessoNegocio {
-	private int id;
+	private String id;
 	private String nome;
 	private List<Tarefa> listaTarefas;
 	
-	// MÉTODOS GET E SET! 
-	public int getId() {
+	
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getNome() {

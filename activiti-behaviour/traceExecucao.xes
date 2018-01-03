@@ -22,455 +22,95 @@
 		<date key="time:timestamp" value="1970-01-01T00:00:00-03:00"/>
 	</global>
 	<classifier name="classifier" keys="&apos;concept:instance concept:name time:timestamp org:resource lifecycle:transition&apos;"/>
-	<string key="concept:name" value="processICMS:282:712504"/>
+	<string key="concept:name" value="processICMS:682:1947504"/>
 	<trace>
-		<string key="concept:name" value="712518"/>
+		<string key="concept:name" value="1947515"/>
 		<event>
 			<string key="concept:name" value="ValorAliquota"/>
-			<string key="concept:instance" value="712518"/>
-			<string key="org:resource" value="AliquotRate2"/>
+			<string key="concept:instance" value="1947515"/>
+			<string key="org:resource" value="AliquotRateSecond:toSayAliquotSecond"/>
 			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:45:55-03:00"/>
+			<date key="time:timestamp" value="2017-12-03T11:10:26-03:00"/>
 		</event>
 		<event>
 			<string key="concept:name" value="ValorAliquota"/>
-			<string key="concept:instance" value="712518"/>
-			<string key="org:resource" value="AliquotRate2"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:45:55-03:00"/>
+			<string key="concept:instance" value="1947515"/>
+			<string key="org:resource" value="AliquotRateSecond:toSayAliquotSecond"/>
+			<string key="lifecycle:transition" value="start"/>
+			<date key="time:timestamp" value="2017-12-03T11:10:27-03:00"/>
 		</event>
 		<event>
 			<string key="concept:name" value="TaxaImportacao"/>
-			<string key="concept:instance" value="712518"/>
-			<string key="org:resource" value="ImportationRate"/>
+			<string key="concept:instance" value="1947515"/>
+			<string key="org:resource" value="ImportationRate:toSayImportationTax"/>
 			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:45:55-03:00"/>
+			<date key="time:timestamp" value="2017-12-03T11:10:27-03:00"/>
 		</event>
 		<event>
 			<string key="concept:name" value="TaxaImportacao"/>
-			<string key="concept:instance" value="712518"/>
-			<string key="org:resource" value="ImportationRate"/>
+			<string key="concept:instance" value="1947515"/>
+			<string key="org:resource" value="ImportationRate:toSayImportationTax"/>
 			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:45:55-03:00"/>
+			<date key="time:timestamp" value="2017-12-03T11:10:28-03:00"/>
 		</event>
 		<event>
 			<string key="concept:name" value="ValorICMS"/>
-			<string key="concept:instance" value="712518"/>
-			<string key="org:resource" value="ICMSRate"/>
+			<string key="concept:instance" value="1947515"/>
+			<string key="org:resource" value="ICMSRate:toSayFinalCost"/>
 			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:45:55-03:00"/>
+			<date key="time:timestamp" value="2017-12-03T11:10:28-03:00"/>
 		</event>
 		<event>
 			<string key="concept:name" value="ValorICMS"/>
-			<string key="concept:instance" value="712518"/>
-			<string key="org:resource" value="ICMSRate"/>
+			<string key="concept:instance" value="1947515"/>
+			<string key="org:resource" value="ICMSRate:toSayFinalCost"/>
 			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:45:56-03:00"/>
+			<date key="time:timestamp" value="2017-12-03T11:10:28-03:00"/>
 		</event>
 	</trace>
 	<trace>
-		<string key="concept:name" value="712531"/>
+		<string key="concept:name" value="1947528"/>
 		<event>
 			<string key="concept:name" value="ValorAliquota"/>
-			<string key="concept:instance" value="712531"/>
-			<string key="org:resource" value="AliquotRate"/>
+			<string key="concept:instance" value="1947528"/>
+			<string key="org:resource" value="AliquotRateSecond:toSayAliquotSecond"/>
 			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:00-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorAliquota"/>
-			<string key="concept:instance" value="712531"/>
-			<string key="org:resource" value="AliquotRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:00-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="TaxaImportacao"/>
-			<string key="concept:instance" value="712531"/>
-			<string key="org:resource" value="ImportationRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:00-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="TaxaImportacao"/>
-			<string key="concept:instance" value="712531"/>
-			<string key="org:resource" value="ImportationRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:00-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorICMS"/>
-			<string key="concept:instance" value="712531"/>
-			<string key="org:resource" value="ICMSRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:00-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorICMS"/>
-			<string key="concept:instance" value="712531"/>
-			<string key="org:resource" value="ICMSRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:01-03:00"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="712544"/>
-		<event>
-			<string key="concept:name" value="ValorAliquota"/>
-			<string key="concept:instance" value="712544"/>
-			<string key="org:resource" value="AliquotRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:06-03:00"/>
+			<date key="time:timestamp" value="2017-12-03T11:10:32-03:00"/>
 		</event>
 		<event>
 			<string key="concept:name" value="ValorAliquota"/>
-			<string key="concept:instance" value="712544"/>
-			<string key="org:resource" value="AliquotRate"/>
+			<string key="concept:instance" value="1947528"/>
+			<string key="org:resource" value="AliquotRateSecond:toSayAliquotSecond"/>
 			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:06-03:00"/>
+			<date key="time:timestamp" value="2017-12-03T11:10:33-03:00"/>
 		</event>
 		<event>
 			<string key="concept:name" value="TaxaImportacao"/>
-			<string key="concept:instance" value="712544"/>
-			<string key="org:resource" value="ImportationRate"/>
+			<string key="concept:instance" value="1947528"/>
+			<string key="org:resource" value="ImportationRate:toSayImportationTax"/>
 			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:06-03:00"/>
+			<date key="time:timestamp" value="2017-12-03T11:10:33-03:00"/>
 		</event>
 		<event>
 			<string key="concept:name" value="TaxaImportacao"/>
-			<string key="concept:instance" value="712544"/>
-			<string key="org:resource" value="ImportationRate"/>
+			<string key="concept:instance" value="1947528"/>
+			<string key="org:resource" value="ImportationRate:toSayImportationTax"/>
 			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:07-03:00"/>
+			<date key="time:timestamp" value="2017-12-03T11:10:33-03:00"/>
 		</event>
 		<event>
 			<string key="concept:name" value="ValorICMS"/>
-			<string key="concept:instance" value="712544"/>
-			<string key="org:resource" value="ICMSRate"/>
+			<string key="concept:instance" value="1947528"/>
+			<string key="org:resource" value="ICMSRate:toSayFinalCost"/>
 			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:07-03:00"/>
+			<date key="time:timestamp" value="2017-12-03T11:10:33-03:00"/>
 		</event>
 		<event>
 			<string key="concept:name" value="ValorICMS"/>
-			<string key="concept:instance" value="712544"/>
-			<string key="org:resource" value="ICMSRate"/>
+			<string key="concept:instance" value="1947528"/>
+			<string key="org:resource" value="ICMSRate:toSayFinalCost"/>
 			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:07-03:00"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="712557"/>
-		<event>
-			<string key="concept:name" value="ValorAliquota"/>
-			<string key="concept:instance" value="712557"/>
-			<string key="org:resource" value="AliquotRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:11-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorAliquota"/>
-			<string key="concept:instance" value="712557"/>
-			<string key="org:resource" value="AliquotRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:12-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="TaxaImportacao"/>
-			<string key="concept:instance" value="712557"/>
-			<string key="org:resource" value="ImportationRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:12-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="TaxaImportacao"/>
-			<string key="concept:instance" value="712557"/>
-			<string key="org:resource" value="ImportationRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:12-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorICMS"/>
-			<string key="concept:instance" value="712557"/>
-			<string key="org:resource" value="ICMSRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:12-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorICMS"/>
-			<string key="concept:instance" value="712557"/>
-			<string key="org:resource" value="ICMSRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:12-03:00"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="712570"/>
-		<event>
-			<string key="concept:name" value="ValorAliquota"/>
-			<string key="concept:instance" value="712570"/>
-			<string key="org:resource" value="AliquotRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:17-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorAliquota"/>
-			<string key="concept:instance" value="712570"/>
-			<string key="org:resource" value="AliquotRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:18-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="TaxaImportacao"/>
-			<string key="concept:instance" value="712570"/>
-			<string key="org:resource" value="ImportationRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:18-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="TaxaImportacao"/>
-			<string key="concept:instance" value="712570"/>
-			<string key="org:resource" value="ImportationRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:18-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorICMS"/>
-			<string key="concept:instance" value="712570"/>
-			<string key="org:resource" value="ICMSRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:18-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorICMS"/>
-			<string key="concept:instance" value="712570"/>
-			<string key="org:resource" value="ICMSRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:18-03:00"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="712583"/>
-		<event>
-			<string key="concept:name" value="ValorAliquota"/>
-			<string key="concept:instance" value="712583"/>
-			<string key="org:resource" value="AliquotRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:23-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorAliquota"/>
-			<string key="concept:instance" value="712583"/>
-			<string key="org:resource" value="AliquotRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:23-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="TaxaImportacao"/>
-			<string key="concept:instance" value="712583"/>
-			<string key="org:resource" value="ImportationRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:23-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="TaxaImportacao"/>
-			<string key="concept:instance" value="712583"/>
-			<string key="org:resource" value="ImportationRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:23-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorICMS"/>
-			<string key="concept:instance" value="712583"/>
-			<string key="org:resource" value="ICMSRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:23-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorICMS"/>
-			<string key="concept:instance" value="712583"/>
-			<string key="org:resource" value="ICMSRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:24-03:00"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="712596"/>
-		<event>
-			<string key="concept:name" value="ValorAliquota"/>
-			<string key="concept:instance" value="712596"/>
-			<string key="org:resource" value="AliquotRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:28-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorAliquota"/>
-			<string key="concept:instance" value="712596"/>
-			<string key="org:resource" value="AliquotRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:28-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="TaxaImportacao"/>
-			<string key="concept:instance" value="712596"/>
-			<string key="org:resource" value="ImportationRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:28-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="TaxaImportacao"/>
-			<string key="concept:instance" value="712596"/>
-			<string key="org:resource" value="ImportationRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:28-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorICMS"/>
-			<string key="concept:instance" value="712596"/>
-			<string key="org:resource" value="ICMSRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:29-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorICMS"/>
-			<string key="concept:instance" value="712596"/>
-			<string key="org:resource" value="ICMSRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:29-03:00"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="712609"/>
-		<event>
-			<string key="concept:name" value="ValorAliquota"/>
-			<string key="concept:instance" value="712609"/>
-			<string key="org:resource" value="AliquotRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:33-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorAliquota"/>
-			<string key="concept:instance" value="712609"/>
-			<string key="org:resource" value="AliquotRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:33-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="TaxaImportacao"/>
-			<string key="concept:instance" value="712609"/>
-			<string key="org:resource" value="ImportationRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:33-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="TaxaImportacao"/>
-			<string key="concept:instance" value="712609"/>
-			<string key="org:resource" value="ImportationRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:34-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorICMS"/>
-			<string key="concept:instance" value="712609"/>
-			<string key="org:resource" value="ICMSRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:34-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorICMS"/>
-			<string key="concept:instance" value="712609"/>
-			<string key="org:resource" value="ICMSRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:34-03:00"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="712622"/>
-		<event>
-			<string key="concept:name" value="ValorAliquota"/>
-			<string key="concept:instance" value="712622"/>
-			<string key="org:resource" value="AliquotRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:39-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorAliquota"/>
-			<string key="concept:instance" value="712622"/>
-			<string key="org:resource" value="AliquotRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:39-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="TaxaImportacao"/>
-			<string key="concept:instance" value="712622"/>
-			<string key="org:resource" value="ImportationRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:39-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="TaxaImportacao"/>
-			<string key="concept:instance" value="712622"/>
-			<string key="org:resource" value="ImportationRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:39-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorICMS"/>
-			<string key="concept:instance" value="712622"/>
-			<string key="org:resource" value="ICMSRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:39-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorICMS"/>
-			<string key="concept:instance" value="712622"/>
-			<string key="org:resource" value="ICMSRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:39-03:00"/>
-		</event>
-	</trace>
-	<trace>
-		<string key="concept:name" value="712635"/>
-		<event>
-			<string key="concept:name" value="ValorAliquota"/>
-			<string key="concept:instance" value="712635"/>
-			<string key="org:resource" value="AliquotRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:44-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorAliquota"/>
-			<string key="concept:instance" value="712635"/>
-			<string key="org:resource" value="AliquotRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:44-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="TaxaImportacao"/>
-			<string key="concept:instance" value="712635"/>
-			<string key="org:resource" value="ImportationRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:44-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="TaxaImportacao"/>
-			<string key="concept:instance" value="712635"/>
-			<string key="org:resource" value="ImportationRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:44-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorICMS"/>
-			<string key="concept:instance" value="712635"/>
-			<string key="org:resource" value="ICMSRate"/>
-			<string key="lifecycle:transition" value="start"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:44-03:00"/>
-		</event>
-		<event>
-			<string key="concept:name" value="ValorICMS"/>
-			<string key="concept:instance" value="712635"/>
-			<string key="org:resource" value="ICMSRate"/>
-			<string key="lifecycle:transition" value="complete"/>
-			<date key="time:timestamp" value="2017-09-29T09:46:44-03:00"/>
+			<date key="time:timestamp" value="2017-12-03T11:10:33-03:00"/>
 		</event>
 	</trace>
 </log>

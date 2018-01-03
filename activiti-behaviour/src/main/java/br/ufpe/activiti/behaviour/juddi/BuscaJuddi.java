@@ -129,7 +129,8 @@ public class BuscaJuddi {
 							atributo.setEMelhorOValorMaior(false);
 							atributo.setValor(tempoRespostaMedio);	
 							
-							listaAtributo.addAll(service.getAtributos());
+							if(service.getAtributos()==null) System.out.println("Null");
+							else listaAtributo.addAll(service.getAtributos());
 							listaAtributo.add(atributo);
 							service.setAtributos(listaAtributo);
 						}

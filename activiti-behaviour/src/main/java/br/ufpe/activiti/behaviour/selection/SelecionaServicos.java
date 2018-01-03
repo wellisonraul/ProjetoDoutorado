@@ -66,4 +66,13 @@ public class SelecionaServicos{
 	public Servico proximoServico(int posicao){
 		return this.servicos.get(posicao);
 	}
+	
+	public void reordenarServico(){
+		Servico servicoAuxiliar = servicos.get(0);
+		for(int i=0; i<(servicos.size()-1); i++) {
+			servicos.set(i, servicos.get(i+1));
+		}
+		
+		servicos.set(servicos.size(), servicoAuxiliar);
+	}
 }

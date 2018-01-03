@@ -41,7 +41,7 @@ import br.ufpe.activiti.behaviour.model.Atributo;
 import br.ufpe.activiti.behaviour.model.ProcessoNegocio;
 import br.ufpe.activiti.behaviour.model.Servico;
 import br.ufpe.activiti.behaviour.model.Tarefa;
-import br.ufpe.activiti.behaviour.monitor.MonitorDisponibilidade;
+import br.ufpe.activiti.behaviour.monitorDisponibilidade.MonitorDisponibilidade;
 import br.ufpe.activiti.behaviour.random.ThreadGeradorErros;
 import br.ufpe.activiti.behaviour.random.ThreadTemporizador;
 import br.ufpe.activiti.behaviour.random.GeradorRandomico;
@@ -212,9 +212,8 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 		// A LISTA DE SERVIÇOS EXISTE?
 		if(selecionaServicos==null){ // Não, então chame o método de criação!
 			criaListaServicos(execution); // Método para cria lista de serviços
-			setProcessIDInicializacao(Integer.parseInt(execution.getProcessInstanceId())); // Recebe o processo que está sendo iniciado
-			MonitorDisponibilidade monitor = new MonitorDisponibilidade(selecionaServicos);
-			monitor.start();
+			//setProcessIDInicializacao(Integer.parseInt(execution.getProcessInstanceId())); // Recebe o processo que está sendo iniciado
+			System.out.println(this.toString());
 		}else {
 			DefineProcessLog dao = new DefineProcessLog(); // Inserção de traces
 			try {

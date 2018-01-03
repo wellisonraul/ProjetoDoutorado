@@ -18,7 +18,7 @@
           <activiti:expression>AliquotRate:toSayAliquot;AliquotRateSecond:toSayAliquotSecond</activiti:expression>
         </activiti:field>
         <activiti:field name="parameters">
-          <activiti:expression>${nameuf}</activiti:expression>
+          <activiti:expression>${nameuf};${nameuf}</activiti:expression>
         </activiti:field>
         <activiti:field name="returnValue">
           <activiti:expression>aliquot</activiti:expression>
@@ -28,7 +28,7 @@
     </serviceTask>
     <sequenceFlow id="sid-20E5AC4E-212E-48E7-9F1A-2BC6EACA0479" sourceRef="sid-BBDCCE8C-1362-4FFF-AE5F-075C206FB1D8" targetRef="sid-EB09C0BA-5465-434C-B3C9-8FEBA8CF0398"/>
     <sequenceFlow id="sid-59641360-C9C7-4635-9AEC-C251EEF6E6DD" sourceRef="sid-EB09C0BA-5465-434C-B3C9-8FEBA8CF0398" targetRef="sid-8CDC9119-2EB9-4074-965B-E9A7817FC726"/>
-    <serviceTask id="sid-EB09C0BA-5465-434C-B3C9-8FEBA8CF0398" name="TaxaImportação" activiti:class="br.ufpe.activiti.behaviour.delegate.WsDelegate">
+    <serviceTask id="sid-EB09C0BA-5465-434C-B3C9-8FEBA8CF0398" name="TaxaImportacao" activiti:class="br.ufpe.activiti.behaviour.delegate.WsDelegate">
       <extensionElements>
        <activiti:field name="eventname">
           <activiti:expression>TaxaImportacao</activiti:expression>

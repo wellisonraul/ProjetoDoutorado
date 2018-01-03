@@ -9,4 +9,11 @@ public class Mapeamento {
 	public String eventualmenteAtividadeAcontece(String atividade) {
 		return "\" <>(?act1("+atividade+")\"";
 	}
+	
+	public String atividadeEspecifica() {
+		return "\" (<>(((?res1{})\"";
+		
+	}
+	
+	
 }

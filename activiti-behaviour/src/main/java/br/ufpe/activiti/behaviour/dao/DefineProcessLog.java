@@ -19,7 +19,7 @@ public class DefineProcessLog {
 		processLog.setActivityId(execution.getCurrentActivityId());
 		processLog.setActivityName(servico.getTarefa());
 		Date date = new Date();
-		processLog.setResource(servico.getNome());
+		processLog.setResource(servico.getNome()+":"+servico.getOperacao());
 		processLog.setTimestamp(date);
 		ActivityDAO activityDAO = new ActivityDAO();
 		

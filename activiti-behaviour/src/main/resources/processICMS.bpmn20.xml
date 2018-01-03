@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
-  <process id="processICMS" isExecutable="true">
+  <process id="processICMS" name="processICMS" isExecutable="true">
     <startEvent id="sid-BBFF164B-1125-499F-8C83-BE36F1F1285B">
       <extensionElements>
         <activiti:formProperty id="nameuf" name="nameuf" type="string"/>
@@ -21,12 +21,6 @@
           <activiti:expression>aliquot</activiti:expression>
         </activiti:field>
       </extensionElements>
-      <serviceRequirements>
-        <activiti:requirement name="Behavior" value="0.94"/>
-        <activiti:requirement name="Availability" value="0.95"/>
-        <activiti:requirement name="Reliability" value="0.98"/>
-        <activiti:requirement name="ResponseTime" value="0.4"/>
-      </serviceRequirements>
     </serviceTask>
     <sequenceFlow id="sid-20E5AC4E-212E-48E7-9F1A-2BC6EACA0479" sourceRef="sid-BBDCCE8C-1362-4FFF-AE5F-075C206FB1D8" targetRef="sid-EB09C0BA-5465-434C-B3C9-8FEBA8CF0398"/>
     <sequenceFlow id="sid-59641360-C9C7-4635-9AEC-C251EEF6E6DD" sourceRef="sid-EB09C0BA-5465-434C-B3C9-8FEBA8CF0398" targetRef="sid-8CDC9119-2EB9-4074-965B-E9A7817FC726"/>
@@ -42,12 +36,6 @@
           <activiti:expression>importation</activiti:expression>
         </activiti:field>
       </extensionElements>
-      <serviceRequirements>
-        <activiti:requirement name="Behavior" value="0.94"/>
-        <activiti:requirement name="Availability" value="0.97"/>
-        <activiti:requirement name="Reliability" value="0.95"/>
-        <activiti:requirement name="ResponseTime" value="0.31"/>
-      </serviceRequirements>
     </serviceTask>
     <serviceTask id="sid-8CDC9119-2EB9-4074-965B-E9A7817FC726" name="ValorICMS" activiti:class="activiti.WsDelegate">
       <extensionElements>
@@ -61,12 +49,6 @@
           <activiti:expression>icms</activiti:expression>
         </activiti:field>
       </extensionElements>
-      <serviceRequirements>
-        <activiti:requirement name="Behavior" value="0.95"/>
-        <activiti:requirement name="Availability" value="0.94"/>
-        <activiti:requirement name="Reliability" value="0.97"/>
-        <activiti:requirement name="ResponseTime" value="0.32"/>
-      </serviceRequirements>
     </serviceTask>
     <intermediateThrowEvent id="sid-8033AA68-D5F4-4251-A0F1-0A6B653AC1CF"/>
     <sequenceFlow id="sid-7EF8DB4D-8B39-4F0A-AA7F-5EBB715C5906" sourceRef="sid-8CDC9119-2EB9-4074-965B-E9A7817FC726" targetRef="sid-8033AA68-D5F4-4251-A0F1-0A6B653AC1CF"/>

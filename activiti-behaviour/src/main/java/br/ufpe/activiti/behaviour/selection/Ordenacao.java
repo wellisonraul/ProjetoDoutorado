@@ -56,7 +56,8 @@ public class Ordenacao {
 	public void agregarAdiçãoPeso(SelecionaServicos servicos) {
 		this.agregacao.simplesAdicaoDePeso(servicos);
 	}
-	public void ordenarServicosAdicaoPeso(SelecionaServicos servicos) {
+	
+	public static void ordenarServicosAdicaoPeso(SelecionaServicos servicos) {
 		// Lista de serviços maior que 1? 
 		if(servicos.getServicos().size()>1){
 			// BUBBLE SORT

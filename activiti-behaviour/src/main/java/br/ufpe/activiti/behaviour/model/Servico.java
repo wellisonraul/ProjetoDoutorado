@@ -14,8 +14,15 @@ public class Servico {
 	private double fator;
 	private QualidadeDoServico qualidadeDoServico;
 	private ArrayList<Atributo> atributos;
+	private int quantidadeParametros;
 	
 	
+	public int getQuantidadeParametros() {
+		return quantidadeParametros;
+	}
+	public void setQuantidadeParametros(int quantidadeParametros) {
+		this.quantidadeParametros = quantidadeParametros;
+	}
 	public ArrayList<Atributo> getAtributos() {
 		return atributos;
 	}

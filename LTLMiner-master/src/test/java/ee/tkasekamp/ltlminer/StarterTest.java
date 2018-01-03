@@ -11,19 +11,18 @@ import br.ufpe.behaviour.mapeamento.Mapeamento;
 
 public class StarterTest {
 
-	@Test
-	public HashMap<String, Double> testBehaviour(XLog logBehaviour) throws Exception {
+	/*public HashMap<String, Double> testBehaviour(XLog logBehaviour) throws Exception {
 		Map<String, Double> mapaDeAnalise = new HashMap<>(); // Mapa para conter resultado de análise!
 		LTLMinerStarter starter = new LTLMinerStarter(getProps()); // Cria o objeto e gera as propriedades
 		mapaDeAnalise = starter.mineBehaviour(logBehaviour); // O método de análise
 		return  (HashMap<String, Double>) mapaDeAnalise;
-	}
+	}*/
 	
-	/*@Test
+	@Test
 	public void test() throws Exception {
 		LTLMinerStarter starter = new LTLMinerStarter(getProps());
-		starter.mineBehaviour(logBehaviour);
-	}*/
+		starter.mine();
+	}
 
 	/*@Test
 	public void test2() throws Exception {
@@ -50,12 +49,19 @@ public class StarterTest {
 	private Properties getProps() {
 		Properties props = new Properties();
 		Mapeamento mapeamento = new Mapeamento();
-		props.setProperty("logPath","/home/wellisonraul/eclipse-workspace/Doutorado/activiti-behaviour/traceExecucao.xes");
+		//props.setProperty("logPath","/home/wellisonraul/eclipse-workspace/Doutorado/activiti-behaviour/traceExecucao.xes");
+		props.setProperty("logPath", "/home/wellisonraul/eclipse-workspace/Doutorado/LTLMiner-master/src/test/resources/eventlog.xes");
 		props.setProperty("considerEventTypes", "true");
-		props.setProperty("minSupport", "0.5");
+		props.setProperty("minSupport", "0.0");
 		props.setProperty("outputFormat", "console");
-		String consulta = mapeamento.eventualmenteTodasAtividadesAcontecem();
-		props.setProperty("queries", consulta);
+		//String consulta = mapeamento.eventualmenteTodasAtividadesAcontecem();
+		String consulta = "\" <>(?act1)\"";
+		String query01 = "\"<>(?act1{ValorICMS})\"";
+		String consulta2 = "\"( (<>(?act1{A}) /\\ <>(?act2{B}) ))\"";
+		//String queries = "\" (<>(((?res1{"+service.getName()+":"+service.getOperation()+"})"+" /\\ (?act1{"+service.getTask()+"}))))\"";
+		String teste = "\" (<>(((?res1{ValorAliquota:AliquotRate})\"";
+		String queries = "\" (<>(((?res1{AliquotRate:toSayAliquot})"+" /\\ (?act1{ValorAliquota}))))\"";
+		props.setProperty("queries", queries);
 
 		return props;
 	}
