@@ -1,0 +1,841 @@
+2018-03-05 14:58:54,205 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization started
+2018-03-05 14:58:54,283 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing Root WebApplicationContext: startup date [Mon Mar 05 14:58:54 BRT 2018]; root of context hierarchy
+2018-03-05 14:58:54,333 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from ServletContext resource [/WEB-INF/beans.xml]
+2018-03-05 14:58:54,448 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2018-03-05 14:58:54,480 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2018-03-05 14:58:54,503 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2018-03-05 14:58:54,657 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@533f0ba7: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,replication]; root of factory hierarchy
+2018-03-05 14:58:55,007 INFO [org.apache.juddi.config.AppConfig] - Reading from jUDDI config file from:  file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3replication/WEB-INF/classes/juddiv3.xml
+2018-03-05 14:59:33,953 INFO [org.apache.juddi.config.Install] - Checking if jUDDI is seeded by searching for root publisher root
+2018-03-05 14:59:34,187 INFO [org.apache.juddi.config.AppConfig] - The 'root' publisher was not found, loading...
+2018-03-05 14:59:34,188 INFO [org.apache.juddi.config.Install] - Checking if jUDDI is seeded by searching for root publisher root
+2018-03-05 14:59:34,192 INFO [org.apache.juddi.config.Install] - Loading the content of file: jar:file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3replication/WEB-INF/lib/juddi-core-openjpa-3.3.5.jar!/juddi_install_data/root_tModelKeyGen.xml
+2018-03-05 14:59:34,744 INFO [org.apache.juddi.config.Install] - Loading the content of file: jar:file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3replication/WEB-INF/lib/juddi-core-openjpa-3.3.5.jar!/juddi_install_data/root_BusinessEntity.xml
+2018-03-05 14:59:34,882 INFO [org.apache.juddi.config.Install] - Loading the content of file: jar:file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3replication/WEB-INF/lib/juddi-core-openjpa-3.3.5.jar!/juddi_install_data/root_replicationConfiguration.xml
+2018-03-05 14:59:34,968 INFO [org.apache.juddi.config.Install] - Loading the root Publisher from file root_Publisher.xml
+2018-03-05 14:59:34,969 INFO [org.apache.juddi.config.Install] - Loading the content of file: jar:file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3replication/WEB-INF/lib/juddi-core-openjpa-3.3.5.jar!/juddi_install_data/root_Publisher.xml
+2018-03-05 14:59:35,741 INFO [org.apache.juddi.config.Install] - replacing tokens on repl config
+2018-03-05 14:59:35,742 INFO [org.apache.juddi.config.Install] - replacing tokens on repl config, done
+2018-03-05 14:59:35,744 WARN [org.apache.juddi.validation.ValidateReplication] - Hey, you should consider encrypting your trust store password!
+2018-03-05 14:59:35,912 INFO [org.apache.juddi.config.Install] - Loading the content of file: jar:file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3replication/WEB-INF/lib/juddi-core-openjpa-3.3.5.jar!/juddi_install_data/UDDI_Publisher.xml
+2018-03-05 14:59:35,997 INFO [org.apache.juddi.config.Install] - Loading the content of file: jar:file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3replication/WEB-INF/lib/juddi-core-openjpa-3.3.5.jar!/juddi_install_data/UDDI_tModels.xml
+2018-03-05 14:59:40,892 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-05 14:59:40,893 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-05 14:59:41,777 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization completed in 47572 ms
+2018-03-05 14:59:41,821 INFO [org.apache.juddi.Registry] - Starting jUDDI registry...This is node uddi:juddi.apache.org:node1
+2018-03-05 14:59:41,825 INFO [org.apache.juddi.config.AppConfig] - Reading from jUDDI config file from:  file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3replication/WEB-INF/classes/juddiv3.xml
+2018-03-05 14:59:41,826 INFO [org.apache.juddi.config.Install] - Checking if jUDDI is seeded by searching for root publisher root
+2018-03-05 14:59:41,843 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-05 14:59:41,846 INFO [org.apache.juddi.Registry] - jUDDI registry started successfully.
+2018-03-05 14:59:43,536 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization started
+2018-03-05 14:59:43,614 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing Root WebApplicationContext: startup date [Mon Mar 05 14:59:43 BRT 2018]; root of context hierarchy
+2018-03-05 14:59:43,881 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from ServletContext resource [/WEB-INF/beans.xml]
+2018-03-05 14:59:43,923 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2018-03-05 14:59:43,945 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2018-03-05 14:59:43,961 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2018-03-05 14:59:44,117 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5b176b9b: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,inquiry,publish,security,subscription,subscription-listener,custody-transfer,valueset-validation,valueset-caching,inquiryv2,publishv2,juddi-api,jsonNamespaceMap,inquiryRestService,inquiryRest,jsonProvider,jaxbProvider]; root of factory hierarchy
+2018-03-05 14:59:44,270 INFO [org.apache.juddi.config.AppConfig] - Reading from jUDDI config file from:  file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 14:59:45,476 INFO [org.apache.juddi.config.Install] - Checking if jUDDI is seeded by searching for root publisher root
+2018-03-05 14:59:45,826 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-05 14:59:46,822 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 140 queued
+2018-03-05 14:59:46,937 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:1 Type:ChangeRecordNewData Key:uddi:juddi.apache.org:node1 Local id:1
+2018-03-05 14:59:47,042 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:2 Type:ChangeRecordNewData Key:uddi:uddi.org:categorization:types Local id:2
+2018-03-05 14:59:47,082 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:3 Type:ChangeRecordNewData Key:uddi:uddi.org:categorization:general_keywords Local id:3
+2018-03-05 14:59:47,108 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:4 Type:ChangeRecordNewData Key:uddi:uddi.org:v3_inquiry Local id:4
+2018-03-05 14:59:47,150 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:5 Type:ChangeRecordNewData Key:uddi:uddi.org:categorization:nodes Local id:5
+2018-03-05 14:59:47,175 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:6 Type:ChangeRecordNewData Key:uddi:uddi.org:v3_publication Local id:6
+2018-03-05 14:59:47,209 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:7 Type:ChangeRecordNewData Key:uddi:uddi.org:v3_security Local id:7
+2018-03-05 14:59:47,245 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:8 Type:ChangeRecordNewData Key:uddi:uddi.org:relationships Local id:8
+2018-03-05 14:59:47,280 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:9 Type:ChangeRecordNewData Key:uddi:uddi.org:categorization:owningbusiness Local id:9
+2018-03-05 14:59:47,308 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:10 Type:ChangeRecordNewData Key:uddi:uddi.org:identifier:isreplacedby Local id:10
+2018-03-05 14:59:47,339 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:11 Type:ChangeRecordNewData Key:uddi:uddi.org:identifier:taxid Local id:11
+2018-03-05 14:59:47,359 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:12 Type:ChangeRecordNewData Key:uddi:uddi.org:categorization:validatedby Local id:12
+2018-03-05 14:59:47,381 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:13 Type:ChangeRecordNewData Key:uddi:uddi.org:categorization:derivedfrom Local id:13
+2018-03-05 14:59:47,402 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:14 Type:ChangeRecordNewData Key:uuid:5678dd4f-f95d-35f9-9ea6-f79a7dd64656 Local id:14
+2018-03-05 14:59:47,433 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:15 Type:ChangeRecordNewData Key:uddi:uddi.org:categorization:entitykeyvalues Local id:15
+2018-03-05 14:59:47,482 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:16 Type:ChangeRecordNewData Key:uuid:916b87bf-0756-3919-8eae-97dfa325e5a4 Local id:16
+2018-03-05 14:59:47,492 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-05 14:59:47,506 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:17 Type:ChangeRecordNewData Key:uddi:uddi.org:protocol:serverauthenticatedssl3 Local id:17
+2018-03-05 14:59:47,532 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:18 Type:ChangeRecordNewData Key:uddi:uddi.org:protocol:mutualauthenticatedssl3 Local id:18
+2018-03-05 14:59:47,566 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:19 Type:ChangeRecordNewData Key:uuid:9555b5b6-55d4-3b0e-bb17-e084fed4e33f Local id:19
+2018-03-05 14:59:47,608 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:20 Type:ChangeRecordNewData Key:uddi:uddi.org:transport:http Local id:20
+2018-03-05 14:59:47,634 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:21 Type:ChangeRecordNewData Key:uuid:68de9e80-ad09-469d-8a37-088422bfbc36 Local id:21
+2018-03-05 14:59:47,672 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:22 Type:ChangeRecordNewData Key:uddi:uddi.org:transport:smtp Local id:22
+2018-03-05 14:59:47,710 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:23 Type:ChangeRecordNewData Key:uuid:93335d49-3efb-48a0-acea-ea102b60ddc6 Local id:23
+2018-03-05 14:59:47,733 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:24 Type:ChangeRecordNewData Key:uddi:uddi.org:transport:userfriendlysmtp Local id:24
+2018-03-05 14:59:47,740 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-05 14:59:47,756 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:25 Type:ChangeRecordNewData Key:uddi:uddi.org:transport:ftp Local id:25
+2018-03-05 14:59:47,788 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:26 Type:ChangeRecordNewData Key:uuid:5fcf5cd0-629a-4c50-8b16-f94e9cf2a674 Local id:26
+2018-03-05 14:59:47,818 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:27 Type:ChangeRecordNewData Key:uddi:uddi.org:transport:fax Local id:27
+2018-03-05 14:59:47,852 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:28 Type:ChangeRecordNewData Key:uddi:uddi.org:transport:telephone Local id:28
+2018-03-05 14:59:47,877 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:29 Type:ChangeRecordNewData Key:uddi:uddi.org:transport:rmi Local id:29
+2018-03-05 14:59:47,905 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:30 Type:ChangeRecordNewData Key:uddi:uddi.org:transport:jndi-rmi Local id:30
+2018-03-05 14:59:47,942 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:31 Type:ChangeRecordNewData Key:uddi:uddi.org:transport:amqp Local id:31
+2018-03-05 14:59:47,970 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:32 Type:ChangeRecordNewData Key:uddi:uddi.org:transport:omgdds Local id:32
+2018-03-05 14:59:47,989 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:33 Type:ChangeRecordNewData Key:uddi:uddi.org:transport:udp Local id:33
+2018-03-05 14:59:47,992 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-05 14:59:48,018 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:34 Type:ChangeRecordNewData Key:uddi:uddi.org:transport:jms Local id:34
+2018-03-05 14:59:48,051 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:35 Type:ChangeRecordNewData Key:uddi:uddi.org:protocol:rest Local id:35
+2018-03-05 14:59:48,086 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:36 Type:ChangeRecordNewData Key:uddi:uddi.org:findqualifier:approximatematch Local id:36
+2018-03-05 14:59:48,118 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:37 Type:ChangeRecordNewData Key:uddi:uddi.org:findqualifier:exactmatch Local id:37
+2018-03-05 14:59:48,151 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:38 Type:ChangeRecordNewData Key:uddi:uddi.org:findqualifier:caseinsensitivematch Local id:38
+2018-03-05 14:59:48,181 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:39 Type:ChangeRecordNewData Key:uddi:uddi.org:findqualifier:casesensitivematch Local id:39
+2018-03-05 14:59:48,219 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:40 Type:ChangeRecordNewData Key:uddi:uddi.org:findqualifier:diacriticsinsensitivematch Local id:40
+2018-03-05 14:59:48,254 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:41 Type:ChangeRecordNewData Key:uddi:uddi.org:findqualifier:diacriticssensitivematch Local id:41
+2018-03-05 14:59:48,276 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:42 Type:ChangeRecordNewData Key:uddi:uddi.org:sortorder:binarysort Local id:42
+2018-03-05 14:59:48,298 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:43 Type:ChangeRecordNewData Key:uddi:uddi.org:sortorder:uts-10 Local id:43
+2018-03-05 14:59:48,322 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-05 14:59:48,335 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:44 Type:ChangeRecordNewData Key:uddi:uddi.org:findqualifier:caseinsensitivesort Local id:44
+2018-03-05 14:59:48,357 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:45 Type:ChangeRecordNewData Key:uddi:uddi.org:findqualifier:casesensitivesort Local id:45
+2018-03-05 14:59:48,381 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:46 Type:ChangeRecordNewData Key:uddi:uddi.org:findqualifier:sortbynameasc Local id:46
+2018-03-05 14:59:48,408 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:47 Type:ChangeRecordNewData Key:uddi:uddi.org:findqualifier:sortbynamedesc Local id:47
+2018-03-05 14:59:48,442 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:48 Type:ChangeRecordNewData Key:uddi:uddi.org:findqualifier:sortbydateasc Local id:48
+2018-03-05 14:59:48,482 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-05 14:59:48,501 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:49 Type:ChangeRecordNewData Key:uddi:uddi.org:findqualifier:sortbydatedesc Local id:49
+2018-03-05 14:59:48,532 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:50 Type:ChangeRecordNewData Key:uddi:uddi.org:findqualifier:andallkeys Local id:50
+2018-03-05 14:59:48,558 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:51 Type:ChangeRecordNewData Key:uddi:uddi.org:findqualifier:orallkeys Local id:51
+2018-03-05 14:59:48,605 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:52 Type:ChangeRecordNewData Key:uddi:uddi.org:findqualifier:orlikekeys Local id:52
+2018-03-05 14:59:48,639 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:53 Type:ChangeRecordNewData Key:uddi:uddi.org:findqualifier:combinecategorybags Local id:53
+2018-03-05 14:59:48,656 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-05 14:59:48,670 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:54 Type:ChangeRecordNewData Key:uddi:uddi.org:findqualifier:servicesubset Local id:54
+2018-03-05 14:59:48,701 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:55 Type:ChangeRecordNewData Key:uddi:uddi.org:findqualifier:bindingsubset Local id:55
+2018-03-05 14:59:48,726 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:56 Type:ChangeRecordNewData Key:uddi:uddi.org:findqualifier:suppressprojectedservices Local id:56
+2018-03-05 14:59:48,749 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:57 Type:ChangeRecordNewData Key:uddi:uddi.org:findqualifier:signaturepresent Local id:57
+2018-03-05 14:59:48,808 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:58 Type:ChangeRecordNewData Key:uddi:uddi.org:specification:hostingredirector Local id:58
+2018-03-05 14:59:48,829 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:59 Type:ChangeRecordNewData Key:uddi:uddi.org:specification:v3_policy Local id:59
+2018-03-05 14:59:48,852 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:60 Type:ChangeRecordNewData Key:uddi:uddi.org:v3_ownership_transfer Local id:60
+2018-03-05 14:59:48,875 WARN [org.apache.juddi.api.impl.UDDIv2InquiryImpl] - This implementation of UDDIv2 Inquire service org.apache.juddi.api.impl.UDDIv2InquiryImpl is considered BETA. Please report any issues to https://issues.apache.org/jira/browse/JUDDI
+2018-03-05 14:59:48,877 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:61 Type:ChangeRecordNewData Key:uddi:uddi.org:v3_subscription Local id:61
+2018-03-05 14:59:48,903 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:62 Type:ChangeRecordNewData Key:uddi:uddi.org:v3_subscriptionlistener Local id:62
+2018-03-05 14:59:48,921 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:63 Type:ChangeRecordNewData Key:uddi:uddi.org:wsdl:types Local id:63
+2018-03-05 14:59:48,962 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:64 Type:ChangeRecordNewData Key:uddi:uddi.org:wadl:types Local id:64
+2018-03-05 14:59:48,983 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:65 Type:ChangeRecordNewData Key:uddi:uddi.org:xml:namespace Local id:65
+2018-03-05 14:59:49,006 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:66 Type:ChangeRecordNewData Key:uddi:uddi.org:xml:localname Local id:66
+2018-03-05 14:59:49,042 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:67 Type:ChangeRecordNewData Key:uddi:uddi.org:wsdl:porttypereference Local id:67
+2018-03-05 14:59:49,055 WARN [org.apache.juddi.api.impl.UDDIv2PublishImpl] - This implementation of UDDIv2 Publish service org.apache.juddi.api.impl.UDDIv2PublishImpl is considered BETA. Please report any issues to https://issues.apache.org/jira/browse/JUDDI
+2018-03-05 14:59:49,072 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:68 Type:ChangeRecordNewData Key:uddi:uddi.org:protocol:soap Local id:68
+2018-03-05 14:59:49,100 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:69 Type:ChangeRecordNewData Key:uddi:uddi.org:protocol:soap12 Local id:69
+2018-03-05 14:59:49,125 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:70 Type:ChangeRecordNewData Key:uddi:uddi.org:protocol:http Local id:70
+2018-03-05 14:59:49,139 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:71 Type:ChangeRecordNewData Key:uddi:uddi.org:wsdl:categorization:protocol Local id:71
+2018-03-05 14:59:49,163 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:72 Type:ChangeRecordNewData Key:uddi:uddi.org:wsdl:categorization:transport Local id:72
+2018-03-05 14:59:49,175 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-05 14:59:49,185 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:73 Type:ChangeRecordNewData Key:uddi:uddi.org:wsdl:address Local id:73
+2018-03-05 14:59:49,217 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:74 Type:ChangeRecordNewData Key:uddi:uddi.org:bpel:types Local id:74
+2018-03-05 14:59:49,246 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:75 Type:ChangeRecordNewData Key:uddi:tmodelkey:address Local id:75
+2018-03-05 14:59:49,263 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:76 Type:ChangeRecordNewData Key:uddi:tmodelkey:group Local id:76
+2018-03-05 14:59:49,284 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:77 Type:ChangeRecordNewData Key:uddi:tmodelkey:blank Local id:77
+2018-03-05 14:59:49,308 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:78 Type:ChangeRecordNewData Key:urn:wsdm.org:metric:requestcount Local id:78
+2018-03-05 14:59:49,334 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:79 Type:ChangeRecordNewData Key:urn:wsdm.org:metric:replycount Local id:79
+2018-03-05 14:59:49,350 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:80 Type:ChangeRecordNewData Key:urn:wsdm.org:metric:faultcount Local id:80
+2018-03-05 14:59:49,374 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:81 Type:ChangeRecordNewData Key:urn:wsdm.org:identity:resourceid Local id:81
+2018-03-05 14:59:49,396 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:82 Type:ChangeRecordNewData Key:urn:wsdm.org:metric:lastupdatetime Local id:82
+2018-03-05 14:59:49,424 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:83 Type:ChangeRecordNewData Key:urn:wsdm.org:qos:responsetime_average Local id:83
+2018-03-05 14:59:49,451 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:84 Type:ChangeRecordNewData Key:urn:wsdm.org:qos:throughput_count Local id:84
+2018-03-05 14:59:49,474 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:85 Type:ChangeRecordNewData Key:urn:wsdm.org:qos:throughput_bytes Local id:85
+2018-03-05 14:59:49,501 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:86 Type:ChangeRecordNewData Key:urn:wsdm.org:qos:reliability Local id:86
+2018-03-05 14:59:49,519 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:87 Type:ChangeRecordNewData Key:urn:wsdm.org:qos:reportingperiodstart Local id:87
+2018-03-05 14:59:49,538 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:88 Type:ChangeRecordNewData Key:urn:wsdm.org:qos:reportingperiodend Local id:88
+2018-03-05 14:59:49,562 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:89 Type:ChangeRecordNewData Key:urn:wsdm.org:qos:updateinterval Local id:89
+2018-03-05 14:59:49,584 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:90 Type:ChangeRecordNewData Key:urn:uddi:uddi.org:version Local id:90
+2018-03-05 14:59:49,617 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:91 Type:ChangeRecordNewData Key:uddi:uddi.org:ubr:categorization:iso3166 Local id:91
+2018-03-05 14:59:49,639 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:92 Type:ChangeRecordNewData Key:uddi:uddi.org:ubr:categorizationgroup:unspsc_geo3166 Local id:92
+2018-03-05 14:59:49,671 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:93 Type:ChangeRecordNewData Key:uddi:uddi.org:ubr:categorizationgroup:wgs84 Local id:93
+2018-03-05 14:59:49,697 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:94 Type:ChangeRecordNewData Key:uddi:uddi.org:ubr:categorizationgroup:wgs84:latitude Local id:94
+2018-03-05 14:59:49,724 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:95 Type:ChangeRecordNewData Key:uddi:uddi.org:ubr:categorizationgroup:wgs84:longitude Local id:95
+2018-03-05 14:59:49,740 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:96 Type:ChangeRecordNewData Key:org:ubr:categorization:geo_precision Local id:96
+2018-03-05 14:59:49,765 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:97 Type:ChangeRecordNewData Key:uddi:uddi.org:ubr:postaladdress Local id:97
+2018-03-05 14:59:49,785 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:98 Type:ChangeRecordNewData Key:uddi:uddi.org:ubr:relationships Local id:98
+2018-03-05 14:59:49,811 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:99 Type:ChangeRecordNewData Key:uddi:uddi.org:ubr:identifier:owningbusiness Local id:99
+2018-03-05 14:59:49,842 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:100 Type:ChangeRecordNewData Key:uddi:uddi.org:ubr:categorization:unspsc Local id:100
+2018-03-05 14:59:49,882 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:101 Type:ChangeRecordNewData Key:uddi:uddi.org:ubr:categorization:naics:1997 Local id:101
+2018-03-05 14:59:49,898 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:102 Type:ChangeRecordNewData Key:uddi:uddi.org:ubr:categorization:naics:2012 Local id:102
+2018-03-05 14:59:49,915 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:103 Type:ChangeRecordNewData Key:uddi:uddi.org:ubr:categorization:naics:2002 Local id:103
+2018-03-05 14:59:49,939 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:104 Type:ChangeRecordNewData Key:uddi:uddi.org:ubr:categorization:naics:2007 Local id:104
+2018-03-05 14:59:49,974 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:105 Type:ChangeRecordNewData Key:uddi:uddi.org:ubr:taxonomy:naics Local id:105
+2018-03-05 14:59:49,995 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:106 Type:ChangeRecordNewData Key:uddi:uddi.org:sortorder:jis-x4061 Local id:106
+2018-03-05 14:59:50,021 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:107 Type:ChangeRecordNewData Key:uddi:uddi.org:ubr:identifier:dnb.com:d-u-n-s Local id:107
+2018-03-05 14:59:50,047 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:108 Type:ChangeRecordNewData Key:uddi:uddi.org:ubr:identifier:iso6523icd Local id:108
+2018-03-05 14:59:50,072 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:109 Type:ChangeRecordNewData Key:uuid:8609c81e-ee1f-4d5a-b202-3eb13ad01823 Local id:109
+2018-03-05 14:59:50,094 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:110 Type:ChangeRecordNewData Key:uuid:c0b9fe13-179f-413d-8a5b-5004db8e5bb2 Local id:110
+2018-03-05 14:59:50,119 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:111 Type:ChangeRecordNewData Key:uuid:c7536010-f786-11db-a010-e6245c4e79a1 Local id:111
+2018-03-05 14:59:50,125 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization completed in 6588 ms
+2018-03-05 14:59:50,142 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:112 Type:ChangeRecordNewData Key:uuid:b1b1baf5-2329-43e6-ae13-ba8e97195039 Local id:112
+2018-03-05 14:59:50,163 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:113 Type:ChangeRecordNewData Key:uuid:a035a07c-f362-44dd-8f95-e2b134bf43b4 Local id:113
+2018-03-05 14:59:50,169 INFO [org.apache.juddi.Registry] - Starting jUDDI registry...This is node uddi:juddi.apache.org:node1
+2018-03-05 14:59:50,195 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:114 Type:ChangeRecordNewData Key:uuid:ac104dcc-d623-452f-88a7-f8acd94d9b2b Local id:114
+2018-03-05 14:59:50,214 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:115 Type:ChangeRecordNewData Key:uuid:e59ae320-77a5-11d5-b898-0004ac49cc1e Local id:115
+2018-03-05 14:59:50,237 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:116 Type:ChangeRecordNewData Key:uuid:4e49a8d6-d5a2-4fc2-93a0-0411d8d19e88 Local id:116
+2018-03-05 14:59:50,247 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:117 Type:ChangeRecordNewData Key:uuid:327a56f0-3299-4461-bc23-5cd513e95c55 Local id:117
+2018-03-05 14:59:50,270 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:118 Type:ChangeRecordNewData Key:uuid:4064c064-6d14-4f35-8953-9652106476a9 Local id:118
+2018-03-05 14:59:50,280 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:119 Type:ChangeRecordNewData Key:uuid:6e10b91b-babc-3442-b8fc-5a3c8fde0794 Local id:119
+2018-03-05 14:59:50,306 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:120 Type:ChangeRecordNewData Key:uuid:aa254698-93de-3870-8df3-a5c075d64a0e Local id:120
+2018-03-05 14:59:50,324 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:121 Type:ChangeRecordNewData Key:uuid:807a2c6a-ee22-470d-adc7-e0424a337c03 Local id:121
+2018-03-05 14:59:50,356 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:122 Type:ChangeRecordNewData Key:uuid:1e3e9cbc-f8ce-41ab-8f99-88326bad324a Local id:122
+2018-03-05 14:59:50,383 INFO [org.apache.juddi.config.AppConfig] - Reading from jUDDI config file from:  file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 14:59:50,384 INFO [org.apache.juddi.config.Install] - Checking if jUDDI is seeded by searching for root publisher root
+2018-03-05 14:59:50,394 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:123 Type:ChangeRecordNewData Key:uuid:c1acf26d-9672-4404-9d70-39b756e62ab4 Local id:123
+2018-03-05 14:59:50,416 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:124 Type:ChangeRecordNewData Key:uuid:ad61de98-4db8-31b2-a299-a2373dc97212 Local id:124
+2018-03-05 14:59:50,430 INFO [org.apache.juddi.Registry] - jUDDI registry started successfully.
+2018-03-05 14:59:50,447 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:125 Type:ChangeRecordNewData Key:uuid:4dc74177-7806-34d9-aecd-33c57dc3a865 Local id:125
+2018-03-05 14:59:50,476 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:126 Type:ChangeRecordNewData Key:uuid:e5c43936-86e4-37bf-8196-1d04b35c0099 Local id:126
+2018-03-05 14:59:50,511 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:127 Type:ChangeRecordNewData Key:uuid:082b0851-25d8-303c-b332-f24a6d53e38e Local id:127
+2018-03-05 14:59:50,530 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:128 Type:ChangeRecordNewData Key:uuid:6e090afa-33e5-36eb-81b7-1ca18373f457 Local id:128
+2018-03-05 14:59:50,548 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:129 Type:ChangeRecordNewData Key:uuid:2ec65201-9109-3919-9bec-c9dbefcaccf6 Local id:129
+2018-03-05 14:59:50,562 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:130 Type:ChangeRecordNewData Key:uuid:d01987d1-ab2e-3013-9be2-2a66eb99d824 Local id:130
+2018-03-05 14:59:50,582 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:131 Type:ChangeRecordNewData Key:uuid:cd153257-086a-4237-b336-6bdcbdcc6634 Local id:131
+2018-03-05 14:59:50,607 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:132 Type:ChangeRecordNewData Key:uuid:db77450d-9fa8-45d4-a7bc-04411d14e384 Local id:132
+2018-03-05 14:59:50,630 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:133 Type:ChangeRecordNewData Key:uuid:f1b347da-6cbb-3a10-93e7-7cd4328b88d3 Local id:133
+2018-03-05 14:59:50,662 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:134 Type:ChangeRecordNewData Key:uuid:1ff729f2-1948-46cf-b660-31ec107f1663 Local id:134
+2018-03-05 14:59:50,682 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:135 Type:ChangeRecordNewData Key:uuid:4614c240-b483-11d7-8be8-000629dc0a53 Local id:135
+2018-03-05 14:59:50,706 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:136 Type:ChangeRecordNewData Key:uuid:48eb2518-c1bd-354f-92c9-21a53b0ff2b1 Local id:136
+2018-03-05 14:59:50,729 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:137 Type:ChangeRecordNewData Key:uddi:uddi.org:ubr:identifier:thomasregister.com:supplierid Local id:137
+2018-03-05 14:59:50,818 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:138 Type:ChangeRecordNewData Key:uddi:uddi.org:v3_valuesetvalidation Local id:138
+2018-03-05 14:59:50,842 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:139 Type:ChangeRecordNewData Key:uddi:uddi.org:v3_valuesetcaching Local id:139
+2018-03-05 14:59:50,880 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:140 Type:ChangeRecordNewData Key:uuid:25b22e3e-3dfa-3024-b02a-3438b9050b59 Local id:140
+2018-03-05 15:01:29,464 INFO [org.apache.juddi.v3.client.config.UDDIClient] - jUDDI Client version - 3.3.5
+2018-03-05 15:01:29,479 INFO [org.apache.juddi.v3.client.config.ClientConfig] - Reading UDDI Client properties file file:///home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/META-INF/uddi.xml use -Duddi.client.xml to override
+2018-03-05 15:02:24,722 ERROR [org.apache.juddi] - java.lang.NullPointerException
+2018-03-05 15:02:34,633 ERROR [org.apache.juddi] - java.lang.NullPointerException
+2018-03-05 15:02:37,768 INFO [org.apache.juddi] - CSRF Test passed.
+2018-03-05 15:03:08,849 INFO [org.apache.juddi] - CSRF Test passed.
+2018-03-05 15:03:20,736 INFO [org.apache.juddi] - CSRF Test passed.
+2018-03-05 15:04:07,930 INFO [org.apache.juddi.v3.client.config.UDDIClient] - jUDDI Client version - 3.3.5
+2018-03-05 15:04:07,999 INFO [org.apache.juddi.v3.client.config.ClientConfig] - Reading UDDI Client properties file file:///home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddi-gui/WEB-INF/classes/META-INF/uddi.xml use -Duddi.client.xml to override
+2018-03-05 15:04:10,100 WARN [org.apache.juddi.v3.client.transport.JAXWSTransport] - You should consider using a secure protocol (https) when sending your password!
+2018-03-05 15:04:38,731 INFO [org.apache.juddi] - CSRF Test passed.
+2018-03-05 15:04:41,701 INFO [org.apache.juddi] - CSRF Test passed.
+2018-03-05 15:05:16,035 INFO [org.apache.juddi] - CSRF Test passed.
+2018-03-05 15:05:16,040 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: AuthToken request for root from null
+2018-03-05 15:05:16,044 WARN [org.apache.juddi.v3.auth.JUDDIAuthenticator] - DO NOT USE JUDDI AUTHENTICATOR FOR PRODUCTION SYSTEMS - DOES NOT VALIDATE PASSWORDS, AT ALL!
+2018-03-05 15:05:16,088 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: AuthToken issued for root from null
+2018-03-05 15:05:18,067 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: AuthToken discarded for root from null
+2018-03-05 15:05:18,111 INFO [org.apache.juddi.v3.client.config.UDDIClient] - jUDDI Client version - 3.3.5
+2018-03-05 15:05:18,113 INFO [org.apache.juddi.v3.client.config.ClientConfig] - Reading UDDI Client properties file file:///home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/META-INF/uddi.xml use -Duddi.client.xml to override
+2018-03-05 15:05:23,301 INFO [org.apache.juddi] - CSRF Test passed.
+2018-03-05 15:05:28,083 INFO [org.apache.juddi] - CSRF Test passed.
+2018-03-05 15:05:29,939 ERROR [org.apache.juddi] - java.lang.NullPointerException
+2018-03-05 15:05:56,256 INFO [org.apache.juddi] - AUDIT: fetching auth token for wellison Auth Mode is AUTH_TOKEN
+2018-03-05 15:05:56,624 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: AuthToken request for wellison from 127.0.0.1
+2018-03-05 15:05:56,625 WARN [org.apache.juddi.v3.auth.JUDDIAuthenticator] - DO NOT USE JUDDI AUTHENTICATOR FOR PRODUCTION SYSTEMS - DOES NOT VALIDATE PASSWORDS, AT ALL!
+2018-03-05 15:05:56,658 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: AuthToken issued for wellison from 127.0.0.1
+2018-03-05 15:08:51,810 ERROR [org.apache.juddi] - SOAP Fault returned: The proposed key is not within the partition defined by owning publisher. If you're trying to create a new tModel in a new partition, try creating a tModel that ends in :keygenerator. Failing key :  uddi:www.mycompany.com:mybusinessThe proposed key is not within the partition defined by owning publisher. If you're trying to create a new tModel in a new partition, try creating a tModel that ends in :keygenerator. Failing key :  uddi:www.mycompany.com:mybusiness
+2018-03-05 15:09:26,163 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:09:26,351 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:09:47,307 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:09:47,655 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:09:50,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 15:09:50,418 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:150 Type:ChangeRecordNewData Key:uddi:www.mycompany.com:keygenerator Local id:150
+2018-03-05 15:09:50,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:09:50,439 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 13 milliseconds.
+2018-03-05 15:11:06,823 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:11:10,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 15:11:10,381 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:151 Type:ChangeRecordNewData Key:uddi:www.mycompany.com:mybusiness Local id:151
+2018-03-05 15:11:10,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:11:10,427 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 15:20:56,262 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:20:56,298 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:21:41,319 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:21:41,324 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:21:53,105 ERROR [org.apache.juddi] - SOAP Fault returned: The technical model was not found for the given key:  uddi:localhost:keygeneratorThe technical model was not found for the given key:  uddi:localhost:keygenerator
+2018-03-05 15:21:54,693 ERROR [org.apache.juddi] - SOAP Fault returned: The technical model was not found for the given key:  uddi:localhost:keygeneratorThe technical model was not found for the given key:  uddi:localhost:keygenerator
+2018-03-05 15:21:54,703 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: FAILURE - Token wellison expired due to old age 127.0.0.1
+2018-03-05 15:21:54,711 INFO [org.apache.juddi] - AUDIT: fetching auth token for wellison Auth Mode is AUTH_TOKEN
+2018-03-05 15:21:54,716 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: AuthToken request for wellison from 127.0.0.1
+2018-03-05 15:21:54,716 WARN [org.apache.juddi.v3.auth.JUDDIAuthenticator] - DO NOT USE JUDDI AUTHENTICATOR FOR PRODUCTION SYSTEMS - DOES NOT VALIDATE PASSWORDS, AT ALL!
+2018-03-05 15:21:54,905 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: AuthToken issued for wellison from 127.0.0.1
+2018-03-05 15:21:54,933 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:21:55,090 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:21:55,190 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:21:55,240 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:21:55,274 ERROR [org.apache.juddi] - SOAP Fault returned: The business entity was not found for the given key:  pizzaprocessThe business entity was not found for the given key:  pizzaprocess
+2018-03-05 15:21:55,336 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:21:55,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 3 queued
+2018-03-05 15:21:55,381 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:152 Type:ChangeRecordNewData Key:uddi:localhost:keygenerator Local id:152
+2018-03-05 15:21:55,392 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:21:55,400 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:153 Type:ChangeRecordNewData Key:uddi:localhost:clientfailurecommunicationoneportbinding Local id:153
+2018-03-05 15:21:55,422 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:154 Type:ChangeRecordNewData Key:uddi:localhost:clientfailurecommunicationone Local id:154
+2018-03-05 15:21:55,427 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:21:55,428 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 15:22:00,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 15:22:00,381 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:155 Type:ChangeRecordNewData Key:uddi:localhost:business_pizzaprocess Local id:155
+2018-03-05 15:22:00,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:22:00,428 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 2 milliseconds.
+2018-03-05 15:23:12,615 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:23:12,861 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:23:15,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 15:23:15,381 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:156 Type:ChangeRecordNewData Key:uddi:localhost:service_clientfailurecommunicationone Local id:156
+2018-03-05 15:23:15,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:23:15,428 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 2 milliseconds.
+2018-03-05 15:23:25,369 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:23:25,507 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:24:28,379 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:24:28,384 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:25:27,972 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:25:30,381 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 15:25:30,382 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:157 Type:ChangeRecordNewData Key:uddi:www.mycompany.com:default_parameters Local id:157
+2018-03-05 15:25:30,427 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:25:30,428 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 2 milliseconds.
+2018-03-05 15:26:38,600 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:26:38,653 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:26:40,381 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 15:26:40,382 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:158 Type:ChangeRecordNewData Key:uddi:localhost:service_clientfailurecommunicationone Local id:158
+2018-03-05 15:26:40,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:26:40,428 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 2 milliseconds.
+2018-03-05 15:26:55,636 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:26:55,639 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:26:59,508 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:26:59,513 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:27:07,067 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:27:07,109 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:27:07,157 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:27:07,314 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:27:07,425 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:27:10,382 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 3 queued
+2018-03-05 15:27:10,382 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:159 Type:ChangeRecordNewData Key:uddi:localhost:authenticationserviceoneportbinding Local id:159
+2018-03-05 15:27:10,413 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:160 Type:ChangeRecordNewData Key:uddi:localhost:authenticationserviceone Local id:160
+2018-03-05 15:27:10,427 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:27:10,428 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 15:27:10,428 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:161 Type:ChangeRecordNewData Key:uddi:localhost:business_pizzaprocess Local id:161
+2018-03-05 15:29:25,583 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:29:25,778 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:29:30,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 15:29:30,381 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:162 Type:ChangeRecordNewData Key:uddi:localhost:service_authenticationserviceone Local id:162
+2018-03-05 15:29:30,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:29:30,427 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 15:30:07,532 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:30:07,568 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:30:10,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 15:30:10,381 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:163 Type:ChangeRecordNewData Key:uddi:localhost:service_clientfailurecommunicationone Local id:163
+2018-03-05 15:30:10,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:30:10,427 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 15:30:32,252 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:30:32,284 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:30:36,128 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:30:36,131 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:30:42,469 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:30:42,519 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:30:42,612 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:30:42,721 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:30:42,809 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:30:45,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 3 queued
+2018-03-05 15:30:45,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:164 Type:ChangeRecordNewData Key:uddi:localhost:orderpizzaserviceoneportbinding Local id:164
+2018-03-05 15:30:45,412 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:165 Type:ChangeRecordNewData Key:uddi:localhost:orderpizzaserviceone Local id:165
+2018-03-05 15:30:45,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:30:45,427 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 15:30:45,480 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:166 Type:ChangeRecordNewData Key:uddi:localhost:business_pizzaprocess Local id:166
+2018-03-05 15:31:45,102 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:31:45,141 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:31:45,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 15:31:45,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:167 Type:ChangeRecordNewData Key:uddi:localhost:service_orderpizzaserviceone Local id:167
+2018-03-05 15:31:45,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:31:45,427 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 15:32:11,468 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:32:11,470 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:32:16,419 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:32:16,423 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:32:21,689 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:32:21,734 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:32:21,786 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:32:21,880 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:32:22,004 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:32:25,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 3 queued
+2018-03-05 15:32:25,382 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:168 Type:ChangeRecordNewData Key:uddi:localhost:internalcommunicationserviceoneportbinding Local id:168
+2018-03-05 15:32:25,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:32:25,427 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 15:32:25,528 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:169 Type:ChangeRecordNewData Key:uddi:localhost:internalcommunicationserviceone Local id:169
+2018-03-05 15:32:25,570 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:170 Type:ChangeRecordNewData Key:uddi:localhost:business_pizzaprocess Local id:170
+2018-03-05 15:33:19,031 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:33:19,248 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:33:20,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 15:33:20,381 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:171 Type:ChangeRecordNewData Key:uddi:localhost:service_internalcommunicationserviceone Local id:171
+2018-03-05 15:33:20,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:33:20,427 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 15:33:53,557 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:33:53,590 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:33:55,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 15:33:55,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:172 Type:ChangeRecordNewData Key:uddi:localhost:service_internalcommunicationserviceone Local id:172
+2018-03-05 15:33:55,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:33:55,427 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 15:34:11,414 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:34:11,416 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:34:15,935 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:34:15,938 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:34:21,591 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:34:21,619 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:34:21,705 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:34:21,887 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:34:22,040 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:34:25,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 3 queued
+2018-03-05 15:34:25,381 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:173 Type:ChangeRecordNewData Key:uddi:localhost:getclientpreferredpizzaserviceoneportbinding Local id:173
+2018-03-05 15:34:25,427 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:174 Type:ChangeRecordNewData Key:uddi:localhost:getclientpreferredpizzaserviceone Local id:174
+2018-03-05 15:34:25,428 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:34:25,432 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 4 milliseconds.
+2018-03-05 15:34:25,477 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:175 Type:ChangeRecordNewData Key:uddi:localhost:business_pizzaprocess Local id:175
+2018-03-05 15:35:06,951 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:35:06,985 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:35:10,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 15:35:10,381 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:176 Type:ChangeRecordNewData Key:uddi:localhost:service_getclientpreferredpizzaserviceone Local id:176
+2018-03-05 15:35:10,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:35:10,427 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 15:35:27,066 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:35:27,068 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:35:32,402 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:35:32,404 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:35:37,488 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:35:37,513 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:35:37,601 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:35:37,741 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:35:38,098 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:35:40,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 3 queued
+2018-03-05 15:35:40,381 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:177 Type:ChangeRecordNewData Key:uddi:localhost:getclientprofileserviceoneportbinding Local id:177
+2018-03-05 15:35:40,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:35:40,427 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 15:35:40,507 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:178 Type:ChangeRecordNewData Key:uddi:localhost:getclientprofileserviceone Local id:178
+2018-03-05 15:35:40,543 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:179 Type:ChangeRecordNewData Key:uddi:localhost:business_pizzaprocess Local id:179
+2018-03-05 15:36:36,347 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:36:36,369 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:36:40,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 15:36:40,381 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:180 Type:ChangeRecordNewData Key:uddi:localhost:service_getclientprofileserviceone Local id:180
+2018-03-05 15:36:40,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:36:40,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 0 milliseconds.
+2018-03-05 15:37:12,691 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:37:12,693 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:37:19,037 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:37:19,039 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:37:24,554 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: FAILURE - Token wellison expired due to old age 127.0.0.1
+2018-03-05 15:37:24,561 INFO [org.apache.juddi] - AUDIT: fetching auth token for wellison Auth Mode is AUTH_TOKEN
+2018-03-05 15:37:24,564 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: AuthToken request for wellison from 127.0.0.1
+2018-03-05 15:37:24,564 WARN [org.apache.juddi.v3.auth.JUDDIAuthenticator] - DO NOT USE JUDDI AUTHENTICATOR FOR PRODUCTION SYSTEMS - DOES NOT VALIDATE PASSWORDS, AT ALL!
+2018-03-05 15:37:24,710 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: AuthToken issued for wellison from 127.0.0.1
+2018-03-05 15:37:24,741 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:37:24,773 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:37:24,847 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:37:24,989 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:37:25,167 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:37:25,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 2 queued
+2018-03-05 15:37:25,381 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:181 Type:ChangeRecordNewData Key:uddi:localhost:externalcommunicationserviceoneportbinding Local id:181
+2018-03-05 15:37:25,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:37:25,427 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 15:37:25,641 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:182 Type:ChangeRecordNewData Key:uddi:localhost:externalcommunicationserviceone Local id:182
+2018-03-05 15:37:25,689 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:183 Type:ChangeRecordNewData Key:uddi:localhost:business_pizzaprocess Local id:183
+2018-03-05 15:37:30,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:37:30,427 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 15:38:13,252 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:38:13,273 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:38:15,381 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 15:38:15,381 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:184 Type:ChangeRecordNewData Key:uddi:localhost:service_externalcommunicationserviceone Local id:184
+2018-03-05 15:38:15,427 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:38:15,427 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 15:38:41,892 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:38:41,895 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:38:45,511 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:38:45,513 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:38:50,749 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:38:50,770 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:38:50,832 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:38:50,994 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:38:51,365 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:38:55,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 3 queued
+2018-03-05 15:38:55,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:185 Type:ChangeRecordNewData Key:uddi:localhost:creditcardvalidationserviceoneportbinding Local id:185
+2018-03-05 15:38:55,416 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:186 Type:ChangeRecordNewData Key:uddi:localhost:creditcardvalidationserviceone Local id:186
+2018-03-05 15:38:55,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:38:55,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 0 milliseconds.
+2018-03-05 15:38:55,481 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:187 Type:ChangeRecordNewData Key:uddi:localhost:business_pizzaprocess Local id:187
+2018-03-05 15:40:05,385 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:40:05,412 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:40:10,102 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:40:10,104 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:40:10,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 15:40:10,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:188 Type:ChangeRecordNewData Key:uddi:localhost:service_creditcardvalidationserviceone Local id:188
+2018-03-05 15:40:10,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:40:10,427 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 15:40:31,671 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:40:31,673 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:40:39,085 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:40:39,087 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:41:00,280 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:41:00,299 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:41:00,346 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:41:00,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 2 queued
+2018-03-05 15:41:00,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:189 Type:ChangeRecordNewData Key:uddi:localhost:externalcommunicationclientserviceoneportbinding Local id:189
+2018-03-05 15:41:00,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:41:00,426 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:190 Type:ChangeRecordNewData Key:uddi:localhost:externalcommunicationclientserviceone Local id:190
+2018-03-05 15:41:00,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 0 milliseconds.
+2018-03-05 15:41:00,432 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:41:00,604 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:41:05,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 15:41:05,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:191 Type:ChangeRecordNewData Key:uddi:localhost:business_pizzaprocess Local id:191
+2018-03-05 15:41:05,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:41:05,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 0 milliseconds.
+2018-03-05 15:41:54,804 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 15:41:54,968 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 15:41:55,380 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 15:41:55,381 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:192 Type:ChangeRecordNewData Key:uddi:localhost:service_externalcommunicationclientserviceone Local id:192
+2018-03-05 15:41:55,426 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 15:41:55,427 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 15:41:58,469 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:41:58,472 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:42:01,308 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:42:01,310 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:42:03,406 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 15:42:03,409 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 16:30:58,293 INFO [org.apache.juddi.Registry] - Stopping jUDDI registry...
+2018-03-05 16:30:58,321 INFO [org.apache.juddi.Registry] - Shutting down SubscriptionNotifier
+2018-03-05 16:30:58,336 INFO [org.apache.juddi.Registry] - jUDDI shutdown completed.
+2018-03-05 16:30:58,339 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing Root WebApplicationContext: startup date [Mon Mar 05 14:58:54 BRT 2018]; root of context hierarchy
+2018-03-05 16:30:58,352 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@533f0ba7: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,replication]; root of factory hierarchy
+2018-03-05 16:31:01,579 INFO [org.apache.juddi.Registry] - Stopping jUDDI registry...
+2018-03-05 16:31:01,581 INFO [org.apache.juddi.Registry] - Shutting down SubscriptionNotifier
+2018-03-05 16:31:01,581 INFO [org.apache.juddi.Registry] - jUDDI shutdown completed.
+2018-03-05 16:31:01,597 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing Root WebApplicationContext: startup date [Mon Mar 05 14:59:43 BRT 2018]; root of context hierarchy
+2018-03-05 16:31:01,598 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5b176b9b: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,inquiry,publish,security,subscription,subscription-listener,custody-transfer,valueset-validation,valueset-caching,inquiryv2,publishv2,juddi-api,jsonNamespaceMap,inquiryRestService,inquiryRest,jsonProvider,jaxbProvider]; root of factory hierarchy
+2018-03-05 18:21:45,442 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization started
+2018-03-05 18:21:45,585 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing Root WebApplicationContext: startup date [Mon Mar 05 18:21:45 BRT 2018]; root of context hierarchy
+2018-03-05 18:21:45,639 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from ServletContext resource [/WEB-INF/beans.xml]
+2018-03-05 18:21:45,800 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2018-03-05 18:21:45,835 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2018-03-05 18:21:45,872 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2018-03-05 18:21:46,060 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@533f0ba7: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,replication]; root of factory hierarchy
+2018-03-05 18:21:46,419 INFO [org.apache.juddi.config.AppConfig] - Reading from jUDDI config file from:  file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3replication/WEB-INF/classes/juddiv3.xml
+2018-03-05 18:22:10,040 INFO [org.apache.juddi.config.Install] - Checking if jUDDI is seeded by searching for root publisher root
+2018-03-05 18:22:10,951 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-05 18:22:10,957 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-05 18:22:12,302 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization completed in 26839 ms
+2018-03-05 18:22:12,370 INFO [org.apache.juddi.Registry] - Starting jUDDI registry...This is node uddi:juddi.apache.org:node1
+2018-03-05 18:22:12,616 INFO [org.apache.juddi.config.AppConfig] - Reading from jUDDI config file from:  file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3replication/WEB-INF/classes/juddiv3.xml
+2018-03-05 18:22:12,617 INFO [org.apache.juddi.config.Install] - Checking if jUDDI is seeded by searching for root publisher root
+2018-03-05 18:22:12,633 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-05 18:22:12,634 INFO [org.apache.juddi.Registry] - jUDDI registry started successfully.
+2018-03-05 18:22:16,324 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization started
+2018-03-05 18:22:16,487 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing Root WebApplicationContext: startup date [Mon Mar 05 18:22:16 BRT 2018]; root of context hierarchy
+2018-03-05 18:22:16,612 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from ServletContext resource [/WEB-INF/beans.xml]
+2018-03-05 18:22:16,839 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2018-03-05 18:22:16,862 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2018-03-05 18:22:16,886 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2018-03-05 18:22:17,041 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3148694f: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,inquiry,publish,security,subscription,subscription-listener,custody-transfer,valueset-validation,valueset-caching,inquiryv2,publishv2,juddi-api,jsonNamespaceMap,inquiryRestService,inquiryRest,jsonProvider,jaxbProvider]; root of factory hierarchy
+2018-03-05 18:22:17,249 INFO [org.apache.juddi.config.AppConfig] - Reading from jUDDI config file from:  file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 18:22:19,637 INFO [org.apache.juddi.config.Install] - Checking if jUDDI is seeded by searching for root publisher root
+2018-03-05 18:22:20,354 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-05 18:22:22,338 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-05 18:22:22,743 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-05 18:22:23,106 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-05 18:22:23,636 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-05 18:22:23,797 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-05 18:22:23,981 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-05 18:22:24,193 WARN [org.apache.juddi.api.impl.UDDIv2InquiryImpl] - This implementation of UDDIv2 Inquire service org.apache.juddi.api.impl.UDDIv2InquiryImpl is considered BETA. Please report any issues to https://issues.apache.org/jira/browse/JUDDI
+2018-03-05 18:22:24,549 WARN [org.apache.juddi.api.impl.UDDIv2PublishImpl] - This implementation of UDDIv2 Publish service org.apache.juddi.api.impl.UDDIv2PublishImpl is considered BETA. Please report any issues to https://issues.apache.org/jira/browse/JUDDI
+2018-03-05 18:22:24,659 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-05 18:22:25,419 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization completed in 9095 ms
+2018-03-05 18:22:25,478 INFO [org.apache.juddi.Registry] - Starting jUDDI registry...This is node uddi:juddi.apache.org:node1
+2018-03-05 18:22:25,557 INFO [org.apache.juddi.config.AppConfig] - Reading from jUDDI config file from:  file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-05 18:22:25,558 INFO [org.apache.juddi.config.Install] - Checking if jUDDI is seeded by searching for root publisher root
+2018-03-05 18:22:25,570 INFO [org.apache.juddi.Registry] - jUDDI registry started successfully.
+2018-03-05 18:27:33,464 INFO [org.apache.juddi.v3.client.config.UDDIClient] - jUDDI Client version - 3.3.5
+2018-03-05 18:27:33,518 INFO [org.apache.juddi.v3.client.config.ClientConfig] - Reading UDDI Client properties file file:///home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddi-gui/WEB-INF/classes/META-INF/uddi.xml use -Duddi.client.xml to override
+2018-03-05 18:27:35,093 WARN [org.apache.juddi.v3.client.transport.JAXWSTransport] - You should consider using a secure protocol (https) when sending your password!
+2018-03-05 18:28:39,151 INFO [org.apache.juddi] - AUDIT: fetching auth token for wellison Auth Mode is AUTH_TOKEN
+2018-03-05 18:28:39,188 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: AuthToken request for wellison from 127.0.0.1
+2018-03-05 18:28:39,191 WARN [org.apache.juddi.v3.auth.JUDDIAuthenticator] - DO NOT USE JUDDI AUTHENTICATOR FOR PRODUCTION SYSTEMS - DOES NOT VALIDATE PASSWORDS, AT ALL!
+2018-03-05 18:28:39,275 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: AuthToken issued for wellison from 127.0.0.1
+2018-03-05 18:28:43,632 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 18:28:44,014 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 18:28:45,555 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 18:28:45,570 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 18:28:45,593 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 23 milliseconds.
+2018-03-05 18:28:45,617 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:200 Type:ChangeRecordNewData Key:uddi:localhost:service_getclientpreferredpizzaserviceone Local id:200
+2018-03-05 18:32:39,843 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 18:32:39,904 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 18:32:40,554 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 18:32:40,555 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:201 Type:ChangeRecordNewData Key:uddi:localhost:service_getclientpreferredpizzaserviceone Local id:201
+2018-03-05 18:32:40,570 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 18:32:40,575 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 5 milliseconds.
+2018-03-05 18:36:30,628 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 18:36:30,873 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 18:36:35,555 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 18:36:35,555 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:202 Type:ChangeRecordNewData Key:uddi:localhost:service_externalcommunicationserviceone Local id:202
+2018-03-05 18:36:35,571 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 18:36:35,572 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 18:39:07,069 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 18:39:07,117 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 18:39:10,554 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 18:39:10,555 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:203 Type:ChangeRecordNewData Key:uddi:localhost:service_creditcardvalidationserviceone Local id:203
+2018-03-05 18:39:10,570 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 18:39:10,571 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 18:41:13,432 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 18:41:13,485 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 18:41:15,554 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 18:41:15,555 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:204 Type:ChangeRecordNewData Key:uddi:localhost:service_creditcardvalidationserviceone Local id:204
+2018-03-05 18:41:15,570 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 18:41:15,571 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 18:41:58,534 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 18:41:58,576 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 18:42:00,555 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 18:42:00,555 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:205 Type:ChangeRecordNewData Key:uddi:localhost:service_clientfailurecommunicationone Local id:205
+2018-03-05 18:42:00,570 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 18:42:00,571 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 18:43:02,705 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 18:43:02,743 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 18:43:05,554 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-05 18:43:05,555 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:206 Type:ChangeRecordNewData Key:uddi:localhost:service_externalcommunicationclientserviceone Local id:206
+2018-03-05 18:43:05,570 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 18:43:05,571 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 18:48:12,956 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: FAILURE - Token wellison expired due to old age 127.0.0.1
+2018-03-05 18:48:13,130 INFO [org.apache.juddi] - AUDIT: fetching auth token for wellison Auth Mode is AUTH_TOKEN
+2018-03-05 18:48:13,135 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: AuthToken request for wellison from 127.0.0.1
+2018-03-05 18:48:13,135 WARN [org.apache.juddi.v3.auth.JUDDIAuthenticator] - DO NOT USE JUDDI AUTHENTICATOR FOR PRODUCTION SYSTEMS - DOES NOT VALIDATE PASSWORDS, AT ALL!
+2018-03-05 18:48:13,156 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: AuthToken issued for wellison from 127.0.0.1
+2018-03-05 18:48:13,195 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 18:48:13,374 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 18:48:15,214 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-05 18:48:15,255 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-05 18:48:15,555 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 2 queued
+2018-03-05 18:48:15,555 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:207 Type:ChangeRecordNewData Key:uddi:localhost:service_externalcommunicationclientserviceone Local id:207
+2018-03-05 18:48:15,567 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:208 Type:ChangeRecordNewData Key:uddi:localhost:service_externalcommunicationclientserviceone Local id:208
+2018-03-05 18:48:15,570 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-05 18:48:15,571 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-05 21:29:47,016 INFO [org.apache.juddi.Registry] - Stopping jUDDI registry...
+2018-03-05 21:29:47,144 INFO [org.apache.juddi.Registry] - Shutting down SubscriptionNotifier
+2018-03-05 21:29:47,193 INFO [org.apache.juddi.Registry] - jUDDI shutdown completed.
+2018-03-05 21:29:47,229 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing Root WebApplicationContext: startup date [Mon Mar 05 18:21:45 BRT 2018]; root of context hierarchy
+2018-03-05 21:29:47,269 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@533f0ba7: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,replication]; root of factory hierarchy
+2018-03-05 21:29:48,764 INFO [org.apache.juddi.Registry] - Stopping jUDDI registry...
+2018-03-05 21:29:48,764 INFO [org.apache.juddi.Registry] - Shutting down SubscriptionNotifier
+2018-03-05 21:29:48,765 INFO [org.apache.juddi.Registry] - jUDDI shutdown completed.
+2018-03-05 21:29:48,786 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing Root WebApplicationContext: startup date [Mon Mar 05 18:22:16 BRT 2018]; root of context hierarchy
+2018-03-05 21:29:48,787 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3148694f: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,inquiry,publish,security,subscription,subscription-listener,custody-transfer,valueset-validation,valueset-caching,inquiryv2,publishv2,juddi-api,jsonNamespaceMap,inquiryRestService,inquiryRest,jsonProvider,jaxbProvider]; root of factory hierarchy
+2018-03-06 08:37:23,565 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization started
+2018-03-06 08:37:23,686 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing Root WebApplicationContext: startup date [Tue Mar 06 08:37:23 BRT 2018]; root of context hierarchy
+2018-03-06 08:37:23,732 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from ServletContext resource [/WEB-INF/beans.xml]
+2018-03-06 08:37:23,871 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2018-03-06 08:37:23,904 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2018-03-06 08:37:23,929 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2018-03-06 08:37:24,078 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@533f0ba7: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,replication]; root of factory hierarchy
+2018-03-06 08:37:24,371 INFO [org.apache.juddi.config.AppConfig] - Reading from jUDDI config file from:  file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3replication/WEB-INF/classes/juddiv3.xml
+2018-03-06 08:37:30,409 INFO [org.apache.juddi.config.Install] - Checking if jUDDI is seeded by searching for root publisher root
+2018-03-06 08:37:30,996 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-06 08:37:30,999 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-06 08:37:32,243 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization completed in 8646 ms
+2018-03-06 08:37:32,315 INFO [org.apache.juddi.Registry] - Starting jUDDI registry...This is node uddi:juddi.apache.org:node1
+2018-03-06 08:37:32,640 INFO [org.apache.juddi.config.AppConfig] - Reading from jUDDI config file from:  file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3replication/WEB-INF/classes/juddiv3.xml
+2018-03-06 08:37:32,641 INFO [org.apache.juddi.config.Install] - Checking if jUDDI is seeded by searching for root publisher root
+2018-03-06 08:37:32,660 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-06 08:37:32,662 INFO [org.apache.juddi.Registry] - jUDDI registry started successfully.
+2018-03-06 08:37:36,115 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization started
+2018-03-06 08:37:36,216 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing Root WebApplicationContext: startup date [Tue Mar 06 08:37:36 BRT 2018]; root of context hierarchy
+2018-03-06 08:37:36,273 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from ServletContext resource [/WEB-INF/beans.xml]
+2018-03-06 08:37:36,358 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2018-03-06 08:37:36,381 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2018-03-06 08:37:36,401 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2018-03-06 08:37:36,619 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7cbbd62c: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,inquiry,publish,security,subscription,subscription-listener,custody-transfer,valueset-validation,valueset-caching,inquiryv2,publishv2,juddi-api,jsonNamespaceMap,inquiryRestService,inquiryRest,jsonProvider,jaxbProvider]; root of factory hierarchy
+2018-03-06 08:37:36,854 INFO [org.apache.juddi.config.AppConfig] - Reading from jUDDI config file from:  file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-06 08:37:38,496 INFO [org.apache.juddi.config.Install] - Checking if jUDDI is seeded by searching for root publisher root
+2018-03-06 08:37:38,812 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-06 08:37:40,318 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-06 08:37:40,539 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-06 08:37:40,685 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-06 08:37:40,922 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-06 08:37:41,025 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-06 08:37:41,113 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-06 08:37:41,310 WARN [org.apache.juddi.api.impl.UDDIv2InquiryImpl] - This implementation of UDDIv2 Inquire service org.apache.juddi.api.impl.UDDIv2InquiryImpl is considered BETA. Please report any issues to https://issues.apache.org/jira/browse/JUDDI
+2018-03-06 08:37:41,499 WARN [org.apache.juddi.api.impl.UDDIv2PublishImpl] - This implementation of UDDIv2 Publish service org.apache.juddi.api.impl.UDDIv2PublishImpl is considered BETA. Please report any issues to https://issues.apache.org/jira/browse/JUDDI
+2018-03-06 08:37:41,552 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-06 08:37:42,138 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization completed in 6023 ms
+2018-03-06 08:37:42,156 INFO [org.apache.juddi.Registry] - Starting jUDDI registry...This is node uddi:juddi.apache.org:node1
+2018-03-06 08:37:42,234 INFO [org.apache.juddi.config.AppConfig] - Reading from jUDDI config file from:  file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-06 08:37:42,235 INFO [org.apache.juddi.config.Install] - Checking if jUDDI is seeded by searching for root publisher root
+2018-03-06 08:37:42,247 INFO [org.apache.juddi.Registry] - jUDDI registry started successfully.
+2018-03-06 15:57:41,740 INFO [org.apache.juddi.v3.client.config.UDDIClient] - jUDDI Client version - 3.3.5
+2018-03-06 15:57:52,616 INFO [org.apache.juddi.v3.client.config.ClientConfig] - Reading UDDI Client properties file file:///home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddi-gui/WEB-INF/classes/META-INF/uddi.xml use -Duddi.client.xml to override
+2018-03-06 15:59:18,388 WARN [org.apache.juddi.v3.client.transport.JAXWSTransport] - You should consider using a secure protocol (https) when sending your password!
+2018-03-06 15:59:42,171 INFO [org.apache.juddi] - AUDIT: fetching auth token for wellison Auth Mode is AUTH_TOKEN
+2018-03-06 15:59:42,590 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: AuthToken request for wellison from 127.0.0.1
+2018-03-06 15:59:42,657 WARN [org.apache.juddi.v3.auth.JUDDIAuthenticator] - DO NOT USE JUDDI AUTHENTICATOR FOR PRODUCTION SYSTEMS - DOES NOT VALIDATE PASSWORDS, AT ALL!
+2018-03-06 15:59:43,837 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: AuthToken issued for wellison from 127.0.0.1
+2018-03-06 15:59:47,009 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-06 15:59:47,518 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-06 15:59:59,294 INFO [org.apache.juddi.api.impl.AuthenticatedService] - FindBusiness with tModel bag filtering is enabled: true loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-06 15:59:59,348 INFO [org.apache.juddi.api.impl.InquiryHelper] - FindBusiness by tModelBag is enabled! Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-06 16:00:07,187 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-06 16:00:07,831 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-06 16:00:08,476 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-06 16:00:09,342 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-06 16:00:10,434 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-06 16:00:12,247 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-06 16:00:12,315 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 3 queued
+2018-03-06 16:00:12,324 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 78 milliseconds.
+2018-03-06 16:00:12,493 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:250 Type:ChangeRecordNewData Key:uddi:localhost:authenticationservicetwoportbinding Local id:250
+2018-03-06 16:00:12,807 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:251 Type:ChangeRecordNewData Key:uddi:localhost:authenticationservicetwo Local id:251
+2018-03-06 16:00:12,845 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:252 Type:ChangeRecordNewData Key:uddi:localhost:business_pizzaprocess Local id:252
+2018-03-06 16:01:02,864 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-06 16:01:02,917 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-06 16:01:07,231 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-06 16:01:07,232 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:253 Type:ChangeRecordNewData Key:uddi:localhost:service_authenticationservicetwo Local id:253
+2018-03-06 16:01:07,246 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-06 16:01:07,266 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 20 milliseconds.
+2018-03-06 16:04:13,821 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-06 16:04:13,985 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-06 16:04:17,231 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-06 16:04:17,232 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:254 Type:ChangeRecordNewData Key:uddi:localhost:service_authenticationservicetwo Local id:254
+2018-03-06 16:04:17,246 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-06 16:04:17,246 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 0 milliseconds.
+2018-03-06 16:15:51,913 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: FAILURE - Token wellison expired due to old age 127.0.0.1
+2018-03-06 16:15:53,918 INFO [org.apache.juddi] - AUDIT: fetching auth token for wellison Auth Mode is AUTH_TOKEN
+2018-03-06 16:15:53,931 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: AuthToken request for wellison from 127.0.0.1
+2018-03-06 16:15:53,931 WARN [org.apache.juddi.v3.auth.JUDDIAuthenticator] - DO NOT USE JUDDI AUTHENTICATOR FOR PRODUCTION SYSTEMS - DOES NOT VALIDATE PASSWORDS, AT ALL!
+2018-03-06 16:15:54,164 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: AuthToken issued for wellison from 127.0.0.1
+2018-03-06 16:15:54,271 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-06 16:15:55,078 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-06 16:15:57,231 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-06 16:15:57,231 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:255 Type:ChangeRecordNewData Key:uddi:localhost:service_authenticationservicetwo Local id:255
+2018-03-06 16:15:57,246 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-06 16:15:57,247 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-06 16:16:39,866 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-06 16:16:40,108 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-06 16:16:42,231 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-06 16:16:42,232 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:256 Type:ChangeRecordNewData Key:uddi:localhost:service_authenticationservicetwo Local id:256
+2018-03-06 16:16:42,246 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-06 16:16:42,246 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 0 milliseconds.
+2018-03-06 16:25:07,330 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-06 16:25:07,421 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-06 16:25:12,231 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-06 16:25:12,242 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:257 Type:ChangeRecordNewData Key:uddi:localhost:service_authenticationservicetwo Local id:257
+2018-03-06 16:25:12,246 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-06 16:25:12,247 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-06 16:27:10,944 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-06 16:27:11,040 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-06 16:27:12,231 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-06 16:27:12,232 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:258 Type:ChangeRecordNewData Key:uddi:localhost:service_authenticationservicetwo Local id:258
+2018-03-06 16:27:12,246 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-06 16:27:12,247 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 1 milliseconds.
+2018-03-06 23:01:05,609 INFO [org.apache.juddi.Registry] - Stopping jUDDI registry...
+2018-03-06 23:01:05,664 INFO [org.apache.juddi.Registry] - Shutting down SubscriptionNotifier
+2018-03-06 23:01:06,024 INFO [org.apache.juddi.Registry] - jUDDI shutdown completed.
+2018-03-06 23:01:06,153 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing Root WebApplicationContext: startup date [Tue Mar 06 08:37:23 BRT 2018]; root of context hierarchy
+2018-03-06 23:01:06,890 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@533f0ba7: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,replication]; root of factory hierarchy
+2018-03-06 23:01:09,332 INFO [org.apache.juddi.Registry] - Stopping jUDDI registry...
+2018-03-06 23:01:09,332 INFO [org.apache.juddi.Registry] - Shutting down SubscriptionNotifier
+2018-03-06 23:01:09,332 INFO [org.apache.juddi.Registry] - jUDDI shutdown completed.
+2018-03-06 23:01:09,504 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing Root WebApplicationContext: startup date [Tue Mar 06 08:37:36 BRT 2018]; root of context hierarchy
+2018-03-06 23:01:09,669 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7cbbd62c: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,inquiry,publish,security,subscription,subscription-listener,custody-transfer,valueset-validation,valueset-caching,inquiryv2,publishv2,juddi-api,jsonNamespaceMap,inquiryRestService,inquiryRest,jsonProvider,jaxbProvider]; root of factory hierarchy
+2018-03-07 12:41:32,320 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization started
+2018-03-07 12:41:32,498 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing Root WebApplicationContext: startup date [Wed Mar 07 12:41:32 BRT 2018]; root of context hierarchy
+2018-03-07 12:41:32,587 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from ServletContext resource [/WEB-INF/beans.xml]
+2018-03-07 12:41:32,774 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2018-03-07 12:41:32,810 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2018-03-07 12:41:32,835 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2018-03-07 12:41:33,042 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@533f0ba7: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,replication]; root of factory hierarchy
+2018-03-07 12:41:33,506 INFO [org.apache.juddi.config.AppConfig] - Reading from jUDDI config file from:  file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3replication/WEB-INF/classes/juddiv3.xml
+2018-03-07 12:41:41,375 INFO [org.apache.juddi.config.Install] - Checking if jUDDI is seeded by searching for root publisher root
+2018-03-07 12:41:42,014 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-07 12:41:42,017 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-07 12:41:43,291 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization completed in 10949 ms
+2018-03-07 12:41:43,366 INFO [org.apache.juddi.Registry] - Starting jUDDI registry...This is node uddi:juddi.apache.org:node1
+2018-03-07 12:41:43,629 INFO [org.apache.juddi.config.AppConfig] - Reading from jUDDI config file from:  file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3replication/WEB-INF/classes/juddiv3.xml
+2018-03-07 12:41:43,630 INFO [org.apache.juddi.config.Install] - Checking if jUDDI is seeded by searching for root publisher root
+2018-03-07 12:41:43,651 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-07 12:41:43,653 INFO [org.apache.juddi.Registry] - jUDDI registry started successfully.
+2018-03-07 12:41:47,237 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization started
+2018-03-07 12:41:47,389 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing Root WebApplicationContext: startup date [Wed Mar 07 12:41:47 BRT 2018]; root of context hierarchy
+2018-03-07 12:41:47,433 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from ServletContext resource [/WEB-INF/beans.xml]
+2018-03-07 12:41:47,568 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2018-03-07 12:41:47,604 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2018-03-07 12:41:47,629 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2018-03-07 12:41:47,811 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@51972205: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,inquiry,publish,security,subscription,subscription-listener,custody-transfer,valueset-validation,valueset-caching,inquiryv2,publishv2,juddi-api,jsonNamespaceMap,inquiryRestService,inquiryRest,jsonProvider,jaxbProvider]; root of factory hierarchy
+2018-03-07 12:41:47,961 INFO [org.apache.juddi.config.AppConfig] - Reading from jUDDI config file from:  file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-07 12:41:49,410 INFO [org.apache.juddi.config.Install] - Checking if jUDDI is seeded by searching for root publisher root
+2018-03-07 12:41:49,747 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-07 12:41:51,128 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-07 12:41:51,393 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-07 12:41:51,584 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-07 12:41:51,899 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-07 12:41:52,026 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-07 12:41:52,156 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-07 12:41:52,286 WARN [org.apache.juddi.api.impl.UDDIv2InquiryImpl] - This implementation of UDDIv2 Inquire service org.apache.juddi.api.impl.UDDIv2InquiryImpl is considered BETA. Please report any issues to https://issues.apache.org/jira/browse/JUDDI
+2018-03-07 12:41:52,426 WARN [org.apache.juddi.api.impl.UDDIv2PublishImpl] - This implementation of UDDIv2 Publish service org.apache.juddi.api.impl.UDDIv2PublishImpl is considered BETA. Please report any issues to https://issues.apache.org/jira/browse/JUDDI
+2018-03-07 12:41:52,483 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-07 12:41:53,076 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization completed in 5838 ms
+2018-03-07 12:41:53,099 INFO [org.apache.juddi.Registry] - Starting jUDDI registry...This is node uddi:juddi.apache.org:node1
+2018-03-07 12:41:53,190 INFO [org.apache.juddi.config.AppConfig] - Reading from jUDDI config file from:  file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-07 12:41:53,192 INFO [org.apache.juddi.config.Install] - Checking if jUDDI is seeded by searching for root publisher root
+2018-03-07 12:41:53,212 INFO [org.apache.juddi.Registry] - jUDDI registry started successfully.
+2018-03-07 12:41:57,059 INFO [org.apache.juddi.v3.client.config.UDDIClient] - jUDDI Client version - 3.3.5
+2018-03-07 12:41:57,136 INFO [org.apache.juddi.v3.client.config.ClientConfig] - Reading UDDI Client properties file file:///home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddi-gui/WEB-INF/classes/META-INF/uddi.xml use -Duddi.client.xml to override
+2018-03-07 12:41:58,817 WARN [org.apache.juddi.v3.client.transport.JAXWSTransport] - You should consider using a secure protocol (https) when sending your password!
+2018-03-07 13:44:20,922 WARN [org.apache.juddi] - CSRF Test failed, no session guid.0:0:0:0:0:0:0:1null
+2018-03-07 13:44:24,883 WARN [org.apache.juddi] - CSRF Test failed, no session guid.0:0:0:0:0:0:0:1null
+2018-03-07 13:44:27,838 INFO [org.apache.juddi.v3.client.config.UDDIClient] - jUDDI Client version - 3.3.5
+2018-03-07 13:44:28,096 INFO [org.apache.juddi.v3.client.config.ClientConfig] - Reading UDDI Client properties file file:///home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddi-gui/WEB-INF/classes/META-INF/uddi.xml use -Duddi.client.xml to override
+2018-03-07 13:44:28,439 WARN [org.apache.juddi.v3.client.transport.JAXWSTransport] - You should consider using a secure protocol (https) when sending your password!
+2018-03-07 13:44:32,092 INFO [org.apache.juddi] - AUDIT: fetching auth token for wellison Auth Mode is AUTH_TOKEN
+2018-03-07 13:44:32,141 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: AuthToken request for wellison from 127.0.0.1
+2018-03-07 13:44:32,187 WARN [org.apache.juddi.v3.auth.JUDDIAuthenticator] - DO NOT USE JUDDI AUTHENTICATOR FOR PRODUCTION SYSTEMS - DOES NOT VALIDATE PASSWORDS, AT ALL!
+2018-03-07 13:44:32,472 INFO [org.apache.juddi.api.impl.AuthenticatedService] - AUDIT: AuthToken issued for wellison from 127.0.0.1
+2018-03-07 13:44:39,269 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-07 13:44:39,794 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-07 13:44:43,185 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-07 13:44:43,212 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-07 13:44:43,295 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 84 milliseconds.
+2018-03-07 13:44:43,574 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:300 Type:ChangeRecordNewData Key:uddi:localhost:service_authenticationserviceone Local id:300
+2018-03-07 13:59:11,115 WARN [org.apache.juddi.validation.ValidatePublish] - Hey, you should consider encrypting your trust store password!
+2018-03-07 13:59:11,313 INFO [org.apache.juddi.api.impl.AuthenticatedService] - translated uddi:uddi.org:categorization:types to class org.apache.juddi.validation.vsv.Uddiuddiorgcategorizationtypes
+2018-03-07 13:59:13,185 INFO [org.apache.juddi.replication.ReplicationNotifier] - Replication, Notifying nodes of new change records. 1 queued
+2018-03-07 13:59:13,186 INFO [org.apache.juddi.replication.ReplicationNotifier] - CR saved locally, it was from uddi:juddi.apache.org:node1 USN:301 Type:ChangeRecordNewData Key:uddi:localhost:service_authenticationserviceone Local id:301
+2018-03-07 13:59:13,211 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Start Notification background task; checking if subscription notifications need to be send out..
+2018-03-07 13:59:13,234 INFO [org.apache.juddi.subscription.SubscriptionNotifier] - Notification background task took 23 milliseconds.
+2018-03-13 15:22:44,720 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization started
+2018-03-13 15:22:44,932 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing Root WebApplicationContext: startup date [Tue Mar 13 15:22:44 BRT 2018]; root of context hierarchy
+2018-03-13 15:22:45,016 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from ServletContext resource [/WEB-INF/beans.xml]
+2018-03-13 15:22:45,498 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2018-03-13 15:22:45,558 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2018-03-13 15:22:45,593 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2018-03-13 15:22:45,947 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2147dd3f: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,replication]; root of factory hierarchy
+2018-03-13 15:22:46,547 INFO [org.apache.juddi.config.AppConfig] - Reading from jUDDI config file from:  file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3replication/WEB-INF/classes/juddiv3.xml
+2018-03-13 15:22:59,766 INFO [org.apache.juddi.config.Install] - Checking if jUDDI is seeded by searching for root publisher root
+2018-03-13 15:23:01,395 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-13 15:23:01,399 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-13 15:23:03,177 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization completed in 18403 ms
+2018-03-13 15:23:03,320 INFO [org.apache.juddi.Registry] - Starting jUDDI registry...This is node uddi:juddi.apache.org:node1
+2018-03-13 15:23:03,818 INFO [org.apache.juddi.config.AppConfig] - Reading from jUDDI config file from:  file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3replication/WEB-INF/classes/juddiv3.xml
+2018-03-13 15:23:03,820 INFO [org.apache.juddi.config.Install] - Checking if jUDDI is seeded by searching for root publisher root
+2018-03-13 15:23:03,868 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-13 15:23:03,874 INFO [org.apache.juddi.Registry] - jUDDI registry started successfully.
+2018-03-13 15:23:20,788 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization started
+2018-03-13 15:23:20,867 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Refreshing Root WebApplicationContext: startup date [Tue Mar 13 15:23:20 BRT 2018]; root of context hierarchy
+2018-03-13 15:23:20,910 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from ServletContext resource [/WEB-INF/beans.xml]
+2018-03-13 15:23:21,098 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2018-03-13 15:23:21,139 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2018-03-13 15:23:21,180 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2018-03-13 15:23:21,421 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3b6e19c7: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,inquiry,publish,security,subscription,subscription-listener,custody-transfer,valueset-validation,valueset-caching,inquiryv2,publishv2,juddi-api,jsonNamespaceMap,inquiryRestService,inquiryRest,jsonProvider,jaxbProvider]; root of factory hierarchy
+2018-03-13 15:23:21,761 INFO [org.apache.juddi.config.AppConfig] - Reading from jUDDI config file from:  file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-13 15:23:24,702 INFO [org.apache.juddi.config.Install] - Checking if jUDDI is seeded by searching for root publisher root
+2018-03-13 15:23:25,389 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-13 15:23:27,274 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-13 15:23:27,717 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-13 15:23:28,027 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-13 15:23:28,526 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-13 15:23:28,708 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-13 15:23:28,850 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-13 15:23:29,177 WARN [org.apache.juddi.api.impl.UDDIv2InquiryImpl] - This implementation of UDDIv2 Inquire service org.apache.juddi.api.impl.UDDIv2InquiryImpl is considered BETA. Please report any issues to https://issues.apache.org/jira/browse/JUDDI
+2018-03-13 15:23:29,439 WARN [org.apache.juddi.api.impl.UDDIv2PublishImpl] - This implementation of UDDIv2 Publish service org.apache.juddi.api.impl.UDDIv2PublishImpl is considered BETA. Please report any issues to https://issues.apache.org/jira/browse/JUDDI
+2018-03-13 15:23:29,554 INFO [org.apache.juddi.api.impl.UDDIServiceCounter] - Found MBean server
+2018-03-13 15:23:30,518 INFO [org.springframework.web.context.ContextLoader] - Root WebApplicationContext: initialization completed in 9730 ms
+2018-03-13 15:23:30,585 INFO [org.apache.juddi.Registry] - Starting jUDDI registry...This is node uddi:juddi.apache.org:node1
+2018-03-13 15:23:30,820 INFO [org.apache.juddi.config.AppConfig] - Reading from jUDDI config file from:  file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddiv3/WEB-INF/classes/juddiv3.xml
+2018-03-13 15:23:30,821 INFO [org.apache.juddi.config.Install] - Checking if jUDDI is seeded by searching for root publisher root
+2018-03-13 15:23:30,851 INFO [org.apache.juddi.Registry] - jUDDI registry started successfully.
+2018-03-13 15:23:41,844 INFO [org.apache.juddi.v3.client.config.UDDIClient] - jUDDI Client version - 3.3.5
+2018-03-13 15:23:42,196 INFO [org.apache.juddi.v3.client.config.ClientConfig] - Reading UDDI Client properties file file:///home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddi-gui/WEB-INF/classes/META-INF/uddi.xml use -Duddi.client.xml to override
+2018-03-13 15:23:46,796 WARN [org.apache.juddi.v3.client.transport.JAXWSTransport] - You should consider using a secure protocol (https) when sending your password!
+2018-03-13 17:32:53,925 INFO [org.apache.juddi.v3.client.config.UDDIClient] - jUDDI Client version - 3.3.5
+2018-03-13 17:32:53,933 INFO [org.apache.juddi.v3.client.config.ClientConfig] - Reading UDDI Client properties file file:///home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/webapps/juddi-gui/WEB-INF/classes/META-INF/uddi.xml use -Duddi.client.xml to override
+2018-03-13 17:32:54,082 WARN [org.apache.juddi.v3.client.transport.JAXWSTransport] - You should consider using a secure protocol (https) when sending your password!
+2018-03-14 07:18:49,463 INFO [org.apache.juddi.Registry] - Stopping jUDDI registry...
+2018-03-14 07:18:49,570 INFO [org.apache.juddi.Registry] - Shutting down SubscriptionNotifier
+2018-03-14 07:18:49,801 INFO [org.apache.juddi.Registry] - jUDDI shutdown completed.
+2018-03-14 07:18:50,012 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing Root WebApplicationContext: startup date [Tue Mar 13 15:22:44 BRT 2018]; root of context hierarchy
+2018-03-14 07:18:50,431 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2147dd3f: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,replication]; root of factory hierarchy
+2018-03-14 07:18:53,424 INFO [org.apache.juddi.Registry] - Stopping jUDDI registry...
+2018-03-14 07:18:53,476 INFO [org.apache.juddi.Registry] - Shutting down SubscriptionNotifier
+2018-03-14 07:18:53,710 INFO [org.apache.juddi.Registry] - jUDDI shutdown completed.
+2018-03-14 07:18:54,169 INFO [org.springframework.web.context.support.XmlWebApplicationContext] - Closing Root WebApplicationContext: startup date [Tue Mar 13 15:23:20 BRT 2018]; root of context hierarchy
+2018-03-14 07:18:54,770 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3b6e19c7: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,inquiry,publish,security,subscription,subscription-listener,custody-transfer,valueset-validation,valueset-caching,inquiryv2,publishv2,juddi-api,jsonNamespaceMap,inquiryRestService,inquiryRest,jsonProvider,jaxbProvider]; root of factory hierarchy

@@ -1,0 +1,24 @@
+mar 14, 2018 7:18:23 AM org.apache.coyote.AbstractProtocol pause
+INFORMAÇÕES: Pausing ProtocolHandler ["http-bio-8080"]
+mar 14, 2018 7:18:30 AM org.apache.coyote.AbstractProtocol pause
+INFORMAÇÕES: Pausing ProtocolHandler ["ajp-bio-8009"]
+mar 14, 2018 7:18:30 AM org.apache.catalina.core.StandardService stopInternal
+INFORMAÇÕES: Stopping service Catalina
+mar 14, 2018 7:18:41 AM org.apache.juddi.webconsole.StartupServlet contextDestroyed
+INFORMAÇÕES: Cleaning up juddi-gui
+mar 14, 2018 7:18:45 AM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+GRAVE: The web application [/juddi-gui] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@6b709786]) and a value of type [org.apache.cxf.BusFactory.BusHolder] (value [org.apache.cxf.BusFactory$BusHolder@59b6bf75]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+mar 14, 2018 7:18:49 AM org.apache.juddi.adminconsole.StartupServlet removeKeyFromConfigurationFile
+INFORMAÇÕES: Cleaning up juddi-admin
+mar 14, 2018 7:18:52 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+GRAVE: The web application [/juddiv3replication] appears to have started a thread named [Timer-1] but has failed to stop it. This is very likely to create a memory leak.
+mar 14, 2018 7:18:53 AM org.apache.juddi.adminconsole.StartupServlet removeKeyFromConfigurationFile
+INFORMAÇÕES: Cleaning up juddi-admin
+mar 14, 2018 7:18:58 AM org.apache.coyote.AbstractProtocol stop
+INFORMAÇÕES: Stopping ProtocolHandler ["http-bio-8080"]
+mar 14, 2018 7:19:00 AM org.apache.coyote.AbstractProtocol stop
+INFORMAÇÕES: Stopping ProtocolHandler ["ajp-bio-8009"]
+mar 14, 2018 7:19:00 AM org.apache.coyote.AbstractProtocol destroy
+INFORMAÇÕES: Destroying ProtocolHandler ["http-bio-8080"]
+mar 14, 2018 7:19:00 AM org.apache.coyote.AbstractProtocol destroy
+INFORMAÇÕES: Destroying ProtocolHandler ["ajp-bio-8009"]

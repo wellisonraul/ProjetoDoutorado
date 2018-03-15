@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="ClientFailureCommunicationOne">
+      <implementation-class>br.com.ufpe.wellisonraul.ClientFailureCommunicationOne</implementation-class>
+    </service>
+    <service name="AuthenticationServiceOne">
+      <implementation-class>br.com.ufpe.wellisonraul.authenticationserviceone.AuthenticationServiceOne</implementation-class>
+    </service>
+    <service name="OrderPizzaServiceOne">
+      <implementation-class>br.com.ufpe.wellisonraul.orderpizzaserviceone.OrderPizzaServiceOne</implementation-class>
+    </service>
+    <service name="InternalCommunicationServiceOne">
+      <implementation-class>br.com.ufpe.wellisonraul.internalcommunicationserviceone.InternalCommunicationServiceOne</implementation-class>
+    </service>
+    <service name="GetClientPreferredPizzaServiceOne">
+      <implementation-class>br.com.ufpe.wellisonraul.getclientpreferredpizzaserviceone.GetClientPreferredPizzaServiceOne</implementation-class>
+    </service>
+    <service name="GetClientProfileServiceOne">
+      <implementation-class>br.com.ufpe.wellisonraul.getclientprofileserviceone.GetClientProfileServiceOne</implementation-class>
+    </service>
+    <service name="ExternalCommunicationServiceOne">
+      <implementation-class>br.com.ufpe.wellisonraul.extenalcommunicationserviceone.ExternalCommunicationServiceOne</implementation-class>
+    </service>
+    <service name="CreditCardValidationServiceOne">
+      <implementation-class>br.com.ufpe.wellisonraul.creditcardvalidationserviceone.CreditCardValidationServiceOne</implementation-class>
+    </service>
+    <service name="ExternalCommunicationClientServiceOne">
+      <implementation-class>br.com.ufpe.wellisonraul.extenalcommunicationclientserviceone.ExternalCommunicationClientServiceOne</implementation-class>
+    </service>
+    <service name="AuthenticationServiceTwo">
+      <implementation-class>br.com.ufpe.wellisonraul.authenticationservicetwo.AuthenticationServiceTwo</implementation-class>
+    </service>
+  </services>
+  <clients/>
+</jax-ws>

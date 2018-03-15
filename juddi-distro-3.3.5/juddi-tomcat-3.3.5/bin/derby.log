@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue Mar 13 15:22:48 BRT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.1 - (1458268): instance a816c00e-0162-2099-b762-000035fcdf38 
+on database directory /home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/bin/target/juddi-derby-test-db with class loader java.net.URLClassLoader@5caf905d 
+Loaded from file:/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/lib/derby-10.10.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_151-8u151-b12-0ubuntu0.16.04.2-b12
+user.dir=/home/wellisonraul/Desenvolvimento/juddi-distro-3.3.5/juddi-tomcat-3.3.5/bin
+os.name=Linux
+os.arch=amd64
+os.version=4.10.0-38-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

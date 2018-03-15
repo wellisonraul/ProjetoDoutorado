@@ -1,0 +1,44 @@
+mar 05, 2018 2:58:54 PM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: No Spring WebApplicationInitializer types detected on classpath
+mar 05, 2018 2:58:54 PM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: Initializing Spring root WebApplicationContext
+mar 05, 2018 2:59:43 PM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: No Spring WebApplicationInitializer types detected on classpath
+mar 05, 2018 2:59:43 PM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: Initializing Spring root WebApplicationContext
+mar 05, 2018 2:59:51 PM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: ContextListener: contextInitialized()
+mar 05, 2018 2:59:51 PM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: SessionListener: contextInitialized()
+mar 05, 2018 2:59:51 PM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@6e1779af')
+mar 05, 2018 4:30:58 PM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: SessionListener: contextDestroyed()
+mar 05, 2018 4:30:58 PM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: ContextListener: contextDestroyed()
+mar 05, 2018 4:30:58 PM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: Closing Spring root WebApplicationContext
+mar 05, 2018 4:31:01 PM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: Closing Spring root WebApplicationContext
+mar 05, 2018 6:21:45 PM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: No Spring WebApplicationInitializer types detected on classpath
+mar 05, 2018 6:21:45 PM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: Initializing Spring root WebApplicationContext
+mar 05, 2018 6:22:16 PM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: No Spring WebApplicationInitializer types detected on classpath
+mar 05, 2018 6:22:16 PM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: Initializing Spring root WebApplicationContext
+mar 05, 2018 6:22:27 PM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: ContextListener: contextInitialized()
+mar 05, 2018 6:22:27 PM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: SessionListener: contextInitialized()
+mar 05, 2018 6:22:27 PM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@5e90191f')
+mar 05, 2018 9:29:46 PM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: SessionListener: contextDestroyed()
+mar 05, 2018 9:29:46 PM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: ContextListener: contextDestroyed()
+mar 05, 2018 9:29:47 PM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: Closing Spring root WebApplicationContext
+mar 05, 2018 9:29:48 PM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: Closing Spring root WebApplicationContext

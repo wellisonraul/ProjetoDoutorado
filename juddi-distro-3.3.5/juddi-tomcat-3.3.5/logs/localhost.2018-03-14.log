@@ -1,0 +1,8 @@
+mar 14, 2018 7:18:49 AM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: SessionListener: contextDestroyed()
+mar 14, 2018 7:18:49 AM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: ContextListener: contextDestroyed()
+mar 14, 2018 7:18:49 AM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: Closing Spring root WebApplicationContext
+mar 14, 2018 7:18:54 AM org.apache.catalina.core.ApplicationContext log
+INFORMAÇÕES: Closing Spring root WebApplicationContext
