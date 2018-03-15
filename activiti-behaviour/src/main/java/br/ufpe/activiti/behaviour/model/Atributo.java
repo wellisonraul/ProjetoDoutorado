@@ -4,6 +4,7 @@ public class Atributo {
 
 	private String nome;
 	private double valor;
+	private String[] parametros;
 	private boolean eMelhorOValorMaior;
 	private int peso;
 	
@@ -11,13 +12,15 @@ public class Atributo {
 		super();
 	}
 	
-	public Atributo(String nome, boolean eMelhorOValorMaior, double valor, int peso) {
+	public Atributo(String nome, boolean eMelhorOValorMaior, double valor, int peso, String[] parametros) {
 		super();
 		this.nome = nome;
 		this.eMelhorOValorMaior = eMelhorOValorMaior;
 		this.valor = valor;
 		this.peso = peso;
+		this.setParametros(parametros);
 	}
+	
 	
 	public int getPeso() {
 		return peso;
@@ -73,5 +76,13 @@ public class Atributo {
 		} else if (!nome.equals(other.nome))
 			return false;
 		return true;
+	}
+
+	public String[] getParametros() {
+		return parametros;
+	}
+
+	public void setParametros(String[] parametros) {
+		this.parametros = parametros;
 	}
 }

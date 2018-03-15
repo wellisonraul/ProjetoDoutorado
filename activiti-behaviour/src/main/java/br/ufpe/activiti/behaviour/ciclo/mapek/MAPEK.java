@@ -7,6 +7,7 @@ import org.deckfour.xes.model.XLog;
 import br.ufpe.activiti.behaviour.conversores.conversorBPMNObjetos;
 import br.ufpe.activiti.behaviour.delegate.WsDelegate;
 import br.ufpe.activiti.behaviour.model.ProcessoNegocio;
+import br.ufpe.activiti.behaviour.util.Util;
 
 public class MAPEK extends Thread{
 
@@ -14,7 +15,7 @@ public class MAPEK extends Thread{
 	public void run() {
 		conversorBPMNObjetos conversorBO = new conversorBPMNObjetos();
 		List<ProcessoNegocio> processosDeNegocios = new ArrayList<ProcessoNegocio>();
-		processosDeNegocios = conversorBO.converterBPMNObjetos("/home/wellisonraul/eclipse-workspace/Doutorado/activiti-behaviour/src/main/resources/processSequel.bpmn20.xml");
+		processosDeNegocios = conversorBO.converterBPMNObjetos(Util.arquivoBPMN);
 		
 		Monitor monitor = new Monitor();
 		Analisador analisador = new Analisador();
@@ -23,10 +24,10 @@ public class MAPEK extends Thread{
 		Executor executor = new Executor();
 		
 		try{
-			//Thread.sleep(15000); // DEFINE O TEMPO PARA A PRIMEIRA INICIALIZAÇÃO DO CICLO MAPE-K
-			//int instancia = WsDelegate.getProcessIDInicializacao()-1; // Tratamento de problema na inicialização do banco!
-			//monitor.setProcessInstanceIDCorrente(""+instancia);
-			monitor.setProcessInstanceIDCorrente("1947514");
+			Thread.sleep(15000); // DEFINE O TEMPO PARA A PRIMEIRA INICIALIZAÇÃO DO CICLO MAPE-K
+			int instancia = WsDelegate.getProcessIDInicializacao()-1; // Tratamento de problema na inicialização do banco!
+			monitor.setProcessInstanceIDCorrente(""+instancia);
+			//monitor.setProcessInstanceIDCorrente("925004");
 		}catch(Exception e){
 			System.out.println("Houve um problema para adormecer a Thread!");
 		}
@@ -35,9 +36,9 @@ public class MAPEK extends Thread{
 		while(true) {
 			XLog log = monitor.Mapear();
 			Map<String, Double> mapaDeAnalise = analisador.Analisar(log,processosDeNegocios);
-			Map<String, Integer> mapaDeAnalisePlanejador = planejador.Planejar(mapaDeAnalise);
-			//Map<String, Integer> mapaDeAnalisePlanejadorDrools = planejadordrools.Planejar(mapaDeAnalise);
-			executor.Executar(mapaDeAnalisePlanejador,processosDeNegocios);
+			//Map<String, Integer> mapaDeAnalisePlanejador = planejador.Planejar(mapaDeAnalise);
+			planejadordrools.Planejar(mapaDeAnalise);
+			//executor.Executar(mapaDeAnalisePlanejador,processosDeNegocios);
 			
 			try {
 				Thread.sleep(10000);

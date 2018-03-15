@@ -11,7 +11,7 @@ import ee.tkasekamp.ltlminer.LTLMinerStarter;
 public class GestaoLTL {
 		
 	public HashMap<String, Double> invocarLTLMinerBehaviour (XLog xlog, String formulaConsulta) throws Exception{
-		HashMap<String, Double> mapaDeAnalise = new HashMap<>();
+		HashMap<String, Double> mapaDeAnalise = new HashMap<String, Double>();
 		
 		LTLMinerStarter minerStater = new LTLMinerStarter(getProps(formulaConsulta));
 		mapaDeAnalise = minerStater.mineBehaviour(xlog); // O método de análise

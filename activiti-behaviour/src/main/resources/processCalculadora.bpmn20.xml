@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
+  <process id="processCalculadora" isExecutable="true">
+    <startEvent id="sid-B7AD651C-0C17-45AD-9E36-40DF74C5BBA9">
+      <extensionElements>
+        <activiti:formProperty id="a" name="a" type="long"/>
+        <activiti:formProperty id="b" name="b" type="long"/>
+      </extensionElements>
+    </startEvent>
+    <sequenceFlow id="sid-55C3F453-6D02-4C9B-A281-65EC27AABADA" sourceRef="sid-B7AD651C-0C17-45AD-9E36-40DF74C5BBA9" targetRef="sid-4EBA56AB-A3CB-4CCE-A3C5-66840B089370"/>
+    <serviceTask id="sid-4EBA56AB-A3CB-4CCE-A3C5-66840B089370" name="CalcSoma" activiti:class="br.ufpe.activiti.behaviour.delegate.WsDelegate">
+      <extensionElements>
+        <activiti:field name="wsdlOperation">
+          <activiti:expression>CalcSoma:metodoSoma</activiti:expression>
+        </activiti:field>
+        <activiti:field name="parameters">
+          <activiti:expression>${a}::${b}</activiti:expression>
+        </activiti:field>
+        <activiti:field name="returnValue">
+          <activiti:expression>resultadoSoma</activiti:expression>
+        </activiti:field>
+        <activiti:field name="eventName">
+          <activiti:expression>CalcSoma</activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <serviceTask id="sid-A029893E-746F-4A0D-8B90-97DD86CCC21D" name="CalcMult" activiti:class="br.ufpe.activiti.behaviour.delegate.WsDelegate">
+      <extensionElements>
+        <activiti:field name="wsdlOperation">
+          <activiti:expression>CalcMult:metodoMultiplicacao</activiti:expression>
+        </activiti:field>
+        <activiti:field name="parameters">
+          <activiti:expression>${resultadoSoma}</activiti:expression>
+        </activiti:field>
+        <activiti:field name="returnValue">
+          <activiti:expression>resultadoMultiplicacao</activiti:expression>
+        </activiti:field>
+        <activiti:field name="eventName">
+          <activiti:expression>CalcMult</activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <exclusiveGateway id="sid-B684000A-18AA-4188-B08B-E2E029A64E5D"/>
+    <sequenceFlow id="sid-164CF546-BAB4-4F46-A982-EC6538883D0E" sourceRef="sid-4EBA56AB-A3CB-4CCE-A3C5-66840B089370" targetRef="sid-B684000A-18AA-4188-B08B-E2E029A64E5D"/>
+    <exclusiveGateway id="sid-4B10E018-4B7F-4D47-8ED3-489BD05AD4DE"/>
+    <sequenceFlow id="sid-AC236E19-AF66-4281-9A87-BF856A967043" sourceRef="sid-A029893E-746F-4A0D-8B90-97DD86CCC21D" targetRef="sid-4B10E018-4B7F-4D47-8ED3-489BD05AD4DE"/>
+    <serviceTask id="sid-C96CDF44-E62C-4455-9BC5-580EB3DA7B75" name="CalcMult" activiti:class="br.ufpe.activiti.behaviour.delegate.WsDelegate">
+      <extensionElements>
+        <activiti:field name="wsdlOperation">
+          <activiti:expression>CalcMult:metodoMultiplicacao</activiti:expression>
+        </activiti:field>
+        <activiti:field name="parameters">
+          <activiti:expression>${resultadoSoma}</activiti:expression>
+        </activiti:field>
+        <activiti:field name="returnValue">
+          <activiti:expression>resultadoMultiplicacao</activiti:expression>
+        </activiti:field>
+        <activiti:field name="eventName">
+          <activiti:expression>CalcMult</activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="sid-6FA1956F-CF2E-4254-A66B-E1A3BB44997D" sourceRef="sid-014A4DC5-49E0-4120-84B3-DFD7FEFA0E17" targetRef="sid-C96CDF44-E62C-4455-9BC5-580EB3DA7B75"/>
+    <serviceTask id="sid-014A4DC5-49E0-4120-84B3-DFD7FEFA0E17" name="CalcInversaoSinal" activiti:class="br.ufpe.activiti.behaviour.delegate.WsDelegate">
+      <extensionElements>
+        <activiti:field name="wsdlOperation">
+          <activiti:expression>CalcInversaoSinal:metodoInversao</activiti:expression>
+        </activiti:field>
+        <activiti:field name="parameters">
+          <activiti:expression>${resultadoSoma}</activiti:expression>
+        </activiti:field>
+        <activiti:field name="returnValue">
+          <activiti:expression>resultadoSoma</activiti:expression>
+        </activiti:field>
+        <activiti:field name="eventName">
+          <activiti:expression>CalcInversaoSinal</activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="sid-C4506740-07BC-4F15-A8DF-F3BDDA9CAA5F" sourceRef="sid-C96CDF44-E62C-4455-9BC5-580EB3DA7B75" targetRef="sid-4B10E018-4B7F-4D47-8ED3-489BD05AD4DE"/>
+    <endEvent id="sid-17693F5A-3D73-4E88-A5A7-D01C8828ADBD"/>
+    <sequenceFlow id="sid-4CDCCC28-5746-4BF4-8B2B-026327C63206" sourceRef="sid-4B10E018-4B7F-4D47-8ED3-489BD05AD4DE" targetRef="sid-17693F5A-3D73-4E88-A5A7-D01C8828ADBD"/>
+    <sequenceFlow id="sid-55116227-CDC9-4DAD-B338-6648A2206310" sourceRef="sid-B684000A-18AA-4188-B08B-E2E029A64E5D" targetRef="sid-014A4DC5-49E0-4120-84B3-DFD7FEFA0E17">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${resultadoSoma < 0}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-55088D0B-FB38-4A23-B33E-99C7A8DF8E98" sourceRef="sid-B684000A-18AA-4188-B08B-E2E029A64E5D" targetRef="sid-A029893E-746F-4A0D-8B90-97DD86CCC21D">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${resultadoSoma >= 0}]]></conditionExpression>
+    </sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_process">
+    <bpmndi:BPMNPlane bpmnElement="process" id="BPMNPlane_process">
+      <bpmndi:BPMNShape bpmnElement="sid-B7AD651C-0C17-45AD-9E36-40DF74C5BBA9" id="BPMNShape_sid-B7AD651C-0C17-45AD-9E36-40DF74C5BBA9">
+        <omgdc:Bounds height="30.0" width="30.0" x="105.0" y="170.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-4EBA56AB-A3CB-4CCE-A3C5-66840B089370" id="BPMNShape_sid-4EBA56AB-A3CB-4CCE-A3C5-66840B089370">
+        <omgdc:Bounds height="80.0" width="100.0" x="180.0" y="145.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-A029893E-746F-4A0D-8B90-97DD86CCC21D" id="BPMNShape_sid-A029893E-746F-4A0D-8B90-97DD86CCC21D">
+        <omgdc:Bounds height="80.0" width="100.0" x="435.0" y="270.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-B684000A-18AA-4188-B08B-E2E029A64E5D" id="BPMNShape_sid-B684000A-18AA-4188-B08B-E2E029A64E5D">
+        <omgdc:Bounds height="40.0" width="40.0" x="325.0" y="165.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-4B10E018-4B7F-4D47-8ED3-489BD05AD4DE" id="BPMNShape_sid-4B10E018-4B7F-4D47-8ED3-489BD05AD4DE">
+        <omgdc:Bounds height="40.0" width="40.0" x="810.0" y="180.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-C96CDF44-E62C-4455-9BC5-580EB3DA7B75" id="BPMNShape_sid-C96CDF44-E62C-4455-9BC5-580EB3DA7B75">
+        <omgdc:Bounds height="80.0" width="100.0" x="615.0" y="45.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-014A4DC5-49E0-4120-84B3-DFD7FEFA0E17" id="BPMNShape_sid-014A4DC5-49E0-4120-84B3-DFD7FEFA0E17">
+        <omgdc:Bounds height="80.0" width="100.0" x="435.0" y="45.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-17693F5A-3D73-4E88-A5A7-D01C8828ADBD" id="BPMNShape_sid-17693F5A-3D73-4E88-A5A7-D01C8828ADBD">
+        <omgdc:Bounds height="28.0" width="28.0" x="895.0" y="186.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sid-C4506740-07BC-4F15-A8DF-F3BDDA9CAA5F" id="BPMNEdge_sid-C4506740-07BC-4F15-A8DF-F3BDDA9CAA5F">
+        <omgdi:waypoint x="715.0" y="85.0"/>
+        <omgdi:waypoint x="830.0" y="85.0"/>
+        <omgdi:waypoint x="830.0" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-55116227-CDC9-4DAD-B338-6648A2206310" id="BPMNEdge_sid-55116227-CDC9-4DAD-B338-6648A2206310">
+        <omgdi:waypoint x="345.5" y="165.5"/>
+        <omgdi:waypoint x="345.5" y="85.0"/>
+        <omgdi:waypoint x="435.0" y="85.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-55C3F453-6D02-4C9B-A281-65EC27AABADA" id="BPMNEdge_sid-55C3F453-6D02-4C9B-A281-65EC27AABADA">
+        <omgdi:waypoint x="135.0" y="185.0"/>
+        <omgdi:waypoint x="180.0" y="185.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-4CDCCC28-5746-4BF4-8B2B-026327C63206" id="BPMNEdge_sid-4CDCCC28-5746-4BF4-8B2B-026327C63206">
+        <omgdi:waypoint x="849.6217948717949" y="200.37820512820514"/>
+        <omgdi:waypoint x="895.0002839785394" y="200.0891701657418"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-6FA1956F-CF2E-4254-A66B-E1A3BB44997D" id="BPMNEdge_sid-6FA1956F-CF2E-4254-A66B-E1A3BB44997D">
+        <omgdi:waypoint x="535.0" y="85.0"/>
+        <omgdi:waypoint x="615.0" y="85.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-164CF546-BAB4-4F46-A982-EC6538883D0E" id="BPMNEdge_sid-164CF546-BAB4-4F46-A982-EC6538883D0E">
+        <omgdi:waypoint x="280.0" y="185.2164502164502"/>
+        <omgdi:waypoint x="325.4130434782609" y="185.41304347826087"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-55088D0B-FB38-4A23-B33E-99C7A8DF8E98" id="BPMNEdge_sid-55088D0B-FB38-4A23-B33E-99C7A8DF8E98">
+        <omgdi:waypoint x="345.5" y="204.5"/>
+        <omgdi:waypoint x="345.5" y="310.0"/>
+        <omgdi:waypoint x="435.0" y="310.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-AC236E19-AF66-4281-9A87-BF856A967043" id="BPMNEdge_sid-AC236E19-AF66-4281-9A87-BF856A967043">
+        <omgdi:waypoint x="535.0" y="310.0"/>
+        <omgdi:waypoint x="830.0" y="310.0"/>
+        <omgdi:waypoint x="830.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

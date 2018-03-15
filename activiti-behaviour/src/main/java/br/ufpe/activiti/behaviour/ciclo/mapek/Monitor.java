@@ -42,7 +42,7 @@ public class Monitor{
 			System.out.println("Houve um problema para conseguir os dados do banco no monitoramento!");
 		}
 		
-		String ultimaInstancia = xLog.get(xLog.size()-1).getAttributes().values().toString();	
+		/*String ultimaInstancia = xLog.get(xLog.size()-1).getAttributes().values().toString();	
 		
 		if(xLog.size()==Util.quantidadeTraces) {
 			setProcessInstanceIDCorrente(ultimaInstancia.substring(1, ultimaInstancia.length()-1));
@@ -52,7 +52,7 @@ public class Monitor{
 		}else {
 			System.out.println("Precisamos aumentar a quantidade de traces!"+xLog.size());
 			xLog = null;
-		}
+		}*/
 		
 		return xLog;
 	}
@@ -61,7 +61,7 @@ public class Monitor{
 		/*--------Monitoring Manager---------*/
 
 		Connection connection = new Connection();
-		connection.setDriverLocation("/home/wellisonraul/eclipse-workspace/Doutorado/activiti-behaviour/lib/mysql-connector-java-5.1.36.jar");
+		connection.setDriverLocation(Util.monitorDriverMySQL);
 		connection.setURL("jdbc:mysql://localhost:3306/activiti");
 		connection.setDriver("com.mysql.jdbc.Driver");
 		connection.setColumnSeperatorStart("");

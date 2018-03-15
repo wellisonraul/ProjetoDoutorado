@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
+  <process id="process1" isExecutable="true">
+    <startEvent id="sid-81C1E208-CF98-4492-8448-95600A0A21AC">
+      <extensionElements>
+        <activiti:formProperty id="cpf" name="cpf" type="string"/>
+      </extensionElements>
+    </startEvent>
+    <sequenceFlow id="sid-A0E32F11-7737-4FE1-A8AD-81D98A075AD6" sourceRef="sid-81C1E208-CF98-4492-8448-95600A0A21AC" targetRef="sid-C6E52299-BC31-49AF-ADC7-A6A6EC7A3701"/>
+    <serviceTask id="sid-C6E52299-BC31-49AF-ADC7-A6A6EC7A3701" name="Client Authentication" activiti:class="br.ufpe.activiti.behaviour.delegate.WsDelegate">
+      <extensionElements>
+        <activiti:field name="wsdlOperation">
+          <activiti:expression>AuthenticationServiceOne:authentication</activiti:expression>
+        </activiti:field>
+        <activiti:field name="parameters">
+          <activiti:expression>${cpf}</activiti:expression>
+        </activiti:field>
+        <activiti:field name="returnValue">
+          <activiti:expression>returnValidation</activiti:expression>
+        </activiti:field>
+        <activiti:field name="eventname">
+          <activiti:expression>ClientAuthentication</activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="sid-6D04E473-6C35-4262-BC58-BF4E39156C39" sourceRef="sid-C6E52299-BC31-49AF-ADC7-A6A6EC7A3701" targetRef="sid-B2B91385-ADE5-4ABE-B4C0-11487C2EA5CC"/>
+    <endEvent id="sid-457734B9-94F7-4BD3-8A95-4B3E0667DE7E"/>
+    <sequenceFlow id="sid-578DC357-8BEA-4823-9D4D-B3C5B09E17FC" sourceRef="sid-B2B91385-ADE5-4ABE-B4C0-11487C2EA5CC" targetRef="sid-457734B9-94F7-4BD3-8A95-4B3E0667DE7E"/>
+    <serviceTask id="sid-B2B91385-ADE5-4ABE-B4C0-11487C2EA5CC" name="ClientFailureCommunication" activiti:class="br.ufpe.activiti.behaviour.delegate.WsDelegate">
+      <extensionElements>
+        <activiti:field name="wsdloperation">
+          <activiti:expression>ClientFailureCommunicationOne:failureCommunication</activiti:expression>
+        </activiti:field>
+        <activiti:field name="parameters">
+          <activiti:expression>${returnValidation}</activiti:expression>
+        </activiti:field>
+         <activiti:field name="returnValue">
+          <activiti:expression>returnClient</activiti:expression>
+        </activiti:field>
+        <activiti:field name="eventname">
+          <activiti:expression>ClientFailureCommunication</activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_process">
+    <bpmndi:BPMNPlane bpmnElement="process" id="BPMNPlane_process">
+      <bpmndi:BPMNShape bpmnElement="sid-81C1E208-CF98-4492-8448-95600A0A21AC" id="BPMNShape_sid-81C1E208-CF98-4492-8448-95600A0A21AC">
+        <omgdc:Bounds height="30.0" width="30.0" x="285.0" y="0.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-C6E52299-BC31-49AF-ADC7-A6A6EC7A3701" id="BPMNShape_sid-C6E52299-BC31-49AF-ADC7-A6A6EC7A3701">
+        <omgdc:Bounds height="63.0" width="92.0" x="254.0" y="60.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-457734B9-94F7-4BD3-8A95-4B3E0667DE7E" id="BPMNShape_sid-457734B9-94F7-4BD3-8A95-4B3E0667DE7E">
+        <omgdc:Bounds height="28.0" width="28.0" x="286.0" y="330.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-B2B91385-ADE5-4ABE-B4C0-11487C2EA5CC" id="BPMNShape_sid-B2B91385-ADE5-4ABE-B4C0-11487C2EA5CC">
+        <omgdc:Bounds height="80.0" width="100.0" x="250.0" y="195.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sid-A0E32F11-7737-4FE1-A8AD-81D98A075AD6" id="BPMNEdge_sid-A0E32F11-7737-4FE1-A8AD-81D98A075AD6">
+        <omgdi:waypoint x="300.0" y="30.0"/>
+        <omgdi:waypoint x="300.0" y="60.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-578DC357-8BEA-4823-9D4D-B3C5B09E17FC" id="BPMNEdge_sid-578DC357-8BEA-4823-9D4D-B3C5B09E17FC">
+        <omgdi:waypoint x="300.0" y="275.0"/>
+        <omgdi:waypoint x="300.0" y="330.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-6D04E473-6C35-4262-BC58-BF4E39156C39" id="BPMNEdge_sid-6D04E473-6C35-4262-BC58-BF4E39156C39">
+        <omgdi:waypoint x="300.0" y="123.0"/>
+        <omgdi:waypoint x="300.0" y="195.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

@@ -18,7 +18,7 @@
           <activiti:expression>AliquotRate:toSayAliquot;AliquotRateSecond:toSayAliquotSecond</activiti:expression>
         </activiti:field>
         <activiti:field name="parameters">
-          <activiti:expression>${nameuf};${nameuf}</activiti:expression>
+          <activiti:expression>${nameuf}</activiti:expression>
         </activiti:field>
         <activiti:field name="returnValue">
           <activiti:expression>aliquot</activiti:expression>

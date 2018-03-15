@@ -8,7 +8,8 @@ public class Servico {
 	private String nome;
 	private String wsdl;
 	private String operacao;
-	Map<String, Object> listaParametros = new HashMap<String, Object>();
+	private Map<String, Object> listaParametros = new HashMap<String, Object>();
+	private ArrayList<Object> listaParametrosDisponibilidade = new ArrayList<Object>();
 	private String tarefa;
 	private double disponibilidade;
 	private double fator;
@@ -17,6 +18,12 @@ public class Servico {
 	private int quantidadeParametros;
 	
 	
+	public ArrayList<Object> getListaParametrosDisponibilidade() {
+		return listaParametrosDisponibilidade;
+	}
+	public void setListaParametrosDisponibilidade(ArrayList<Object> listaParametrosDisponibilidade) {
+		this.listaParametrosDisponibilidade = listaParametrosDisponibilidade;
+	}
 	public int getQuantidadeParametros() {
 		return quantidadeParametros;
 	}

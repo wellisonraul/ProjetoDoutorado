@@ -64,7 +64,7 @@ public class conversorBPMNObjetos {
 		String wsdlOperacao = "", parametros = "";
 		
 		for(FieldExtension extensao: tarefa.getFieldExtensions()) {
-			if(extensao.getFieldName().equals("wsdloperation")) {
+			if(extensao.getFieldName().equals("wsdlOperation")) {
 				wsdlOperacao = extensao.getExpression();
 			}else if(extensao.getFieldName().equals("parameters")) {
 				parametros = extensao.getExpression();
@@ -85,6 +85,8 @@ public class conversorBPMNObjetos {
 				servico.setNome(divisaoServicoOperacao[0]);
 				servico.setOperacao(divisaoServicoOperacao[1]);
 				
+				
+				
 				int qtdParametros = 0;
 				
 				for(int j=0; j<parametros.length();j++) {
@@ -92,8 +94,6 @@ public class conversorBPMNObjetos {
 						qtdParametros++;
 					}
 				}
-				
-				qtdParametros = qtdParametros / servicoOperacao.length;
 				
 				Map<String,Object> parametro = new HashMap<String, Object>();
 				for(int k=0; k<qtdParametros; k++) {
@@ -114,7 +114,7 @@ public class conversorBPMNObjetos {
 			servico.setOperacao(divisaoServicoOperacao[1]);
 			
 			
-			int qtdParametros = 0;
+			int qtdParametros = 0;	
 			
 			for(int j=0; j<parametros.length();j++) {
 				if(parametros.charAt(j)=='$') {

@@ -78,17 +78,21 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 
 	private ArrayList<Servico> servicos;
 	private GeradorRandomico geradorRandomico = new GeradorRandomico();
+	private Ordenacao ordenacao = new Ordenacao();
 	private SelecionaServicos selecionaServicos;
 	private SelecionaTarefa selecionaTarefas;
 	private ArrayList<Tarefa> tarefas;
 	private ArrayList<Tarefa> auxiliarTarefas;
 	private ProcessoNegocio processoNegocio;
-	private Expression wsdloperation;
+	private Expression wsdlOperation;
 	private Expression parameters;
 	private Expression returnValue;
-	private Expression eventname;
+	private Expression eventName;
 	private Invocar invocar;
 	public static int processIDInicializacao;
+	private static boolean processInstanceID = true;
+	
+	
 	
 	public Expression getParameters() {
 		return parameters;
@@ -100,10 +104,10 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 		WsDelegate.processIDInicializacao = processIDInicializacao;
 	}
 	public Expression getWsdloperation() {
-		return wsdloperation;
+		return wsdlOperation;
 	}
 	public void setWsdloperation(Expression wsdloperation) {
-		this.wsdloperation = wsdloperation;
+		this.wsdlOperation = wsdloperation;
 	}
 	public void setParameters(Expression parameters) {
 		this.parameters = parameters;
@@ -115,10 +119,10 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 		this.returnValue = returnValue;
 	}	
 	public Expression getEventname() {
-		return eventname;
+		return eventName;
 	}
 	public void setEventname(Expression eventname) {
-		this.eventname = eventname;
+		this.eventName = eventname;
 	}
 
 	private void criaListaServicos(DelegateExecution execution){
@@ -130,10 +134,10 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 		// Criar um objeto tarefa.
 		Tarefa t = new Tarefa();
 		t.setId(execution.getCurrentActivityId()); // Cria id da tarefa com base no BPMN!
-		t.setNome((String)eventname.getValue(execution)); // Recebe o nome da tarefa com base no BPMN
+		t.setNome((String)eventName.getValue(execution)); // Recebe o nome da tarefa com base no BPMN
 		
 		// RECEBE OS VALORES VINDOS DA STRING WSDL, ELA CONTÉM QUANTOS SERVIÇOS ESSA TAREFA TEM.
-		String wsdlServicos = (String) wsdloperation.getValue(execution);
+		String wsdlServicos = (String) wsdlOperation.getValue(execution);
 			
 		// CASO SEJA MAIS DE UM SERVIÇO PARA ESTA TAREFA
 		if(wsdlServicos.contains(";")){
@@ -150,7 +154,7 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 				servico.setOperacao(divisaoServicoOperacao[1]);
 				servico.setListaParametros(execution.getVariables());
 				servico.setFator(0);
-				servico.setTarefa((String)eventname.getValue(execution));
+				servico.setTarefa((String)eventName.getValue(execution));
 				
 				// UTILIZANDO O JUDDI PARA RECEBER O WSDL E A DISPONIBILIDADE
 				buscaJuddi.setServiceWSDLKey(servico, servico.getNome());
@@ -169,7 +173,7 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 			servico.setOperacao(divisaoServicoOperacao[1]);
 			servico.setListaParametros(execution.getVariables());
 			servico.setFator(0);
-			servico.setTarefa((String)eventname.getValue(execution));
+			servico.setTarefa((String)eventName.getValue(execution));
 			
 			// UTILIZANDO O JUDDI PARA RECEBER O WSDL E A DISPONIBILIDADE
 			buscaJuddi.setServiceWSDLKey(servico, servico.getNome());
@@ -182,51 +186,42 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 		
 		for(Servico servicos: selecionaServicos.getServicos()) {
 			System.out.println(servicos.getNome());
+			System.out.println(servicos.getFator());
 			for(Atributo atributo: servicos.getAtributos()) {
 				System.out.println(atributo.getNome()+": "+atributo.getValor());
 			}
 		}
 		
-		Ordenacao ordenacao = new Ordenacao();
+		
 		if(Util.METODODEAGREGACAO==1) ordenacao.ordenarAdicaoPeso(selecionaServicos);
 		else if(Util.METODODEAGREGACAO==2) ordenacao.ordenarDistanciaEuclidiana(selecionaServicos);
-		
-		for(Servico servicos: selecionaServicos.getServicos()) {
-			System.out.println(servicos.getNome());
-			for(Atributo atributo: servicos.getAtributos()) {
-				System.out.println(atributo.getNome()+": "+atributo.getValor());
-			}
-			System.out.println("Fator: "+servicos.getFator());
-		}
 	}	
-	
-	// MÉTODO PRINCIPAL QUE CHAMA OS RECURSOS
-	/* RECURSOS *
-	 * CRIA LISTA DE SERVIÇO
-	 * INICIALIZA SERVIÇO
-	 * INVOCA
-	 * RECEBE RESPOSTA
-	 * */
 	
 	public void execute(DelegateExecution execution) {	
 		// A LISTA DE SERVIÇOS EXISTE?
 		if(selecionaServicos==null){ // Não, então chame o método de criação!
 			criaListaServicos(execution); // Método para cria lista de serviços
 			//setProcessIDInicializacao(Integer.parseInt(execution.getProcessInstanceId())); // Recebe o processo que está sendo iniciado
-			System.out.println(this.toString());
-		}else {
+		}
+			
+			if(Util.atualizacaoDisponibilidade) {
+				selecionaServicos.atualizacaoServicos();
+			}else if(Util.atualizacaoLTLMiner) {
+				selecionaServicos.adaptacaoServicos(selecionaServicos);
+			}
+			
 			DefineProcessLog dao = new DefineProcessLog(); // Inserção de traces
 			try {
 				dao.inserirLog(execution,selecionaServicos.retorneMelhorServico(),null); // Insira o trace de inicialização
 				invocarServico(execution, selecionaServicos.retorneMelhorServico()); // Invoca o serviço da lista de serviços
 			}catch (Exception e) {
+				System.out.println(e.getCause());
 				System.out.println("O serviço "+selecionaServicos.retorneMelhorServico().getNome()+" falhou!");
 			}finally {
 				// Inseri traces de execução, caso seja concluído, inseri complete!
 				if(execution.getVariable((String)returnValue.getValue(execution))!=null) 
 					dao.inserirLog(execution,selecionaServicos.retorneMelhorServico(),execution.getVariable((String)returnValue.getValue(execution)));
 			}
-		}
 		
 		
 	}
@@ -360,6 +355,12 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 		}
 		
 		
-		System.out.println("Retorno: "+ result[0]);
+		//System.out.println("Retorno do serviço: "+ result[0].toString()+": "+servico.getNome());
+	}
+	public static boolean isProcessInstanceID() {
+		return processInstanceID;
+	}
+	public static void setProcessInstanceID(boolean processInstanceID) {
+		WsDelegate.processInstanceID = processInstanceID;
 	}
 }

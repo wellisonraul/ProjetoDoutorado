@@ -86,59 +86,116 @@ public class BuscaJuddi {
 					name.setValue(value);
 					fs.getName().add(name);
 					ServiceList sl = null;
-					sl = inquiry.findService(fs);
-					
-					GetServiceDetail getSD = new GetServiceDetail();
-					
-					List<org.uddi.api_v3.ServiceInfo> serviceInfos = sl.getServiceInfos().getServiceInfo();
-					
-					org.uddi.api_v3.ServiceInfo serviceInfo = serviceInfos.get(0);
-					getSD.getServiceKey().add(serviceInfo.getServiceKey());
-					ServiceDetail serviceDetails = inquiry.getServiceDetail(getSD);
-					BusinessService bs = serviceDetails.getBusinessService().get(0);
-					CategoryBag cb = bs.getCategoryBag();
-					List<KeyedReference> keyedReferences = cb.getKeyedReference();
-					
-					for (KeyedReference keyedReference : keyedReferences) {
+					try{
+						sl = inquiry.findService(fs);
 						
-						ArrayList<Atributo> listaAtributo = new ArrayList<Atributo>();
+						GetServiceDetail getSD = new GetServiceDetail();
 						
-						if(keyedReference.getTModelKey().equals("uddi:uddi.org:wsdl:address")){
-							service.setWsdl(keyedReference.getKeyValue());
+						List<org.uddi.api_v3.ServiceInfo> serviceInfos = sl.getServiceInfos().getServiceInfo();
+						
+						org.uddi.api_v3.ServiceInfo serviceInfo = serviceInfos.get(0);
+						getSD.getServiceKey().add(serviceInfo.getServiceKey());
+						ServiceDetail serviceDetails = inquiry.getServiceDetail(getSD);
+						BusinessService bs = serviceDetails.getBusinessService().get(0);
+						CategoryBag cb = bs.getCategoryBag();
+						List<KeyedReference> keyedReferences = cb.getKeyedReference();
+						
+						for (KeyedReference keyedReference : keyedReferences) {
+							
+							ArrayList<Atributo> listaAtributo = new ArrayList<Atributo>();
+							
+							if(keyedReference.getTModelKey().equals("uddi:uddi.org:wsdl:address")){
+								service.setWsdl(keyedReference.getKeyValue());
+							}
+							
+							if(keyedReference.getTModelKey().equals("urn:wsdm.org:qos:reliability")){
+								Double reliability = Double.parseDouble(keyedReference.getKeyValue());
+								
+								Atributo atributo = new Atributo();
+								
+								atributo.setNome("Disponibilidade");
+								atributo.setEMelhorOValorMaior(true);
+								atributo.setValor(reliability);
+								
+								listaAtributo.add(atributo);
+								service.setAtributos(listaAtributo);
+							}
+							
+							if(keyedReference.getTModelKey().equals("urn:wsdm.org:qos:responsetime_average")){
+								Double tempoRespostaMedio = Double.parseDouble(keyedReference.getKeyValue());
+								
+								Atributo atributo = new Atributo();
+								
+								atributo.setNome("TempoDeResposta");
+								atributo.setEMelhorOValorMaior(false);
+								atributo.setValor(tempoRespostaMedio);	
+								
+								if(service.getAtributos()==null) System.out.println("Null");
+								else listaAtributo.addAll(service.getAtributos());
+								listaAtributo.add(atributo);
+								service.setAtributos(listaAtributo);
+							}
+							
+							if(keyedReference.getTModelKey().equals("uddi:www.mycompany.com:default_parameters")){
+								String divisao[] = keyedReference.getKeyValue().split("::");
+								
+								Double parametersDouble = null;
+								Integer parametersInteger = null;
+								String parametersString = null;
+								Double differenceBetweenParameters = null;
+								
+								ArrayList<Object> parametros = new ArrayList<Object>();
+								
+								
+								if(divisao.length==1) {
+									try {
+										parametersDouble = Double.parseDouble(divisao[0]);
+										parametersInteger = Integer.parseInt(divisao[0]);
+										differenceBetweenParameters = parametersDouble - parametersInteger;
+									}catch (Exception e) {
+										parametersString = divisao[0];
+									}finally {
+										if(parametersDouble==null && parametersInteger == null) {
+											parametros.add(parametersString);
+										}else if(differenceBetweenParameters!=0){
+											parametros.add(parametersDouble);
+										}else {
+											parametros.add(parametersInteger);
+										}
+										
+									}
+								}else {
+									for(int j=0; j<divisao.length; j++) {
+										try {
+											parametersDouble = Double.parseDouble(divisao[j]);
+											parametersInteger = Integer.parseInt(divisao[j]);
+											differenceBetweenParameters = parametersDouble - parametersInteger;
+										}catch (Exception e) {
+											parametersString = divisao[j];
+										}finally {
+											if(parametersDouble==null && parametersInteger == null) {
+												parametros.add(parametersString);
+											}else if(differenceBetweenParameters!=0){
+												parametros.add(parametersDouble);
+											}else {
+												parametros.add(parametersInteger);
+											}
+										}
+									}
+								}
+								
+								service.setListaParametrosDisponibilidade(parametros);
+							}
+							
 						}
-						
-						if(keyedReference.getTModelKey().equals("urn:wsdm.org:qos:reliability")){
-							Double reliability = Double.parseDouble(keyedReference.getKeyValue());
-							
-							Atributo atributo = new Atributo();
-							
-							atributo.setNome("Disponibilidade");
-							atributo.setEMelhorOValorMaior(true);
-							atributo.setValor(reliability);
-							
-							listaAtributo.add(atributo);
-							service.setAtributos(listaAtributo);
-						}
-						
-						if(keyedReference.getTModelKey().equals("urn:wsdm.org:qos:responsetime_average")){
-							Double tempoRespostaMedio = Double.parseDouble(keyedReference.getKeyValue());
-							
-							Atributo atributo = new Atributo();
-							
-							atributo.setNome("TempoDeResposta");
-							atributo.setEMelhorOValorMaior(false);
-							atributo.setValor(tempoRespostaMedio);	
-							
-							if(service.getAtributos()==null) System.out.println("Null");
-							else listaAtributo.addAll(service.getAtributos());
-							listaAtributo.add(atributo);
-							service.setAtributos(listaAtributo);
-						}
-						
+					}catch (Exception e) {
+						System.out.println("Houve algum erro na aquisição do serviço "+service.getNome()+"!");
+						System.out.println("Causas comuns: o serviço não está disponível"
+								+ " no Juddi ou o Juddi está desligado!");
 					}
+					
+					
 				}
-				
-				
 			} catch (TransportException e) {
 				e.printStackTrace();
 			} catch (DispositionReportFaultMessage e) {
@@ -148,7 +205,6 @@ public class BuscaJuddi {
 			}
 
 		} catch (ConfigurationException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

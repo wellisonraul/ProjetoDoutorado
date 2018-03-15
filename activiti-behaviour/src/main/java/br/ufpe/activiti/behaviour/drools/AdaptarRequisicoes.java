@@ -1,38 +1,47 @@
 package br.ufpe.activiti.behaviour.drools;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 
 public class AdaptarRequisicoes {
 	
-	public void requisitarDrools(ArrayList<Double> codigosParaAnalise){
-		ArrayList<Codigo> codigosParaPlanejamento = new ArrayList<Codigo>();
-		codigosParaPlanejamento = criarArrayDeCodigosParaPlanejamento(codigosParaAnalise);
+	public void requisitarDrools(Map<String, Double> mapaDeAnalisePlanejador){
+		ArrayList<DroolsEncoding> codigosParaPlanejamento = new ArrayList<DroolsEncoding>();
+		codigosParaPlanejamento = criarArrayDeCodigosParaPlanejamento(mapaDeAnalisePlanejador);
 		executarDrools(codigosParaPlanejamento);
 	}
 	
-	public ArrayList<Codigo> criarArrayDeCodigosParaPlanejamento(ArrayList<Double> codigosParaAnalise) {
-		ArrayList<Codigo> codigosParaPlanejamento = new ArrayList<Codigo>();
-		Codigo codigo = null;
+	public ArrayList<DroolsEncoding> criarArrayDeCodigosParaPlanejamento(Map<String, Double> mapaDeAnalisePlanejador) {
+		ArrayList<DroolsEncoding> codigosParaPlanejamento = new ArrayList<DroolsEncoding>();
+		DroolsEncoding codigo = null;
 		
-		for (Double codigoParaAnalise : codigosParaAnalise) {
-			codigo = new Codigo();
-			codigo.setCodigoParaAnalise(codigoParaAnalise);
+		for (Iterator<Entry<String, Double>> iterator = mapaDeAnalisePlanejador.entrySet().iterator(); iterator.hasNext();) {
+			Entry<String, Double> entry = iterator.next();
+			codigo = new DroolsEncoding();
+			codigo.setPromValue(entry.getValue());
+			String propriedade[] = entry.getKey().split(":");
+			codigo.setActivityName(propriedade[0]);
+			codigo.setPropertyType(propriedade[3]);
 			codigosParaPlanejamento.add(codigo);
 		}
 		
 		return codigosParaPlanejamento;
 	}
 	
-	public void executarDrools(ArrayList<Codigo> codigosParaPlanejamento){
+	public void executarDrools(ArrayList<DroolsEncoding> codigosParaPlanejamento){
 		// Padronização Drools
 		KieServices ks = KieServices.Factory.get();
 	    KieContainer kContainer = ks.getKieClasspathContainer();
     	KieSession kSession = kContainer.newKieSession("ksession-rules");
     	
-    	for (Codigo codigosParaInserirNoDrools : codigosParaPlanejamento ) {
+    	for (DroolsEncoding codigosParaInserirNoDrools : codigosParaPlanejamento ) {
     		kSession.insert(codigosParaInserirNoDrools);
 		}
 
@@ -40,14 +49,11 @@ public class AdaptarRequisicoes {
 	}
 	
 	public static void main(String args[]) {
+		Map<String, Double> mapaDeAnalise = new HashMap<String, Double>();
 		ArrayList<Double> inteiros = new ArrayList<Double>();
-		inteiros.add(0.1);
-		inteiros.add(0.5);
-		inteiros.add(0.85);
-		inteiros.add(0.95);
-		inteiros.add(1.0);
+		mapaDeAnalise.put("1:2:1:Init",1.0);
 		
 		AdaptarRequisicoes planejar = new AdaptarRequisicoes();
-		planejar.requisitarDrools(inteiros);
+		planejar.requisitarDrools(mapaDeAnalise);
 	}
 }

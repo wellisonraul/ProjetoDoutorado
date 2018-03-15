@@ -20,12 +20,15 @@ public class Engine {
 		// INSERI O PROCESS
 		RepositoryService repositoryService = processEngine.getRepositoryService();
 		DeploymentBuilder db = repositoryService.createDeployment();
-		db.addClasspathResource("processSequel.bpmn20.xml");
+		db.addClasspathResource("processPizza.bpmn20.xml");
 		db.deploy();
+		
 		Map<String, Object> variables = new HashMap<String, Object>();
-		variables.put("nameuf", "RN");
-		variables.put("good", new Long(900));
-		variables.put("shipping", new Long(100));
+		variables.put("cpf", "084.187.454-95");
+		variables.put("orderClient", "Portuguesa");
+		variables.put("creditcardNumber", "4539125464473757");
+		
+		
 		RuntimeService runtimeService = processEngine.getRuntimeService();
 		
 
@@ -38,27 +41,27 @@ public class Engine {
 		MAPEK mapek = new MAPEK();
 		mapek.start();
 		
-		/*int numDays =10;
+		MonitorDisponibilidade md = new MonitorDisponibilidade();
+		md.start();
+		
+		int numDays =100;
 		for (int i = 0; i < numDays; i++) {
 
 			for (int j = 0; j <3; j++) {
 				try {
-					System.out.println("####################### Invocacao "+j +" do dia "+ i+ "#####################################################");
+					//System.out.println("####################### Invocacao "+j +" do dia "+ i+ "#####################################################");
 					FileWriter fstream = new FileWriter("Execucao.txt", true); 
 					BufferedWriter out = new BufferedWriter(fstream);
-					out.write("##################### Invocacao "+j +" do dia "+ i+ " #####################"+ "\n");
+					out.write("##################### Invocacao "+j+" do dia "+i+ " #####################"+ "\n");
 					out.close();
-					runtimeService.startProcessInstanceByKey("processICMS", variables);
+					runtimeService.startProcessInstanceByKey("processPizza", variables);
 					double a = 0;
-					while(a<900000000){
-						a=a+0.5;
-					}
 				} catch (Exception e) {
 					System.out.println(e);
 				}
 			}
 
-		}*/
+		}
 
 	}
 

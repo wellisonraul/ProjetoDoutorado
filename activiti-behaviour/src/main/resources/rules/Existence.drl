@@ -1,0 +1,80 @@
+package br.ufpe.activiti.behaviour.drools
+
+import br.ufpe.activiti.behaviour.drools.DroolsEncoding;
+import function br.ufpe.activiti.behaviour.ciclo.mapek.Executor.executorDrools;
+import function br.ufpe.activiti.behaviour.ciclo.mapek.Executor.ativarAdaptacao;
+
+dialect "java"
+
+rule "ExistenceWithoutProblems"
+	when
+		c : DroolsEncoding( promValue >= DroolsEncoding.EXISTENCEWITHOUTPROBLEMS && propertyType == "Existence")
+	then
+		System.out.println("The "+c.getPromValue()+" is good for Existence! Don't do anything!");
+		executorDrools(c.getActivityName(),3);
+end
+
+rule "ProblematicExistence"
+	when
+		c : DroolsEncoding( (promValue >= DroolsEncoding.PROBLEMATICEXISTENCE && 
+		promValue < DroolsEncoding.EXISTENCEWITHOUTPROBLEMS) && propertyType == "Existence")
+	then
+		System.out.println("The "+c.getPromValue()+" is average for Existence! Mark the service as problematic!");
+		executorDrools(c.getActivityName(),2);
+end
+
+rule "ExistenceWithProblems"
+	when
+		c : DroolsEncoding( promValue < DroolsEncoding.PROBLEMATICEXISTENCE 
+		&& propertyType == "Existence")
+	then
+		System.out.println("The "+c.getPromValue()+" is bad for Existence! Conduct the adaptation policy!");
+		executorDrools(c.getActivityName(),1);
+end
+
+rule "AbsenceWithoutProblems"
+	when
+		c : DroolsEncoding( promValue >= DroolsEncoding.ABSENCEWITHOUTPROBLEMS
+		&& propertyType == "Absence")
+	then
+		System.out.println("The "+c.getPromValue()+" is good for Absence! Don't do anything!");
+		executorDrools(c.getActivityName(),3);
+end
+
+rule "AbsenceWithProblems"
+	when
+		c : DroolsEncoding( promValue < DroolsEncoding.ABSENCEWITHOUTPROBLEMS
+		&& propertyType == "Absence")
+	then
+		System.out.println("The "+c.getPromValue()+" is bad for Absence! Conduct the adaptation policy!");
+		executorDrools(c.getActivityName(),1);
+end
+
+rule "StartWithoutProblems"
+	when
+		c : DroolsEncoding( promValue >= DroolsEncoding.STARTWITHOUTPROBLEMS
+		&& propertyType == "Init")
+	then
+		System.out.println("The "+c.getPromValue()+" is good for start! Don't do anything!");
+		executorDrools(c.getActivityName(),3);
+end
+
+rule "StartWithProblems"
+	when
+		c : DroolsEncoding( promValue < DroolsEncoding.STARTWITHOUTPROBLEMS
+		&& propertyType == "Init")
+	then
+		System.out.println("The "+c.getPromValue()+" is bad for start! Conduct the adaptation policy!");
+		executorDrools(c.getActivityName(),1);
+end
+
+rule "Final"
+	when
+		c : DroolsEncoding( propertyType == "Final")
+	then
+		ativarAdaptacao();
+end
+
+
+
+

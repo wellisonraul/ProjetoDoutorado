@@ -9,7 +9,7 @@ public class Planejador {
 	Executor executor = new Executor();
 	public Map<String, Integer>  Planejar(Map<String, Double> mapaDeAnalise){
 		
-		Map<String, Integer> mapa = new HashMap<>(); // Objeto para conter resultados!
+		Map<String, Integer> mapa = new HashMap<String, Integer>(); // Objeto para conter resultados!
 		
 		for (Iterator<Entry<String, Double>> iterator = mapaDeAnalise.entrySet().iterator(); iterator.hasNext();) {
 			Entry<String, Double> entry = iterator.next();

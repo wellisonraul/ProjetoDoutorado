@@ -1,6 +1,7 @@
 package br.ufpe.activiti.behaviour.ciclo.mapek;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import org.deckfour.xes.model.XLog;
@@ -15,47 +16,49 @@ public class Analisador {
 	public Map<String, Double> Analisar(XLog xlog, List<ProcessoNegocio> processosDeNegocios) {
 		
 		GestaoLTL gestaoLTL = new GestaoLTL();
-		Map<String, Double> mapaDeAnalise = new HashMap<>();
+		Map<String, Double> mapaDeAnalise = new LinkedHashMap<String, Double>();
 		MapemanetoFormulasLTL mapemanetoFormulasLTL = new MapemanetoFormulasLTL();
 		
-		for(ProcessoNegocio processoNegocio: processosDeNegocios) {
+		String formulaConsulta = mapemanetoFormulasLTL.eventualmenteAcontece
+				("AuthenticationServiceOne", "authentication", "ClientAuthentication");
+		String formulaConsulta2 = mapemanetoFormulasLTL.eventualmenteAcontece
+				("AuthenticationServiceTwo", "authenticationTwo", "ClientAuthentication");
+		
+		try {
+			Double valor = gestaoLTL.invocarMinerarFormula(xlog,formulaConsulta);
+			Double valor2 = gestaoLTL.invocarMinerarFormula(xlog,formulaConsulta2);
+			
+			if(valor2!=null) {
+				//mapaDeAnalise.put("ClientAuthentication:AuthenticationServiceOne:authentication:Existence", valor);
+				mapaDeAnalise.put("ClientAuthentication:AuthenticationServiceTwo:authenticationTwo:Existence", valor2);
+				mapaDeAnalise.put("ClientAuthentication:AuthenticationServiceOne:authentication:Final", 0.0);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		/*for(ProcessoNegocio processoNegocio: processosDeNegocios) {
 			for(Tarefa tarefa: processoNegocio.getListaTarefas()) {
 				for(Servico servico: tarefa.getListaServicos()) {	
 					
-					System.out.println(servico.getNome()+": "+servico.getListaParametros().size());
-					
-					String formulaConsulta = mapemanetoFormulasLTL.RecursoParaUmaAtividade
+					formulaConsulta = mapemanetoFormulasLTL.recursoParaUmaAtividade
 							(servico.getNome(), servico.getOperacao(), tarefa.getNome());
 					try {
 						Double valor = gestaoLTL.invocarMinerarFormula(xlog,formulaConsulta);
 						
 						if(valor!=null) {
 							mapaDeAnalise.put(tarefa.getNome()+":"+servico.getNome()+":"+servico.getOperacao(), valor);
-							//mapaDeAnalise.put(tarefa.getNome(), valor);
 						}
 						
 					} catch (Exception e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 				}
 			}
-		}
+		}*/
 		
 		return mapaDeAnalise;
 	}
-	
-	public Map<String, Double> Analisar(XLog xlog) {
-		
-		GestaoLTL gestaoLTL = new GestaoLTL();
-		Map<String, Double> mapaDeAnalise = new HashMap<>();
-		
-		try {
-			//mapaDeAnalise = gestaoLTL.invocarLTLMiner(xlog); // Invoca LTLMiner
-		}catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		return mapaDeAnalise;
-	}
+
 }
