@@ -26,6 +26,5 @@ import java.beans.IntrospectionException;
  * @author Joram Barrez
  */
 public interface JavaDelegate {
-
 	void execute(DelegateExecution execution);
 }
