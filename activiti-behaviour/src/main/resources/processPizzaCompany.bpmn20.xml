@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
+  <process id="processPizzaCompany" isExecutable="true">
+    <startEvent id="sid-6E41CC1F-66B0-4F26-81B1-DDFB73CC3B83">
+      <extensionElements>
+        <activiti:formProperty id="cpf" name="cpf" type="string"/>
+        <activiti:formProperty id="orderClient" name="orderClient" type="string"/>
+        <activiti:formProperty id="creditcardNumber" name="creditcardNumber" type="string"/>
+      </extensionElements>
+    </startEvent>
+    <sequenceFlow id="sid-473FED5A-11D2-4ACF-AD63-1FE7C95FF58D" sourceRef="sid-6E41CC1F-66B0-4F26-81B1-DDFB73CC3B83" targetRef="sid-19AB58C9-C5F6-4966-8842-EFB1A325AFB6"/>
+    <serviceTask id="sid-19AB58C9-C5F6-4966-8842-EFB1A325AFB6" name="Client Authentication" activiti:class="br.ufpe.activiti.behaviour.delegate.WsDelegate">
+      <extensionElements>
+        <activiti:field name="wsdlOperation">
+          <activiti:expression>AuthenticationServiceOneService:authentication;AuthenticationServiceTwoService:authenticationTwo</activiti:expression>
+        </activiti:field>
+        <activiti:field name="parameters">
+          <activiti:expression>${cpf}</activiti:expression>
+        </activiti:field>
+        <activiti:field name="returnValue">
+          <activiti:expression>returnValidation</activiti:expression>
+        </activiti:field>
+        <activiti:field name="eventname">
+          <activiti:expression>ClientAuthentication</activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="sid-966A19AB-F043-4A96-9D6A-486505A65EEF" sourceRef="sid-19AB58C9-C5F6-4966-8842-EFB1A325AFB6" targetRef="sid-519DD06E-EE8B-4D29-9F25-CF8FB8651A75"/>
+    <serviceTask id="sid-519DD06E-EE8B-4D29-9F25-CF8FB8651A75" name="Get Client Profile" activiti:class="br.ufpe.activiti.behaviour.delegate.WsDelegate">
+      <extensionElements>
+        <activiti:field name="wsdlOperation">
+            <activiti:expression>GetClientProfileServiceOne:getData</activiti:expression>
+        </activiti:field>
+        <activiti:field name="parameters">
+          <activiti:expression>${cpf}</activiti:expression>
+        </activiti:field>
+        <activiti:field name="returnValue">
+          <activiti:expression>returnDataClient</activiti:expression>
+        </activiti:field>
+        <activiti:field name="eventname">
+          <activiti:expression>GetClientProfile</activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="sid-7C63C4CC-5791-4CE2-B8C4-222FBF75DBE8" sourceRef="sid-519DD06E-EE8B-4D29-9F25-CF8FB8651A75" targetRef="sid-C7CE43F3-9D29-475C-A23B-CDB26B28BE64"/>
+    <serviceTask id="sid-C7CE43F3-9D29-475C-A23B-CDB26B28BE64" name="Get pizzas from Catalogue" activiti:class="br.ufpe.activiti.behaviour.delegate.WsDelegate">
+      <extensionElements>
+        <activiti:field name="wsdlOperation">
+          <activiti:expression>GetClientPreferredPizzaServiceOne:getCatalogue</activiti:expression>
+        </activiti:field>
+        <activiti:field name="parameters">
+          <activiti:expression>${cpf}</activiti:expression>
+        </activiti:field>
+        <activiti:field name="returnValue">
+          <activiti:expression>returnPreferredPizza</activiti:expression>
+        </activiti:field>
+        <activiti:field name="eventname">
+          <activiti:expression>GetpizzasfromCatalogue</activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="sid-AD8AF806-0D12-44ED-827E-74C2795459A2" sourceRef="sid-C7CE43F3-9D29-475C-A23B-CDB26B28BE64" targetRef="sid-D6B18095-A517-49F8-B8E5-8CE5BC2B6F7C"/>
+    <serviceTask id="sid-D6B18095-A517-49F8-B8E5-8CE5BC2B6F7C" name="Receive order from client" activiti:class="br.ufpe.activiti.behaviour.delegate.WsDelegate">
+      <extensionElements>
+        <activiti:field name="wsdlOperation">
+          <activiti:expression>OrderPizzaServiceOne:getOrderPizza</activiti:expression>
+        </activiti:field>
+        <activiti:field name="parameters">
+          <activiti:expression>${orderClient}</activiti:expression>
+        </activiti:field>
+        <activiti:field name="returnValue">
+          <activiti:expression>orderClient</activiti:expression>
+        </activiti:field>
+        <activiti:field name="eventname">
+          <activiti:expression>Receiveorderfromclient</activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="sid-1447D98B-2E8E-45F5-B2A0-B93A3C24923D" sourceRef="sid-D6B18095-A517-49F8-B8E5-8CE5BC2B6F7C" targetRef="sid-BB1401C7-CB85-4610-A8D0-50B0360E4D85"/>
+    <serviceTask id="sid-BB1401C7-CB85-4610-A8D0-50B0360E4D85" name="Validate client credit card" activiti:class="br.ufpe.activiti.behaviour.delegate.WsDelegate">
+      <extensionElements>
+        <activiti:field name="wsdlOperation">
+          <activiti:expression>CreditCardValidationServiceOne:validation</activiti:expression>
+        </activiti:field>
+        <activiti:field name="parameters">
+          <activiti:expression>${creditcardNumber}</activiti:expression>
+        </activiti:field>
+        <activiti:field name="returnValue">
+          <activiti:expression>returnValidation</activiti:expression>
+        </activiti:field>
+        <activiti:field name="eventname">
+          <activiti:expression>Validateclientcreditcard</activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="sid-11392415-940E-4C12-B3C2-0CE8214E4BFC" sourceRef="sid-BB1401C7-CB85-4610-A8D0-50B0360E4D85" targetRef="sid-F08D2B1B-EB93-4B38-9E94-252F3D44AE9F"/>
+    <serviceTask id="sid-F08D2B1B-EB93-4B38-9E94-252F3D44AE9F" name="Communicate desired pizza to baker" activiti:class="br.ufpe.activiti.behaviour.delegate.WsDelegate">
+      <extensionElements>
+        <activiti:field name="wsdlOperation">
+          <activiti:expression>InternalCommunicationServiceOne:communicateBaker</activiti:expression>
+        </activiti:field>
+        <activiti:field name="parameters">
+          <activiti:expression>${orderClient}</activiti:expression>
+        </activiti:field>
+        <activiti:field name="returnValue">
+          <activiti:expression>returnStatus</activiti:expression>
+        </activiti:field>
+        <activiti:field name="eventname">
+          <activiti:expression>Communicatedesiredpizzatobaker</activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="sid-0D02DE26-E996-49EA-8930-FD53FCF332A7" sourceRef="sid-F08D2B1B-EB93-4B38-9E94-252F3D44AE9F" targetRef="sid-749E8B1F-FE79-4793-AE36-143842934927"/>
+    <parallelGateway id="sid-749E8B1F-FE79-4793-AE36-143842934927"/>
+    <sequenceFlow id="sid-76A7387A-A216-4EA1-8D6A-741485AFBC42" sourceRef="sid-749E8B1F-FE79-4793-AE36-143842934927" targetRef="sid-A7734116-D1A5-4FA2-AB4F-A2FA9D7C5D5E"/>
+    <serviceTask id="sid-A7734116-D1A5-4FA2-AB4F-A2FA9D7C5D5E" name="Send message to Client" activiti:class="br.ufpe.activiti.behaviour.delegate.WsDelegate">
+      <extensionElements>
+        <activiti:field name="wsdlOperation">
+          <activiti:expression>ExternalCommunicationClientServiceOne:communicateClient</activiti:expression>
+        </activiti:field>
+        <activiti:field name="parameters">
+          <activiti:expression>${cpf}</activiti:expression>
+        </activiti:field>
+        <activiti:field name="returnValue">
+          <activiti:expression>returnFinalStatus</activiti:expression>
+        </activiti:field>
+        <activiti:field name="eventname">
+          <activiti:expression>SendmessagetoClient</activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="sid-52F6A726-DA92-4FDF-9A35-7D33C43F98F6" sourceRef="sid-749E8B1F-FE79-4793-AE36-143842934927" targetRef="sid-C2D5648F-BBAC-4A13-AE93-B803BDD72FCA"/>
+    <serviceTask id="sid-C2D5648F-BBAC-4A13-AE93-B803BDD72FCA" name="Send information to Delivery Company" activiti:class="br.ufpe.activiti.behaviour.delegate.WsDelegate">
+      <extensionElements>
+        <activiti:field name="wsdlOperation">
+          <activiti:expression>ExternalCommunicationServiceOne:communicateDelivery</activiti:expression>
+        </activiti:field>
+        <activiti:field name="parameters">
+          <activiti:expression>${cpf}::${orderClient}</activiti:expression>
+        </activiti:field>
+        <activiti:field name="returnValue">
+          <activiti:expression>returnFinalStatus</activiti:expression>
+        </activiti:field>
+        <activiti:field name="eventname">
+          <activiti:expression>SendinformationtoDeliveryCompany</activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="sid-7C3EC86C-61B9-4DBB-A7EB-3C24295512F6" sourceRef="sid-C2D5648F-BBAC-4A13-AE93-B803BDD72FCA" targetRef="sid-ADAFB6CC-3C90-427A-9B8F-F4A4C844F18F"/>
+    <sequenceFlow id="sid-F95FD0A6-755A-4A71-B95A-5E187B5AAEA3" sourceRef="sid-A7734116-D1A5-4FA2-AB4F-A2FA9D7C5D5E" targetRef="sid-ADAFB6CC-3C90-427A-9B8F-F4A4C844F18F"/>
+    <parallelGateway id="sid-ADAFB6CC-3C90-427A-9B8F-F4A4C844F18F"/>
+    <endEvent id="sid-306D0409-68F6-4587-A1B6-B9EF0604991E"/>
+    <sequenceFlow id="sid-9FCD6FCB-ADB5-4CD1-8016-BDA3E546DD95" sourceRef="sid-ADAFB6CC-3C90-427A-9B8F-F4A4C844F18F" targetRef="sid-306D0409-68F6-4587-A1B6-B9EF0604991E"/>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_process">
+    <bpmndi:BPMNPlane bpmnElement="process" id="BPMNPlane_process">
+      <bpmndi:BPMNShape bpmnElement="sid-6E41CC1F-66B0-4F26-81B1-DDFB73CC3B83" id="BPMNShape_sid-6E41CC1F-66B0-4F26-81B1-DDFB73CC3B83">
+        <omgdc:Bounds height="30.0" width="30.0" x="292.0" y="6.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-19AB58C9-C5F6-4966-8842-EFB1A325AFB6" id="BPMNShape_sid-19AB58C9-C5F6-4966-8842-EFB1A325AFB6">
+        <omgdc:Bounds height="80.0" width="100.0" x="257.0" y="75.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-519DD06E-EE8B-4D29-9F25-CF8FB8651A75" id="BPMNShape_sid-519DD06E-EE8B-4D29-9F25-CF8FB8651A75">
+        <omgdc:Bounds height="80.0" width="100.0" x="257.0" y="180.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-C7CE43F3-9D29-475C-A23B-CDB26B28BE64" id="BPMNShape_sid-C7CE43F3-9D29-475C-A23B-CDB26B28BE64">
+        <omgdc:Bounds height="80.0" width="100.0" x="257.0" y="285.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-D6B18095-A517-49F8-B8E5-8CE5BC2B6F7C" id="BPMNShape_sid-D6B18095-A517-49F8-B8E5-8CE5BC2B6F7C">
+        <omgdc:Bounds height="80.0" width="100.0" x="257.0" y="385.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-BB1401C7-CB85-4610-A8D0-50B0360E4D85" id="BPMNShape_sid-BB1401C7-CB85-4610-A8D0-50B0360E4D85">
+        <omgdc:Bounds height="80.0" width="100.0" x="257.0" y="485.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-F08D2B1B-EB93-4B38-9E94-252F3D44AE9F" id="BPMNShape_sid-F08D2B1B-EB93-4B38-9E94-252F3D44AE9F">
+        <omgdc:Bounds height="80.0" width="100.0" x="257.0" y="585.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-749E8B1F-FE79-4793-AE36-143842934927" id="BPMNShape_sid-749E8B1F-FE79-4793-AE36-143842934927">
+        <omgdc:Bounds height="40.0" width="40.0" x="287.0" y="685.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-A7734116-D1A5-4FA2-AB4F-A2FA9D7C5D5E" id="BPMNShape_sid-A7734116-D1A5-4FA2-AB4F-A2FA9D7C5D5E">
+        <omgdc:Bounds height="80.0" width="100.0" x="340.0" y="740.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-C2D5648F-BBAC-4A13-AE93-B803BDD72FCA" id="BPMNShape_sid-C2D5648F-BBAC-4A13-AE93-B803BDD72FCA">
+        <omgdc:Bounds height="80.0" width="100.0" x="185.0" y="740.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-ADAFB6CC-3C90-427A-9B8F-F4A4C844F18F" id="BPMNShape_sid-ADAFB6CC-3C90-427A-9B8F-F4A4C844F18F">
+        <omgdc:Bounds height="40.0" width="40.0" x="287.0" y="825.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-306D0409-68F6-4587-A1B6-B9EF0604991E" id="BPMNShape_sid-306D0409-68F6-4587-A1B6-B9EF0604991E">
+        <omgdc:Bounds height="28.0" width="28.0" x="293.0" y="900.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sid-7C3EC86C-61B9-4DBB-A7EB-3C24295512F6" id="BPMNEdge_sid-7C3EC86C-61B9-4DBB-A7EB-3C24295512F6">
+        <omgdi:waypoint x="235.0" y="820.0"/>
+        <omgdi:waypoint x="235.0" y="845.5"/>
+        <omgdi:waypoint x="287.5" y="845.5"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-473FED5A-11D2-4ACF-AD63-1FE7C95FF58D" id="BPMNEdge_sid-473FED5A-11D2-4ACF-AD63-1FE7C95FF58D">
+        <omgdi:waypoint x="307.0" y="36.0"/>
+        <omgdi:waypoint x="307.0" y="75.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-76A7387A-A216-4EA1-8D6A-741485AFBC42" id="BPMNEdge_sid-76A7387A-A216-4EA1-8D6A-741485AFBC42">
+        <omgdi:waypoint x="326.5" y="705.5"/>
+        <omgdi:waypoint x="390.0" y="705.5"/>
+        <omgdi:waypoint x="390.0" y="740.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-9FCD6FCB-ADB5-4CD1-8016-BDA3E546DD95" id="BPMNEdge_sid-9FCD6FCB-ADB5-4CD1-8016-BDA3E546DD95">
+        <omgdi:waypoint x="307.3602941176471" y="864.6397058823529"/>
+        <omgdi:waypoint x="307.10218705882846" y="900.0003729405028"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-966A19AB-F043-4A96-9D6A-486505A65EEF" id="BPMNEdge_sid-966A19AB-F043-4A96-9D6A-486505A65EEF">
+        <omgdi:waypoint x="307.0" y="155.0"/>
+        <omgdi:waypoint x="307.0" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-F95FD0A6-755A-4A71-B95A-5E187B5AAEA3" id="BPMNEdge_sid-F95FD0A6-755A-4A71-B95A-5E187B5AAEA3">
+        <omgdi:waypoint x="390.0" y="820.0"/>
+        <omgdi:waypoint x="390.0" y="845.0"/>
+        <omgdi:waypoint x="327.0" y="845.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-7C63C4CC-5791-4CE2-B8C4-222FBF75DBE8" id="BPMNEdge_sid-7C63C4CC-5791-4CE2-B8C4-222FBF75DBE8">
+        <omgdi:waypoint x="307.0" y="260.0"/>
+        <omgdi:waypoint x="307.0" y="285.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-0D02DE26-E996-49EA-8930-FD53FCF332A7" id="BPMNEdge_sid-0D02DE26-E996-49EA-8930-FD53FCF332A7">
+        <omgdi:waypoint x="307.24844720496895" y="665.0"/>
+        <omgdi:waypoint x="307.375" y="685.375"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-AD8AF806-0D12-44ED-827E-74C2795459A2" id="BPMNEdge_sid-AD8AF806-0D12-44ED-827E-74C2795459A2">
+        <omgdi:waypoint x="307.0" y="365.0"/>
+        <omgdi:waypoint x="307.0" y="385.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-11392415-940E-4C12-B3C2-0CE8214E4BFC" id="BPMNEdge_sid-11392415-940E-4C12-B3C2-0CE8214E4BFC">
+        <omgdi:waypoint x="307.0" y="565.0"/>
+        <omgdi:waypoint x="307.0" y="585.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-1447D98B-2E8E-45F5-B2A0-B93A3C24923D" id="BPMNEdge_sid-1447D98B-2E8E-45F5-B2A0-B93A3C24923D">
+        <omgdi:waypoint x="307.0" y="465.0"/>
+        <omgdi:waypoint x="307.0" y="485.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-52F6A726-DA92-4FDF-9A35-7D33C43F98F6" id="BPMNEdge_sid-52F6A726-DA92-4FDF-9A35-7D33C43F98F6">
+        <omgdi:waypoint x="287.5" y="705.5"/>
+        <omgdi:waypoint x="235.0" y="705.5"/>
+        <omgdi:waypoint x="235.0" y="740.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

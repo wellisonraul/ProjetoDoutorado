@@ -4,6 +4,7 @@ import java.beans.IntrospectionException;
 import java.beans.PropertyDescriptor;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.charset.Charset;
@@ -186,7 +187,6 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 		
 		for(Servico servicos: selecionaServicos.getServicos()) {
 			System.out.println(servicos.getNome());
-			System.out.println(servicos.getFator());
 			for(Atributo atributo: servicos.getAtributos()) {
 				System.out.println(atributo.getNome()+": "+atributo.getValor());
 			}
@@ -203,6 +203,34 @@ public class WsDelegate extends SelecionaServicos implements JavaDelegate {
 			criaListaServicos(execution); // Método para cria lista de serviços
 			//setProcessIDInicializacao(Integer.parseInt(execution.getProcessInstanceId())); // Recebe o processo que está sendo iniciado
 		}
+			
+			if(selecionaServicos.retorneMelhorServico().getTarefa()
+					.equals("ClientAuthentication")) {
+				FileWriter fstream;
+				try {
+					fstream = new FileWriter("Simulação1.txt", true);
+					BufferedWriter out = new BufferedWriter(fstream);
+					out.write(selecionaServicos.retorneMelhorServico().getTarefa()+" iniciou em: "+System.currentTimeMillis());
+					out.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} 
+				
+			}else if(selecionaServicos.retorneMelhorServico().getTarefa()
+					.equals("SendmessagetoClient")) {
+				FileWriter fstream;
+				try {
+					fstream = new FileWriter("Simulação1.txt", true);
+					BufferedWriter out = new BufferedWriter(fstream);
+					out.write(selecionaServicos.retorneMelhorServico().getTarefa()+" iniciou em: "+System.currentTimeMillis());
+					out.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} 
+			}
+			
 			
 			if(Util.atualizacaoDisponibilidade) {
 				selecionaServicos.atualizacaoServicos();

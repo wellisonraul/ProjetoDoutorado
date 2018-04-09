@@ -102,6 +102,7 @@ public class BuscaJuddi {
 						
 						for (KeyedReference keyedReference : keyedReferences) {
 							
+							
 							ArrayList<Atributo> listaAtributo = new ArrayList<Atributo>();
 							
 							if(keyedReference.getTModelKey().equals("uddi:uddi.org:wsdl:address")){
@@ -117,11 +118,12 @@ public class BuscaJuddi {
 								atributo.setEMelhorOValorMaior(true);
 								atributo.setValor(reliability);
 								
-								listaAtributo.add(atributo);
+								
 								service.setAtributos(listaAtributo);
+								listaAtributo.add(atributo);
 							}
 							
-							if(keyedReference.getTModelKey().equals("urn:wsdm.org:qos:responsetime_average")){
+							/*if(keyedReference.getTModelKey().equals("urn:wsdm.org:qos:responsetime_average")){
 								Double tempoRespostaMedio = Double.parseDouble(keyedReference.getKeyValue());
 								
 								Atributo atributo = new Atributo();
@@ -130,10 +132,12 @@ public class BuscaJuddi {
 								atributo.setEMelhorOValorMaior(false);
 								atributo.setValor(tempoRespostaMedio);	
 								
-								if(service.getAtributos()==null) System.out.println("Null");
-								else listaAtributo.addAll(service.getAtributos());
-								listaAtributo.add(atributo);
+								if(!(service.getAtributos()==null)) 
+									listaAtributo.addAll(service.getAtributos());
+								
 								service.setAtributos(listaAtributo);
+								listaAtributo.add(atributo);
+								
 							}
 							
 							if(keyedReference.getTModelKey().equals("uddi:www.mycompany.com:default_parameters")){
@@ -155,7 +159,7 @@ public class BuscaJuddi {
 									}catch (Exception e) {
 										parametersString = divisao[0];
 									}finally {
-										if(parametersDouble==null && parametersInteger == null) {
+										if(parametersDouble==null && parametersInteger == ) {
 											parametros.add(parametersString);
 										}else if(differenceBetweenParameters!=0){
 											parametros.add(parametersDouble);
@@ -185,10 +189,11 @@ public class BuscaJuddi {
 								}
 								
 								service.setListaParametrosDisponibilidade(parametros);
-							}
+							}*/
 							
 						}
 					}catch (Exception e) {
+						e.printStackTrace();
 						System.out.println("Houve algum erro na aquisição do serviço "+service.getNome()+"!");
 						System.out.println("Causas comuns: o serviço não está disponível"
 								+ " no Juddi ou o Juddi está desligado!");

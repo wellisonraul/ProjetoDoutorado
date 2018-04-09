@@ -28,11 +28,8 @@ public class Analisador {
 			Double valor = gestaoLTL.invocarMinerarFormula(xlog,formulaConsulta);
 			Double valor2 = gestaoLTL.invocarMinerarFormula(xlog,formulaConsulta2);
 			
-			if(valor2!=null) {
-				//mapaDeAnalise.put("ClientAuthentication:AuthenticationServiceOne:authentication:Existence", valor);
-				mapaDeAnalise.put("ClientAuthentication:AuthenticationServiceTwo:authenticationTwo:Existence", valor2);
-				mapaDeAnalise.put("ClientAuthentication:AuthenticationServiceOne:authentication:Final", 0.0);
-			}
+			if(valor==null) mapaDeAnalise.put("ClientAuthentication:AuthenticationServiceOne:authentication:Existence", valor);	
+			if(valor2==null) mapaDeAnalise.put("ClientAuthentication:AuthenticationServiceTwo:authenticationTwo:Existence", valor2);
 			
 		} catch (Exception e) {
 			e.printStackTrace();

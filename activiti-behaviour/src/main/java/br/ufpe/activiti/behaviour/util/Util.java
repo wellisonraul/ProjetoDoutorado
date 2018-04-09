@@ -8,7 +8,7 @@ public class Util {
 	public static String arquivoXES = "/home/wellisonraul/eclipse-workspace/Doutorado/activiti-behaviour/traceExecucao.xes";
 	public static String arquivoBPMN = "/home/wellisonraul/Desenvolvimento/Eclipse/activiti-behaviour/src/main/resources/processPizza.bpmn20.xml";
 	public static String monitorDriverMySQL = "/home/wellisonraul/Desenvolvimento/Eclipse/activiti-behaviour/lib/mysql-connector-java-5.1.36.jar";
-	public static int quantidadeTraces=6;
+	public static int quantidadeTraces=20;
 	public static boolean atualizacaoDisponibilidade = false;
 	public static boolean atualizacaoLTLMiner = false;
 	public static List<ProcessoNegocio> processosNegocio = null;

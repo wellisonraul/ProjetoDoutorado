@@ -42,9 +42,9 @@ public class Monitor{
 			System.out.println("Houve um problema para conseguir os dados do banco no monitoramento!");
 		}
 		
-		/*String ultimaInstancia = xLog.get(xLog.size()-1).getAttributes().values().toString();	
 		
 		if(xLog.size()==Util.quantidadeTraces) {
+			String ultimaInstancia = xLog.get(xLog.size()-1).getAttributes().values().toString();	
 			setProcessInstanceIDCorrente(ultimaInstancia.substring(1, ultimaInstancia.length()-1));
 		}else if(xLog.size()<Util.quantidadeTraces){
 			System.out.println("Precisamos aumentar o tempo"+xLog.size());
@@ -52,7 +52,7 @@ public class Monitor{
 		}else {
 			System.out.println("Precisamos aumentar a quantidade de traces!"+xLog.size());
 			xLog = null;
-		}*/
+		}
 		
 		return xLog;
 	}

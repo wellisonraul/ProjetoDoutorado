@@ -20,7 +20,7 @@ public class Engine {
 		// INSERI O PROCESS
 		RepositoryService repositoryService = processEngine.getRepositoryService();
 		DeploymentBuilder db = repositoryService.createDeployment();
-		db.addClasspathResource("processPizza.bpmn20.xml");
+		db.addClasspathResource("processPizzaCompany.bpmn20.xml");
 		db.deploy();
 		
 		Map<String, Object> variables = new HashMap<String, Object>();
@@ -44,18 +44,18 @@ public class Engine {
 		MonitorDisponibilidade md = new MonitorDisponibilidade();
 		md.start();
 		
-		int numDays =100;
+		int numDays =15;
+		int numRequisicao = 60;
 		for (int i = 0; i < numDays; i++) {
 
-			for (int j = 0; j <3; j++) {
+			for (int j = 0; j <numRequisicao; j++) {
 				try {
-					//System.out.println("####################### Invocacao "+j +" do dia "+ i+ "#####################################################");
+					/*//System.out.println("####################### Invocacao "+j +" do dia "+ i+ "#####################################################");
 					FileWriter fstream = new FileWriter("Execucao.txt", true); 
 					BufferedWriter out = new BufferedWriter(fstream);
 					out.write("##################### Invocacao "+j+" do dia "+i+ " #####################"+ "\n");
-					out.close();
-					runtimeService.startProcessInstanceByKey("processPizza", variables);
-					double a = 0;
+					out.close();*/
+					runtimeService.startProcessInstanceByKey("processPizzaCompany", variables);
 				} catch (Exception e) {
 					System.out.println(e);
 				}

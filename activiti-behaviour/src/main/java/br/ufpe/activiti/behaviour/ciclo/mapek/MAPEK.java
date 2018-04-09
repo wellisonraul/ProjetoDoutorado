@@ -24,10 +24,9 @@ public class MAPEK extends Thread{
 		Executor executor = new Executor();
 		
 		try{
-			Thread.sleep(15000); // DEFINE O TEMPO PARA A PRIMEIRA INICIALIZAÇÃO DO CICLO MAPE-K
+			Thread.sleep(40000); // DEFINE O TEMPO PARA A PRIMEIRA INICIALIZAÇÃO DO CICLO MAPE-K
 			int instancia = WsDelegate.getProcessIDInicializacao()-1; // Tratamento de problema na inicialização do banco!
 			monitor.setProcessInstanceIDCorrente(""+instancia);
-			//monitor.setProcessInstanceIDCorrente("925004");
 		}catch(Exception e){
 			System.out.println("Houve um problema para adormecer a Thread!");
 		}
@@ -35,13 +34,15 @@ public class MAPEK extends Thread{
 		
 		while(true) {
 			XLog log = monitor.Mapear();
-			Map<String, Double> mapaDeAnalise = analisador.Analisar(log,processosDeNegocios);
-			//Map<String, Integer> mapaDeAnalisePlanejador = planejador.Planejar(mapaDeAnalise);
-			planejadordrools.Planejar(mapaDeAnalise);
-			//executor.Executar(mapaDeAnalisePlanejador,processosDeNegocios);
+			if(log!=null) {
+				Map<String, Double> mapaDeAnalise = analisador.Analisar(log,processosDeNegocios);
+				//Map<String, Integer> mapaDeAnalisePlanejador = planejador.Planejar(mapaDeAnalise);
+				planejadordrools.Planejar(mapaDeAnalise);
+				//executor.Executar(mapaDeAnalisePlanejador,processosDeNegocios);
+			}
 			
 			try {
-				Thread.sleep(10000);
+				Thread.sleep(40000);
 			}catch(Exception e) {
 				System.out.println("Houve um problema para adormecer a Thread!");
 			}
